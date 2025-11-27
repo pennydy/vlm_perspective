@@ -1,3 +1,10 @@
 .DS_Store
 
 llm_env/*
+
+# data
+data/1_reference_game/speaker-cond*
+data/*.csv
+
+# experiment
+experiments/2_reference_occlusion/

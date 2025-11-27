@@ -1,0 +1,90 @@
+// condition2
+
+// print function 'condProb2Table' for conditional probability tables
+///fold:
+var condProb2Table = function(condProbFct, row_names, col_names, precision){
+  var matrix = map(function(row) {
+    map(function(col) {
+      _.round(Math.exp(condProbFct(row).score(col)),precision)}, 
+        col_names)}, 
+                   row_names)
+  var max_length_col = _.max(map(function(c) {c.length}, col_names))
+  var max_length_row = _.max(map(function(r) {r.length}, row_names))
+  var header = _.repeat(" ", max_length_row + 2)+ col_names.join("  ") + "\n"
+  var row = mapIndexed(function(i,r) { _.padEnd(r, max_length_row, " ") + "  " + 
+                       mapIndexed(function(j,c) {
+                          _.padEnd(matrix[i][j], c.length+2," ")}, 
+                                  col_names).join("") + "\n" }, 
+                           row_names).join("")
+  return header + row
+}
+
+///
+
+// set of states (here: objects of reference)
+// we represent objects as JavaScript objects to demarcate them from utterances
+// internally we treat objects as strings nonetheless
+var objects = [{color: "green", shape: "square", string: "green square"},
+               {color: "green", shape: "square", string: "green square"},
+               {color: "green", shape: "circle", string: "green circle"}]
+
+// prior over world states
+var objectPrior = function() {
+  var obj = uniformDraw(objects)
+  return obj.string 
+}
+
+// set of utterances
+var utterances = ["green","circle", "square"]
+
+// utterance cost function
+var cost = function(utterance) {
+  return 0;
+};
+
+// meaning function to interpret the utterances
+var meaning = function(utterance, obj){
+  _.includes(obj, utterance)
+}
+
+// literal listener
+var literalListener = function(utterance){
+  Infer({model: function(){
+    var obj = objectPrior();
+    condition(meaning(utterance, obj))
+    return obj
+  }})
+}
+
+// set speaker optimality
+var alpha = 1
+
+// pragmatic speaker
+var speaker = function(obj){
+  Infer({model: function(){
+    var utterance = uniformDraw(utterances)
+    factor(alpha * (literalListener(utterance).score(obj) - cost(utterance)))
+    return utterance
+  }})
+}
+
+// pragmatic listener
+var pragmaticListener = function(utterance){
+  Infer({model: function(){
+    var obj = objectPrior()
+    observe(speaker(obj),utterance)
+    return obj
+  }})
+}
+
+viz.table(pragmaticListener("green"))
+
+var object_strings = map(function(obj) {return obj.string}, objects)
+display("literal listener")
+display(condProb2Table(literalListener, utterances, object_strings, 4))
+
+display("speaker")
+display(condProb2Table(speaker, object_strings, utterances, 2))
+
+// display("pragmatic listener")
+// display(condProb2Table(pragmaticListener, utterances, object_strings, 2))

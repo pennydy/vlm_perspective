@@ -27,7 +27,7 @@ def get_prediction(prompt, model, seed):
         seed = seed,
         temperature = 0,
         max_tokens = 256,
-        # max_completion_tokens = 256, # gpt-5.1
+        # max_completion_tokens = 256, # instead of max_tokens for gpt-5.1
         logprobs=True,
         top_logprobs=5 # ranging from 0 to 20, the number of most likely tokens to return at each token position
     )
@@ -36,10 +36,11 @@ def get_prediction(prompt, model, seed):
     return generated_answer
 
 # geting response
-# system_prompt = "You are a helpful assistant. Your task is to follow the instruction and respond to the question."
+# system_prompt = "You are the speaker in a reference game."
 system_prompt_speaker = "Your job is to decide what utterance to use. Imagine that you have $100. You should divide your money between the possible utterances -- the amount of money you bet on each option should correspond to how confident you are that it will lead the listener to the correct choice. Bets must sum to 100, which means you have to place bets. You do not need to provide any reasoning." # Please provide it in the format of 'word1': money; 'word2':money.
 # question_speaker = "Imagine you are talking to someone and you want to refer to the middle object. Which word would you use, 'blue' or 'circle'?"
-system_prompt_free_speaker = "Your job is to decide what utterance to use. Imagine you are talking to someone and want them to select the target object, but the objects might be arranged differently for the other person. So please avoid using absolute positions and the label. The target image is highlighted by a dashed red box that only you can see."
+# system_prompt_free_speaker = "Imagine you are talking to someone and want them to select the target object, but the objects might be arranged differently for the other person. Your job is to decide what utterance to use. So please avoid using absolute positions and the label. The target image is highlighted by a dashed red box that only you can see. Please use only one word." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
+system_prompt_free_speaker = "You are the speaker in a reference game. Please use the shortest description possible."  # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
 system_prompt_listener = "Your job is to decide which object the speaker is talking about. Imagine that you have $100. You should divide your money between the possible objects -- the amount of money you bet on each option should correspond to how confident you are that it is correct. Bets must sum to 100. You do not need to provide any reasoning." # Please provide it in the format of 'word1': money; 'word2':money.
 # question_listener = "Imagine someone is talking to you and uses the word 'square' to refer to one of the objects. Which object do you think they are talking about?"
 question_prior = "Imagine someone is talking to you and uses a word you don't know to refer to one of the objects. Which object do you think they are talking about?"
@@ -58,7 +59,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="reference game")
     parser.add_argument("--model", "-m", type=str, default="gpt-4.1") # or gpt-5.1
     parser.add_argument("--input", "-i", type=str, default="exp1_cond4.csv")
-    parser.add_argument("--output_dir", "-o", type=str, default="../data/")
+    parser.add_argument("--output_dir", "-o", type=str, default="../../data/")
     parser.add_argument("--condition", "-c", type=str, default="cond1")
     parser.add_argument("--task", "-t", type=str, default="speaker")
     parser.add_argument("--seed", "-s", type=int, default=1)
@@ -82,7 +83,7 @@ if __name__ == "__main__":
             system_prompt = system_prompt_speaker
             question = question_speaker
         elif task == "free_speaker":
-            system_prompt = system_prompt_free_speaker
+            system_prompt = system_prompt_free_speaker + " Please use the shortest description possible."
             question = question_free_speaker
         elif task == "prior":
             system_prompt = system_prompt_listener
