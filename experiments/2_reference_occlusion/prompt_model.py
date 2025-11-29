@@ -13,7 +13,6 @@ from google.genai import types
 
 logger = logging.getLogger()
 # client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
-client = OpenAI()
 
 # Function to encode the image
 def encode_image(image_path):
@@ -68,7 +67,7 @@ if __name__ == "__main__":
         if task == "speaker":
             system_prompt = system_prompt_speaker
             question = speaker_question
-        if task == "listener":
+        elif task == "listener":
             system_prompt = system_prompt_listener
             question = row.listener_question
         else:
@@ -97,6 +96,7 @@ if __name__ == "__main__":
         elif model.startswith("gpt"):
             # getting the Base64 string
             base64_image = encode_image(image_path)
+            client = OpenAI()
 
             generated_answer = get_prediction(
                 prompt=[{"role" : "system", "content": system_prompt},

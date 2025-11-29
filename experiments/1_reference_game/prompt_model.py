@@ -1,9 +1,6 @@
-# import numpy as np
 import pandas as pd
 import logging
-# import random
 import base64
-import re
 from openai import OpenAI
 from tqdm import tqdm
 import argparse
@@ -13,7 +10,7 @@ from google.genai import types
 
 logger = logging.getLogger()
 # client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+# client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Function to encode the image
 def encode_image(image_path):
@@ -42,7 +39,7 @@ def get_prediction(prompt, model, seed):
 system_prompt_speaker = "Your job is to decide what utterance to use. Imagine that you have $100. You should divide your money between the possible utterances -- the amount of money you bet on each option should correspond to how confident you are that it will lead the listener to the correct choice. Bets must sum to 100, which means you have to place bets. You do not need to provide any reasoning." # Please provide it in the format of 'word1': money; 'word2':money.
 # question_speaker = "Imagine you are talking to someone and you want to refer to the middle object. Which word would you use, 'blue' or 'circle'?"
 # system_prompt_free_speaker = "Imagine you are talking to someone and want them to select the target object, but the objects might be arranged differently for the other person. Your job is to decide what utterance to use. So please avoid using absolute positions and the label. The target image is highlighted by a dashed red box that only you can see. Please use only one word." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
-system_prompt_free_speaker = "You are the speaker in a reference game. Please use the shortest description possible."  # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
+system_prompt_free_speaker = "You are the speaker in a reference game."  # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
 system_prompt_listener = "Your job is to decide which object the speaker is talking about. Imagine that you have $100. You should divide your money between the possible objects -- the amount of money you bet on each option should correspond to how confident you are that it is correct. Bets must sum to 100. You do not need to provide any reasoning." # Please provide it in the format of 'word1': money; 'word2':money.
 # question_listener = "Imagine someone is talking to you and uses the word 'square' to refer to one of the objects. Which object do you think they are talking about?"
 question_prior = "Imagine someone is talking to you and uses a word you don't know to refer to one of the objects. Which object do you think they are talking about?"
@@ -81,7 +78,7 @@ if __name__ == "__main__":
             system_prompt = system_prompt_speaker
             question = question_speaker
         elif task == "free_speaker":
-            system_prompt = system_prompt_free_speaker + " Please use the shortest description possible."
+            system_prompt = system_prompt_free_speaker
             question = question_free_speaker
         elif task == "prior":
             system_prompt = system_prompt_listener
@@ -118,6 +115,7 @@ if __name__ == "__main__":
         elif model.startswith("gpt"):
             # getting the Base64 string
             base64_image = encode_image(image_path)
+            client = OpenAI()
 
             generated_answer = get_prediction(
                 prompt=[{"role" : "system", "content": system_prompt},
