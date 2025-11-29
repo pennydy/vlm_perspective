@@ -72,8 +72,6 @@ if __name__ == "__main__":
     for i, row in tqdm(prompts.iterrows()):
         image_file = row.image_file
         image_path = f"stimuli_{condition}/"+image_file
-        word_1 = row.adj1
-        word_2 = row.adj2
         question_speaker = row.question_speaker
         question_free_speaker = row.question_free_speaker
         question_listener_1 = row.question_listener_1

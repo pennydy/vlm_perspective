@@ -15,13 +15,12 @@ cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00",
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 source("helpers.R")
 
-
 # 1. Data ----
 rsa_summary <- read.csv("../../../data/1_reference_game/rsa_predictions.csv", header=TRUE)
-speaker.gpt41.data <- read.csv("../../../data/1_reference_game/speaker_gpt-4.1_1.csv", header=TRUE) %>% 
+gpt41_speaker.data <- read.csv("../../../data/1_reference_game/speaker_gpt-4.1_1.csv", header=TRUE) %>% 
   na.omit()
 
-gpt41_summary <- speaker.gpt41.data %>% 
+gpt41_summary <- gpt41_speaker.data %>% 
   filter(answer1!="none") %>% 
   mutate(answer1 = as.numeric(answer1),
          answer2 = as.numeric(answer2)) %>% 
