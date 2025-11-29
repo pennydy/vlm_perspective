@@ -8,6 +8,8 @@ from openai import OpenAI
 from tqdm import tqdm
 import argparse
 import os
+from google import genai
+from google.genai import types
 
 logger = logging.getLogger()
 # client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
@@ -57,6 +59,7 @@ if __name__ == "__main__":
 
     prompts = pd.read_csv(args.input, header=0)
     task = args.task
+    model = args.model
     
     for i, row in tqdm(prompts.iterrows()):
         image_file = row.image_file
@@ -70,22 +73,43 @@ if __name__ == "__main__":
             question = row.listener_question
         else:
             raise TypeError("wrong task type!")
+        
+        if model.startswith("gemini"):
+            with open(image_path, 'rb') as f:
+                    image_byte = f.read()
+            image = types.Part.from_bytes(
+                data = image_byte,
+                mime_type = "image/jpeg",
+            )
+            config = types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                # temperature=0 # recommended to be 1 so commented it out
+            )
+            client = genai.Client()
+            response = client.models.generate_content(
+                model = model,
+                config = config,
+                contents =[image,question]
+            )
+            generated_answer=response.text
+            print(generated_answer)
 
-        # getting the Base64 string
-        base64_image = encode_image(image_path)
+        elif model.startswith("gpt"):
+            # getting the Base64 string
+            base64_image = encode_image(image_path)
 
-        generated_answer = get_prediction(
-            prompt=[{"role" : "system", "content": system_prompt},
-                    {"role": "user", "content": [
-                        {"type": "text", "text":question},
-                        {"type": "image_url", "image_url":{
-                            "url":f"data:image/jpeg;base64,{base64_image}"
-                        }}
-                    ]}],
-            seed=args.seed,
-            model=args.model
-        )
-        print(generated_answer)
+            generated_answer = get_prediction(
+                prompt=[{"role" : "system", "content": system_prompt},
+                        {"role": "user", "content": [
+                            {"type": "text", "text":question},
+                            {"type": "image_url", "image_url":{
+                                "url":f"data:image/jpeg;base64,{base64_image}"
+                            }}
+                        ]}],
+                seed=args.seed,
+                model=model
+            )
+            print(generated_answer)
         prompts.loc[i, f"{task}_answer"] = generated_answer
 
     output_dir = args.output_dir

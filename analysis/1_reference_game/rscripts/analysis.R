@@ -19,7 +19,10 @@ source("helpers.R")
 rsa_summary <- read.csv("../../../data/1_reference_game/rsa_predictions.csv", header=TRUE)
 gpt41_speaker.data <- read.csv("../../../data/1_reference_game/speaker_gpt-4.1_1.csv", header=TRUE) %>% 
   na.omit()
+gemini25_speaker.data <- read.csv("../../../data/1_reference_game/speaker_gemini-2.5-pro_1.csv", header=TRUE) %>% 
+  na.omit()
 
+## 1.1. GPT-4.1 ----
 gpt41_summary <- gpt41_speaker.data %>% 
   filter(answer1!="none") %>% 
   mutate(answer1 = as.numeric(answer1),
@@ -46,3 +49,29 @@ ggplot(data=rsa_gpt41_summary,
   geom_smooth(stat="smooth",method = lm,se=FALSE,color="red") # +
   # scale_x_continuous(limits = c(50, 100)) +
   # scale_y_continuous(limits = c(50, 100))
+
+## 1.2. Gemini-2.5-pro ----
+gemini25_summary <- gemini25_speaker.data %>% 
+  filter(answer1!="none") %>% 
+  mutate(answer1 = as.numeric(answer1),
+         answer2 = as.numeric(answer2)) %>% 
+  group_by(condition) %>% 
+  summarize(mean_answer1 = mean(answer1),
+            mean_answer2 = mean(answer2), # answer1 is 1-answer2
+            CILow = ci.low(answer2),
+            CIHigh = ci.high(answer2)) %>% 
+  ungroup() %>% 
+  mutate(YMin = mean_answer2-CILow,
+         YMax = mean_answer2+CIHigh)
+
+rsa_gemini25_summary <- merge(rsa_summary, gemini25_summary, by="condition") %>% 
+  rename("RSA" = feature2,
+         "gemine2.5" = mean_answer2) %>% 
+  select(-c("feature1", "mean_answer1"))
+
+ggplot(data=rsa_gemini25_summary,
+       aes(x=RSA,y=gemine2.5))+
+  geom_point()+
+  geom_abline(intercept = 0, slope = 1, color = "grey", linetype = "dashed") +
+  geom_errorbar(aes(ymin=YMin,ymax=YMax), width=.2, show.legend = FALSE) +
+  geom_smooth(stat="smooth",method = lm,se=FALSE,color="red")

@@ -8,10 +8,12 @@ from openai import OpenAI
 from tqdm import tqdm
 import argparse
 import os
+from google import genai
+from google.genai import types
 
 logger = logging.getLogger()
 # client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
-client = OpenAI()
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Function to encode the image
 def encode_image(image_path):
@@ -45,9 +47,6 @@ system_prompt_listener = "Your job is to decide which object the speaker is talk
 # question_listener = "Imagine someone is talking to you and uses the word 'square' to refer to one of the objects. Which object do you think they are talking about?"
 question_prior = "Imagine someone is talking to you and uses a word you don't know to refer to one of the objects. Which object do you think they are talking about?"
 
-# system_prompt = "Imagine you are talking to someone and want them to select the target object, but the objects might be arranged differently for the other person. So please avoid using absolute positions, and please use either a single word a two-word phrase."
-# question = "You want to refer to the middle object."
-
 # test on individual image
 # # path to the image
 # image_path = "stimuli_001.jpeg"
@@ -67,6 +66,7 @@ if __name__ == "__main__":
 
     prompts = pd.read_csv(args.input, header=0)
     task = args.task
+    model = args.model
     condition = args.condition
     
     for i, row in tqdm(prompts.iterrows()):
@@ -93,23 +93,46 @@ if __name__ == "__main__":
             system_prompt = system_prompt_listener
             question = question_listener_2
         else:
-            raise TypeError("wrong task type!")
+            raise ValueError("wrong task type!")
 
-        # getting the Base64 string
-        base64_image = encode_image(image_path)
+        if model.startswith("gemini"):
+            with open(image_path, 'rb') as f:
+                image_byte = f.read()
+            image = types.Part.from_bytes(
+                data = image_byte,
+                mime_type = "image/jpeg",
+            )
+            config = types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                # temperature=0 # recommended to be 1 so commented it out
+            )
+            client = genai.Client()
+            response = client.models.generate_content(
+                model = model,
+                config = config,
+                contents =[image,question]
+            )
+            generated_answer=response.text
+            print(generated_answer)
 
-        generated_answer = get_prediction(
-            prompt=[{"role" : "system", "content": system_prompt},
-                    {"role": "user", "content": [
-                        {"type": "text", "text":question},
-                        {"type": "image_url", "image_url":{
-                            "url":f"data:image/jpeg;base64,{base64_image}"
-                        }}
-                    ]}],
-            seed=args.seed,
-            model=args.model
-        )
-        print(generated_answer)
+        elif model.startswith("gpt"):
+            # getting the Base64 string
+            base64_image = encode_image(image_path)
+
+            generated_answer = get_prediction(
+                prompt=[{"role" : "system", "content": system_prompt},
+                        {"role": "user", "content": [
+                            {"type": "text", "text":question},
+                            {"type": "image_url", "image_url":{
+                                "url":f"data:image/jpeg;base64,{base64_image}"
+                            }}
+                        ]}],
+                seed=args.seed,
+                model=model
+            )
+            print(generated_answer)
+        else:
+            raise ValueError("wrong model!")
         prompts.loc[i, f"{task}_answer"] = generated_answer
 
     output_dir = args.output_dir

@@ -6,4 +6,6 @@ llm_env/*
 data/1_reference_game/speaker-cond*
 data/*.csv
 
-# experiment
+# experiment test files
+experiments/1_reference_game/stimuli_test/
+experiments/1_reference_game/exp1_test.csv

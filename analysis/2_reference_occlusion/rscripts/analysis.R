@@ -11,7 +11,7 @@ library(stringr)
 theme_set(theme_bw())
 # color-blind-friendly palette
 cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7") 
-altPalette <- c("#CC6677", "#BBBBBB")
+altPalette <- c("#BBBBBB","#CC6677")
 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 source("helpers.R")
