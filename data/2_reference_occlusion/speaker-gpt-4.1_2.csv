@@ -59,3 +59,63 @@ exp2_057.jpeg,cond4,present,present,3,Select the triangle with wavy lines.,2,yes
 exp2_058.jpeg,cond3,present,absent,2,Choose the gray polka-dotted circle with a green outline.,3,yes,yes,yes
 exp2_059.jpeg,cond3,present,absent,3,Select the star with wavy lines.,2,yes,no,yes
 exp2_060.jpeg,cond1,absent,absent,2,Choose the wavy circle.,2,yes,no,yes
+exp2_061.jpeg,cond3,present,absent,2,Select the green striped star.,3,yes,yes,yes
+exp2_062.jpeg,cond1,absent,absent,4,Select the green square with polka dots.,3,yes,yes,yes
+exp2_063.jpeg,cond2,absent,present,2,Select the triangle with vertical stripes.,2,yes,no,yes
+exp2_064.jpeg,cond1,absent,absent,3,Polka dot star.,2,yes,no,yes
+exp2_065.jpeg,cond3,present,absent,2,Choose the checkerboard pattern.,1,no,no,yes
+exp2_066.jpeg,cond2,absent,present,4,Choose the gray polka-dotted circle.,2,yes,no,yes
+exp2_067.jpeg,cond4,present,present,3,Select the wavy pattern with the blue border.,2,no,yes,yes
+exp2_068.jpeg,cond4,present,present,4,Black-outlined star with vertical stripes.,3,yes,yes,yes
+exp2_069.jpeg,cond2,absent,present,2,Select the square with the green border and dotted pattern.,3,yes,yes,yes
+exp2_070.jpeg,cond1,absent,absent,4,Select the green-bordered checkerboard square.,3,yes,yes,yes
+exp2_071.jpeg,cond4,present,present,3,Choose the gray checkerboard with a thick black border.,2,no,yes,yes
+exp2_072.jpeg,cond3,present,absent,2,Striped star,2,yes,no,yes
+exp2_073.jpeg,cond4,present,present,2,Green-outlined star with vertical stripes.,3,yes,yes,yes
+exp2_074.jpeg,cond2,absent,present,3,Pick the square with the wavy lines.,2,yes,no,yes
+exp2_075.jpeg,cond1,absent,absent,2,Choose the star with a wavy pattern.,2,yes,no,yes
+exp2_076.jpeg,cond1,absent,absent,2,Striped green triangle,3,yes,yes,yes
+exp2_077.jpeg,cond3,present,absent,3,Select the blue-outlined circle with vertical stripes.,3,yes,yes,yes
+exp2_078.jpeg,cond4,present,present,4,Select the striped triangle with a red outline.,3,yes,yes,yes
+exp2_079.jpeg,cond2,absent,present,4,Polka dot circle with a green outline.,3,yes,yes,yes
+exp2_080.jpeg,cond3,present,absent,3,Select the blue-outlined triangle with dots.,3,yes,yes,yes
+exp2_081.jpeg,cond2,absent,present,4,Green triangle with a checkered pattern.,3,yes,yes,yes
+exp2_082.jpeg,cond3,present,absent,2,Striped green triangle.,3,yes,yes,yes
+exp2_083.jpeg,cond1,absent,absent,3,Select the star with polka dots.,2,yes,no,yes
+exp2_084.jpeg,cond4,present,present,4,Pick the wavy circle with a black outline.,3,yes,yes,yes
+exp2_085.jpeg,cond3,present,absent,2,Pick the triangle with a green outline and wavy stripes.,3,yes,yes,yes
+exp2_086.jpeg,cond4,present,present,3,Select the black star with dots.,3,yes,yes,yes
+exp2_087.jpeg,cond2,absent,present,3,Select the star with a checkerboard pattern.,2,yes,no,yes
+exp2_088.jpeg,cond1,absent,absent,4,Choose the circle with a red outline and a checkered pattern.,3,yes,yes,yes
+exp2_089.jpeg,cond3,present,absent,4,Select the square with gray polka dots.,2,yes,no,yes
+exp2_090.jpeg,cond3,present,absent,3,Pick the triangle with dots.,2,yes,no,yes
+exp2_091.jpeg,cond1,absent,absent,3,Select the wavy-patterned square.,2,yes,no,yes
+exp2_092.jpeg,cond2,absent,present,3,Choose the triangle with a red outline and polka dots.,3,yes,yes,yes
+exp2_093.jpeg,cond4,present,present,3,Choose the gray square with wavy white lines.,3,yes,yes,yes
+exp2_094.jpeg,cond2,absent,present,4,Select the green star with polka dots.,3,yes,yes,yes
+exp2_095.jpeg,cond1,absent,absent,2,Pick the polka-dotted circle.,2,yes,no,yes
+exp2_096.jpeg,cond4,present,present,4,Select the green star with a dotted pattern.,3,yes,yes,yes
+exp2_097.jpeg,cond3,present,absent,3,Select the black and white vertical striped rectangle.,2,yes,no,yes
+exp2_098.jpeg,cond1,absent,absent,2,Blue-bordered square with vertical stripes.,3,yes,yes,yes
+exp2_099.jpeg,cond2,absent,present,3,Pick the wavy circle with a green border.,3,yes,yes,yes
+exp2_100.jpeg,cond4,present,present,2,Select the image with the gray polka dots.,1,no,no,yes
+exp2_101.jpeg,cond4,present,present,2,Select the circle with the checkerboard pattern.,2,yes,no,yes
+exp2_102.jpeg,cond1,absent,absent,4,Select the black and white checkered square.,3,yes,yes,yes
+exp2_103.jpeg,cond3,present,absent,2,Square with gray dots.,2,yes,no,yes
+exp2_104.jpeg,cond2,absent,present,2,Green-outlined circle with vertical stripes.,3,yes,yes,yes
+exp2_105.jpeg,cond4,present,present,3,Select the triangle with dots.,2,yes,no,yes
+exp2_106.jpeg,cond4,present,present,4,Pick the triangle with a green outline and a dotted pattern.,3,yes,yes,yes
+exp2_107.jpeg,cond1,absent,absent,4,Select the wavy-patterned triangle with a red border.,3,yes,yes,yes
+exp2_108.jpeg,cond3,present,absent,4,Select the gray square with a wavy pattern.,2,yes,no,yes
+exp2_109.jpeg,cond3,present,absent,2,Choose the polka-dotted triangle.,2,yes,no,yes
+exp2_110.jpeg,cond2,absent,present,2,Green-outlined triangle with dots.,3,yes,yes,yes
+exp2_111.jpeg,cond1,absent,absent,4,Select the gray wavy triangle with a green border.,3,yes,yes,yes
+exp2_112.jpeg,cond2,absent,present,4,Wavy pattern circle.,2,yes,no,yes
+exp2_113.jpeg,cond3,present,absent,2,Select the wavy-patterned circle.,2,yes,no,yes
+exp2_114.jpeg,cond1,absent,absent,2,Choose the square with the wavy pattern.,2,yes,no,yes
+exp2_115.jpeg,cond2,absent,present,4,Select the green triangle with polka dots.,3,yes,yes,yes
+exp2_116.jpeg,cond3,present,absent,2,Select the striped star.,2,yes,no,yes
+exp2_117.jpeg,cond4,present,present,2,Select the black star with a wavy pattern.,3,yes,yes,yes
+exp2_118.jpeg,cond2,absent,present,3,Black star with gray dots.,3,yes,yes,yes
+exp2_119.jpeg,cond1,absent,absent,4,Polka dot triangle,2,yes,no,yes
+exp2_120.jpeg,cond4,present,present,3,Pick the square with vertical black and white stripes.,2,yes,no,yes

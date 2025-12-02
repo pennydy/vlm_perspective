@@ -37,7 +37,7 @@ def get_prediction(prompt, model, seed):
     return generated_answer
 
 # geting response
-system_prompt_speaker = "You are the speaker in a reference game. Please use the shortest description possible." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
+system_prompt_speaker = "You are the speaker in a reference game." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
 speaker_question = "Imagine you are talking to someone and want them to select the target object. The objects might be arranged differently for the other person, so please do not use degenerate spatial locations. Some objects are hidden behind a red curtain with a question mark, so you do not know what is behind, but the other person knows. The target image is highlighted by a dashed red box that only you can see."
 system_prompt_listener = "Your are the listener in a reference game. Please only provide the column number and the row number."
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
             )
             config = types.GenerateContentConfig(
                 system_instruction=system_prompt,
-                # temperature=0 # recommended to be 1 so commented it out
+                temperature=0 # recommended to be 1 but not deterministic
             )
             client = genai.Client()
             response = client.models.generate_content(

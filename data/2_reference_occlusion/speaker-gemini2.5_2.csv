@@ -1,0 +1,61 @@
+image_file,condition,occlusion,distractor,non_target,speaker_answer,feature,shape,color,texture
+exp2_001.jpeg,cond2,absent,present,2,striped,1,,,yes
+exp2_002.jpeg,cond4,present,present,4,Blue.,1,,yes,
+exp2_003.jpeg,cond3,present,absent,4,Circle.,1,yes,,
+exp2_004.jpeg,cond1,absent,absent,3,Square.,1,yes,,
+exp2_005.jpeg,cond2,absent,present,3,Wavy,1,,,yes
+exp2_006.jpeg,cond2,absent,present,4,Black circle.,2,yes,yes,
+exp2_007.jpeg,cond4,present,present,3,Red circle,2,yes,yes,
+exp2_008.jpeg,cond1,absent,absent,4,Striped.,1,,,yes
+exp2_009.jpeg,cond4,present,present,2,Wavy.,1,,,yes
+exp2_010.jpeg,cond3,present,absent,3,Stripes,1,,,yes
+exp2_011.jpeg,cond4,present,present,2,Wavy.,1,,,yes
+exp2_012.jpeg,cond1,absent,absent,4,Triangle,1,yes,,
+exp2_013.jpeg,cond2,absent,present,2,Dots.,1,,,yes
+exp2_014.jpeg,cond2,absent,present,4,Red.,1,,yes,
+exp2_015.jpeg,cond4,present,present,2,Green triangle.,2,yes,yes,
+exp2_016.jpeg,cond1,absent,absent,2,green,1,,yes,
+exp2_017.jpeg,cond3,present,absent,4,star,1,yes,,
+exp2_018.jpeg,cond3,present,absent,3,Star,1,yes,,
+exp2_019.jpeg,cond4,present,present,3,Dotted triangle.,2,yes,,yes
+exp2_020.jpeg,cond4,present,present,3,Dots.,1,,,yes
+exp2_021.jpeg,cond1,absent,absent,3,Triangle,1,yes,,
+exp2_022.jpeg,cond1,absent,absent,4,square,1,yes,,
+exp2_023.jpeg,cond2,absent,present,4,Green circle.,2,yes,yes,
+exp2_024.jpeg,cond2,absent,present,2,Stripes.,1,,,yes
+exp2_025.jpeg,cond3,present,absent,2,Star,1,yes,,
+exp2_026.jpeg,cond4,present,present,2,Checkerboard.,1,,,yes
+exp2_027.jpeg,cond3,present,absent,2,Star,1,yes,,
+exp2_028.jpeg,cond2,absent,present,3,blue,1,,yes,
+exp2_029.jpeg,cond1,absent,absent,4,Circle,1,yes,,
+exp2_030.jpeg,cond2,absent,present,3,Wavy.,1,,,yes
+exp2_031.jpeg,cond3,present,absent,3,Circle,1,yes,,
+exp2_032.jpeg,cond3,present,absent,4,Triangle.,1,yes,,
+exp2_033.jpeg,cond1,absent,absent,3,Star,1,yes,,
+exp2_034.jpeg,cond4,present,present,4,Borderless.,,,,
+exp2_035.jpeg,cond4,present,present,3,Black star.,2,yes,yes,
+exp2_036.jpeg,cond2,absent,present,4,Dotted.,1,,,yes
+exp2_037.jpeg,cond3,present,absent,3,Triangle,1,yes,,
+exp2_038.jpeg,cond3,present,absent,2,Circle,1,yes,,
+exp2_039.jpeg,cond4,present,present,4,blue wavy,2,,yes,yes
+exp2_040.jpeg,cond1,absent,absent,4,Square,1,yes,,
+exp2_041.jpeg,cond4,present,present,2,Red border.,1,,yes,
+exp2_042.jpeg,cond1,absent,absent,3,Circle.,1,yes,,
+exp2_043.jpeg,cond2,absent,present,4,wavy,1,,,yes
+exp2_044.jpeg,cond3,present,absent,3,square,1,yes,,
+exp2_045.jpeg,cond1,absent,absent,2,Triangle,1,yes,,
+exp2_046.jpeg,cond2,absent,present,4,Red star,2,yes,yes,
+exp2_047.jpeg,cond4,present,present,3,Striped square,2,yes,,yes
+exp2_048.jpeg,cond2,absent,present,3,Red square,2,yes,yes,
+exp2_049.jpeg,cond4,present,present,3,Green square.,2,yes,yes,
+exp2_050.jpeg,cond3,present,absent,3,Star,1,yes,,
+exp2_051.jpeg,cond1,absent,absent,3,Wavy.,1,,,yes
+exp2_052.jpeg,cond3,present,absent,3,Triangle.,1,yes,,
+exp2_053.jpeg,cond1,absent,absent,3,Red,1,,yes,
+exp2_054.jpeg,cond2,absent,present,4,Checkerboard,1,,,yes
+exp2_055.jpeg,cond1,absent,absent,2,Triangle,1,yes,,
+exp2_056.jpeg,cond2,absent,present,3,Blue,1,,yes,
+exp2_057.jpeg,cond4,present,present,3,Wavy triangle.,2,yes,,yes
+exp2_058.jpeg,cond3,present,absent,2,Green.,1,,yes,
+exp2_059.jpeg,cond3,present,absent,3,Star.,1,yes,,
+exp2_060.jpeg,cond1,absent,absent,2,wavy,1,,,yes
