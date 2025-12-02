@@ -10,6 +10,7 @@ import argparse
 import os
 from google import genai
 from google.genai import types
+from transformers import AutoModelForImageTextToText, AutoProcessor
 
 logger = logging.getLogger()
 # client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
@@ -50,7 +51,7 @@ system_prompt_listener = "Your are the listener in a reference game. Please only
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="reference game")
     parser.add_argument("--model", "-m", type=str, default="gpt-4.1") # or gpt-5.1
-    parser.add_argument("--input", "-i", type=str, default="exp2.csv")
+    parser.add_argument("--input", "-i", type=str, default="exp2_speaker.csv")
     parser.add_argument("--output_dir", "-o", type=str, default="../../data/2_reference_occlusion")
     parser.add_argument("--task", "-t", type=str, default="speaker")
     parser.add_argument("--seed", "-s", type=int, default=1)
@@ -75,7 +76,7 @@ if __name__ == "__main__":
         
         if model.startswith("gemini"):
             with open(image_path, 'rb') as f:
-                    image_byte = f.read()
+                image_byte = f.read()
             image = types.Part.from_bytes(
                 data = image_byte,
                 mime_type = "image/jpeg",
@@ -110,6 +111,40 @@ if __name__ == "__main__":
                 model=model
             )
             print(generated_answer)
+        elif model.startswith("qwen"):
+            encoded_image = encode_image(image_path)
+            model = AutoModelForImageTextToText.from_pretrained(
+                "Qwen/Qwen3-VL-8B-Instruct", dtype="auto", device_map="auto"
+            )
+            config = model.generation_config
+            config.do_sample = False
+            config.temperature = 0.0  # default temperature is 0.7
+            processor = AutoProcessor.from_pretrained("Qwen/Qwen3-VL-8B-Instruct")
+            prompt=[{"role" : "system", 
+                     "content": [{"type": "text", "text": system_prompt},]},
+                     {"role": "user", 
+                      "content": [
+                            {"type": "text", "text":question},
+                            {"type": "image", "image": encoded_image}]}]
+            inputs = processor.apply_chat_template(
+                prompt,
+                tokenize=True,
+                add_generation_prompt=True,
+                return_dict=True,
+                return_tensors="pt"
+            )
+            inputs = inputs.to(model.device)
+            generated_ids = model.generate(**inputs, 
+                                           generation_config=config, # not sure this is working
+                                           max_new_tokens=128)
+            generated_ids_trimmed = [
+                out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+                ]
+            output_text = processor.batch_decode(
+                generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+            )
+            print(output_text)
+
         prompts.loc[i, f"{task}_answer"] = generated_answer
 
     output_dir = args.output_dir
