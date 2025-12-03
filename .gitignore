@@ -10,3 +10,9 @@ data/2_reference_occlusion/*_clean.csv
 # experiment test files
 experiments/1_reference_game/stimuli_test/
 experiments/1_reference_game/exp1_test.csv
+
+# presentation plots
+analysis/2_reference_occlusion/graphs/presentation_only_*
+
+# writing
+writings/

@@ -28,8 +28,8 @@ def get_prediction(prompt, model, seed):
         messages = prompt,
         seed = seed,
         temperature = 0,
-        max_tokens = 256,
-        # max_completion_tokens = 256, # instead of max_tokens for gpt-5.1
+        # max_tokens = 256,
+        max_completion_tokens = 256, # instead of max_tokens for gpt-5.1
         logprobs=True,
         top_logprobs=5 # ranging from 0 to 20, the number of most likely tokens to return at each token position
     )
@@ -38,7 +38,7 @@ def get_prediction(prompt, model, seed):
     return generated_answer
 
 # geting response
-system_prompt_speaker = "You are the speaker in a reference game." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
+system_prompt_speaker = "You are the speaker in a reference game. Please use the shortest description possible." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
 speaker_question = "Imagine you are talking to someone and want them to select the target object. The objects might be arranged differently for the other person, so please do not use degenerate spatial locations. Some objects are hidden behind a red curtain with a question mark, so you do not know what is behind, but the other person knows. The target image is highlighted by a dashed red box that only you can see."
 system_prompt_listener = "Your are the listener in a reference game. Please only provide the column number and the row number."
 
