@@ -19,17 +19,33 @@ logger = logging.getLogger()
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
-    
 
+# for gpt-5.1
+def get_response(prompt,model):
+    response = client.responses.create(
+        model=model,
+        input=prompt,
+        # temperature=0, # not supported when reasoning is not none
+        store=False,
+        max_output_tokens = 256,
+        text={
+            "verbosity": "low"
+            },
+        reasoning={
+            "effort": "none"
+            }
+        )
+    generated_answer = response.output_text
+    return(generated_answer)
+
+# for gpt-4.1
 def get_prediction(prompt, model, seed):
-    # prob = []
     prediction = client.chat.completions.create(
         model = model,
         messages = prompt,
         seed = seed,
         temperature = 0,
-        # max_tokens = 256,
-        max_completion_tokens = 256, # instead of max_tokens for gpt-5.1
+        max_tokens = 256,
         logprobs=True,
         top_logprobs=5 # ranging from 0 to 20, the number of most likely tokens to return at each token position
     )
@@ -99,17 +115,31 @@ if __name__ == "__main__":
             base64_image = encode_image(image_path)
             client = OpenAI()
 
-            generated_answer = get_prediction(
-                prompt=[{"role" : "system", "content": system_prompt},
-                        {"role": "user", "content": [
-                            {"type": "text", "text":question},
-                            {"type": "image_url", "image_url":{
-                                "url":f"data:image/jpeg;base64,{base64_image}"
-                            }}
-                        ]}],
-                seed=args.seed,
-                model=model
-            )
+            if model == "gpt-4.1":
+                generated_answer = get_prediction(
+                    prompt=[{"role" : "system", "content": system_prompt},
+                             {"role": "user", "content": [
+                                  {"type": "text", "text":question},
+                                  {"type": "image_url", "image_url":{
+                                       "url":f"data:image/jpeg;base64,{base64_image}"
+                                         }}
+                                         ]}],
+                    model=model,
+                    seed=args.seed
+                )
+            elif model == "gpt-5.1":
+                generated_answer = get_response(
+                    prompt=[{"role": "system",
+                             "content":[
+                                 {"type" : "input_text", "text": system_prompt}
+                             ]},
+                             {"role": "user",
+                              "content": [
+                                  {"type": "input_text", "text": question},
+                                  {"type": "input_image", "image_url": f"data:image/jpeg;base64,{base64_image}"}
+                              ]}],
+                    model=model
+                )
             print(generated_answer)
         elif model.startswith("qwen"):
             encoded_image = encode_image(image_path)
@@ -150,4 +180,4 @@ if __name__ == "__main__":
     output_dir = args.output_dir
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_{args.seed}.csv"), index=False)
+    prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_{args.seed}_low.csv"), index=False)
