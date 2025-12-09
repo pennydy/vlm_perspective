@@ -17,7 +17,25 @@ def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
     
+# for gpt-5.1
+def get_response(prompt,model):
+    response = client.responses.create(
+        model=model,
+        input=prompt,
+        temperature=0, # not supported when reasoning is not none
+        store=False,
+        max_output_tokens = 256,
+        text={
+            "verbosity": "low"
+            },
+        reasoning={
+            "effort": "none"
+            }
+        )
+    generated_answer = response.output_text
+    return(generated_answer)
 
+# for gpt-4.1
 def get_prediction(prompt, model, seed):
     # prob = []
     prediction = client.chat.completions.create(
@@ -39,7 +57,7 @@ def get_prediction(prompt, model, seed):
 system_prompt_speaker = "Your job is to decide what utterance to use. Imagine that you have $100. You should divide your money between the possible utterances -- the amount of money you bet on each option should correspond to how confident you are that it will lead the listener to the correct choice. Bets must sum to 100, which means you have to place bets. You do not need to provide any reasoning." # Please provide it in the format of 'word1': money; 'word2':money.
 # question_speaker = "Imagine you are talking to someone and you want to refer to the middle object. Which word would you use, 'blue' or 'circle'?"
 # system_prompt_free_speaker = "Imagine you are talking to someone and want them to select the target object, but the objects might be arranged differently for the other person. Your job is to decide what utterance to use. So please avoid using absolute positions and the label. The target image is highlighted by a dashed red box that only you can see. Please use only one word." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
-system_prompt_free_speaker = "You are the speaker in a reference game."  # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
+system_prompt_free_speaker = "You are the speaker in a reference game. Please use either one word or two words."  # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
 system_prompt_listener = "Your job is to decide which object the speaker is talking about. Imagine that you have $100. You should divide your money between the possible objects -- the amount of money you bet on each option should correspond to how confident you are that it is correct. Bets must sum to 100. You do not need to provide any reasoning." # Please provide it in the format of 'word1': money; 'word2':money.
 # question_listener = "Imagine someone is talking to you and uses the word 'square' to refer to one of the objects. Which object do you think they are talking about?"
 question_prior = "Imagine someone is talking to you and uses a word you don't know to refer to one of the objects. Which object do you think they are talking about?"
@@ -57,7 +75,7 @@ if __name__ == "__main__":
     parser.add_argument("--input", "-i", type=str, default="exp1_cond4.csv")
     parser.add_argument("--output_dir", "-o", type=str, default="../../data/")
     parser.add_argument("--condition", "-c", type=str, default="cond1")
-    parser.add_argument("--task", "-t", type=str, default="speaker")
+    parser.add_argument("--task", "-t", type=str, default="speaker") # speaker, free speaker, listener1,2 prior
     parser.add_argument("--seed", "-s", type=int, default=1)
     args = parser.parse_args()
 
@@ -117,21 +135,35 @@ if __name__ == "__main__":
             base64_image = encode_image(image_path)
             client = OpenAI()
 
-            generated_answer = get_prediction(
-                prompt=[{"role" : "system", "content": system_prompt},
-                        {"role": "user", "content": [
-                            {"type": "text", "text":question},
-                            {"type": "image_url", "image_url":{
-                                "url":f"data:image/jpeg;base64,{base64_image}"
-                            }}
-                        ]}],
-                seed=args.seed,
-                model=model
-            )
+            if model == "gpt-4.1":
+                generated_answer = get_prediction(
+                    prompt=[{"role" : "system", "content": system_prompt},
+                            {"role": "user", "content": [
+                                {"type": "text", "text":question},
+                                {"type": "image_url", "image_url":{
+                                    "url":f"data:image/jpeg;base64,{base64_image}"
+                                }}
+                            ]}],
+                    seed=args.seed,
+                    model=model
+                )
+            elif model == "gpt-5.1":
+                generated_answer = get_response(
+                    prompt=[{"role": "system",
+                             "content":[
+                                 {"type" : "input_text", "text": system_prompt}
+                             ]},
+                             {"role": "user",
+                              "content": [
+                                  {"type": "input_text", "text": question},
+                                  {"type": "input_image", "image_url": f"data:image/jpeg;base64,{base64_image}"}
+                              ]}],
+                    model=model
+                )
             print(generated_answer)
         else:
             raise ValueError("wrong model!")
         prompts.loc[i, f"{task}_answer"] = generated_answer
 
     output_dir = args.output_dir
-    prompts.to_csv(os.path.join(output_dir,f"{task}-{condition}-{args.model}_{args.seed}.csv"), index=False)
+    prompts.to_csv(os.path.join(output_dir,f"{task}-{condition}_diff-{args.model}_{args.seed}.csv"), index=False)

@@ -7,9 +7,12 @@ data/1_reference_game/speaker-cond*
 data/*.csv
 data/2_reference_occlusion/*_clean.csv
 
-# experiment test files
+# experiment test and not needed files
 experiments/1_reference_game/stimuli_test/
 experiments/1_reference_game/exp1_test.csv
+experiments/1_reference_game/stimuli_cond5_new/
+experiments/1_reference_game/exp1_cond5_new.csv
+experiments/1_reference_game/exp1_cond5_new_combined.csv
 
 # presentation plots
 analysis/2_reference_occlusion/graphs/presentation_only_*

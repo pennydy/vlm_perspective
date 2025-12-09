@@ -22,36 +22,51 @@ gpt4.1_speaker.data <- gpt4.1_speaker.data %>%
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
          utt_length = str_count(speaker_answer, "\\S+"))
+mean(gpt4.1_speaker.data$utt_length) # 6.08
 sum(gpt4.1_speaker.data$listener_answer_correct=="yes")/120 # 0.925
+sum(gpt4.1_speaker.data$listener_answer_correct=="no") # 4
+sum(gpt4.1_speaker.data$listener_answer_correct=="none") # 5
 
 gpt5.1_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-gpt-5.1_1.csv", header=TRUE)
 gpt5.1_speaker.data <- gpt5.1_speaker.data %>% 
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
          utt_length = str_count(speaker_answer, "\\S+"))
+mean(gpt5.1_speaker.data$utt_length) # 10.46
 sum(gpt5.1_speaker.data$listener_answer_correct=="yes")/120 # 0.99
+sum(gpt5.1_speaker.data$listener_answer_correct=="no") # 0
+sum(gpt5.1_speaker.data$listener_answer_correct=="none") # 1
 
 gpt5.1_low_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-gpt-5.1_1_low.csv", header=TRUE)
 gpt5.1_low_speaker.data <- gpt5.1_low_speaker.data %>% 
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
          utt_length = str_count(speaker_answer, "\\S+"))
+mean(gpt5.1_low_speaker.data$utt_length) # 12.37
 sum(gpt5.1_low_speaker.data$listener_answer_correct=="yes")/120 # 0.992
+sum(gpt5.1_low_speaker.data$listener_answer_correct=="no") # 0
+sum(gpt5.1_low_speaker.data$listener_answer_correct=="none") # 1
 
 gemini2.5_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-gemini2.5_0.csv", header=TRUE)
 gemini2.5_speaker.data <- gemini2.5_speaker.data %>% 
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
          utt_length = str_count(speaker_answer, "\\S+"))
+mean(gemini2.5_speaker.data$utt_length) # 9.24
 sum(gemini2.5_speaker.data$listener_answer_correct=="yes")/120 # 0.94
+sum(gemini2.5_speaker.data$listener_answer_correct=="no") # 0
+sum(gemini2.5_speaker.data$listener_answer_correct=="none") # 7
 
 qwen3_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-qwen_1.csv", header=TRUE) # the listener results are very bad...
 qwen3_speaker.data <- qwen3_speaker.data %>%
-  filter(! image_file %in% c("exp2_064.jpeg", "exp2_071.jpeg", "exp2_101.jpeg", "exp2_107.jpeg")) %>% # excluding cases where it uses absolute positions and like the "highlighted box"
+  filter(! image_file %in% c("exp2_064.jpeg", "exp2_071.jpeg", "exp2_101.jpeg", "exp2_107.jpeg")) %>% # excluding cases where it uses absolute positions and like the "highlighted box", two in condition1 and two in condition4
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
          utt_length = str_count(speaker_answer, "\\S+"))
+mean(qwen3_speaker.data$utt_length) # 5.78
 sum(qwen3_speaker.data$listener_answer_correct=="yes")/120 # 0.66
+sum(qwen3_speaker.data$listener_answer_correct=="no") # 13
+sum(qwen3_speaker.data$listener_answer_correct=="none") # 24
 
 # 2. Summary ----
 ## 2.1. GPT-4.1 ----
@@ -120,6 +135,11 @@ gpt5.1_speaker_each_feature_summary <- gpt5.1_speaker.data %>%
                values_to = "percentage") %>% 
   mutate(feature_type=fct_relevel(feature_type, "shape", "color", "texture"))
 
+gpt5.1_speaker.data %>% 
+  group_by(occlusion, distractor) %>% 
+  summarize(sum(negation=="yes"))
+
+## 2.2.1 GPT-5.1 low ----
 gpt5.1_low_speaker_summary <- gpt5.1_low_speaker.data %>% 
   group_by(occlusion, distractor) %>% 
   summarize(mean_length = mean(utt_length),
@@ -151,6 +171,10 @@ gpt5.1_low_speaker_each_feature_summary <- gpt5.1_low_speaker.data %>%
                names_to = "feature_type",
                values_to = "percentage") %>% 
   mutate(feature_type=fct_relevel(feature_type, "shape", "color", "texture"))
+
+gpt5.1_low_speaker.data %>% 
+  group_by(occlusion, distractor) %>% 
+  summarize(sum(negation=="yes"))
 
 ## 2.3. Gemini-2.5 ----
 gemini2.5_speaker_summary <- gemini2.5_speaker.data %>% 
@@ -218,6 +242,7 @@ qwen3_speaker_each_feature_summary <- qwen3_speaker.data %>%
                values_to = "percentage") %>% 
   mutate(feature_type=fct_relevel(feature_type, "shape", "color", "texture"))
 
+## 2.5. all models ----
 gpt4.1_speaker_summary$model = "GPT-4.1"
 gpt5.1_speaker_summary$model = "GPT-5.1"
 gpt5.1_low_speaker_summary$model = "GPT-5.1 low"
@@ -231,6 +256,13 @@ gpt5.1_low_speaker_feature_summary$model = "GPT-5.1 low"
 gemini2.5_speaker_feature_summary$model = "Gemini-2.5-pro"
 qwen3_speaker_feature_summary$model = "Qwen3-VL"
 all_models_feature_summary <- bind_rows(gpt4.1_speaker_feature_summary,gpt5.1_speaker_feature_summary, gpt5.1_low_speaker_feature_summary, gemini2.5_speaker_feature_summary,qwen3_speaker_feature_summary)
+
+gpt4.1_speaker_each_feature_summary$model = "GPT-4.1"
+gpt5.1_speaker_each_feature_summary$model = "GPT-5.1"
+gpt5.1_low_speaker_each_feature_summary$model = "GPT-5.1 low"
+gemini2.5_speaker_each_feature_summary$model = "Gemini-2.5-pro"
+qwen3_speaker_each_feature_summary$model = "Qwen3-VL"
+all_models_each_feature_summary <- bind_rows(gpt4.1_speaker_each_feature_summary,gpt5.1_speaker_each_feature_summary, gpt5.1_low_speaker_each_feature_summary, gemini2.5_speaker_each_feature_summary,qwen3_speaker_each_feature_summary)
 
 # 3. Plot ----
 ## 3.1. GPT-4.1 ----
@@ -559,7 +591,7 @@ qwen3_feature_plot <- ggplot(data=qwen3_speaker_each_feature_summary %>%
 qwen3_feature_plot
 ggsave(qwen3_feature_plot, file="../graphs/qwen3_feature_plot.pdf", width=4, height=3)
 
-## 3.5. All models
+## 3.5. All models ----
 all_speaker_plot <- ggplot(data=all_models_summary %>% 
                              mutate(distractor = fct_relevel(distractor, "present", "absent")),
                                     # alpha_value = ifelse(occlusion == "absent", 1, 0)),
@@ -590,7 +622,7 @@ all_speaker_plot
 ggsave(all_speaker_plot, file="../graphs/all_models_speaker_plot.pdf", width=7, height=3)
 
 all_speaker_feature_plot <- ggplot(data=all_models_feature_summary %>% 
-                                     mutate(distractor = fct_relevel(distractor, "present", "absent")),,
+                                     mutate(distractor = fct_relevel(distractor, "present", "absent")),
        aes(x=distractor,y=mean_feature,fill=occlusion))+
   geom_bar(stat="identity", 
            position=position_dodge(),
@@ -614,6 +646,27 @@ all_speaker_feature_plot <- ggplot(data=all_models_feature_summary %>%
         strip.text.x = element_text(size=12))
 all_speaker_feature_plot
 ggsave(all_speaker_feature_plot, file="../graphs/all_models_speaker_feature_plot.pdf", width=7, height=3)
+
+all_speaker_each_feature_plot<-ggplot(data=all_models_each_feature_summary %>% 
+         mutate(distractor = fct_relevel(distractor, "present", "absent")),
+       aes(x=distractor,y=percentage,fill=occlusion))+
+  geom_bar(stat="identity", 
+           position=position_dodge(),
+           width=0.8, 
+           aes(color=occlusion))+
+  scale_fill_manual(values=altPalette, name = "occlusion")+
+  scale_color_manual(values=altPalette, name = "occlusion")+
+  facet_grid(model~feature_type)+
+  labs(x="distractor",
+       y="% utterances with features")+
+  theme(legend.position = "top",
+        axis.text = element_text(size=12),
+        axis.title = element_text(size=14),
+        legend.text = element_text(size=12),
+        legend.title = element_text(size=14),
+        strip.text.x = element_text(size=12))
+all_speaker_each_feature_plot
+ggsave(all_speaker_each_feature_plot, file="../graphs/all_models_speaker_each_feature_plot.pdf", width=6, height=6)
 
 # 4. Analysis ----
 ## 4.1. GPT-4.1 ----
@@ -642,7 +695,6 @@ gpt5.1_feature_model <- lm(feature ~ occlusion * distractor,
                    data=gpt5.1_speaker.data)
 summary(gpt5.1_feature_model)
 
-
 ## 4.2.1 GPT-5.1 low ----
 contrasts(gpt5.1_low_speaker.data$occlusion) <- contr.treatment(2, base = 1)
 levels(gpt5.1_low_speaker.data$occlusion) # level1: absent, level2: present
@@ -652,7 +704,7 @@ levels(gpt5.1_low_speaker.data$distractor) # level1: absent, level2: present
 gpt5.1_low_model <- lm(utt_length ~ occlusion * distractor,
                         data=gpt5.1_low_speaker.data)
 summary(gpt5.1_low_model)
-gpt5.1_low_feature_model <- lm(utt_length ~ occlusion * distractor,
+gpt5.1_low_feature_model <- lm(feature ~ occlusion * distractor,
                        data=gpt5.1_low_speaker.data)
 summary(gpt5.1_low_feature_model)
 
