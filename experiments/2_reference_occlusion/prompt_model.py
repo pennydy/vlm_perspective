@@ -32,11 +32,17 @@ def get_response(prompt,model):
             "verbosity": "low"
             },
         reasoning={
-            "effort": "none"
+            "effort": "low",
+            "summary": "auto"
             }
         )
+    if response.output[0].summary:
+        thought_summary = response.output[0].summary[0].text
+    else:
+        thought_summary = "none"
+        print("no thoughts")
     generated_answer = response.output_text
-    return(generated_answer)
+    return generated_answer, thought_summary
 
 # for gpt-4.1
 def get_prediction(prompt, model, seed):
@@ -97,16 +103,52 @@ if __name__ == "__main__":
                 data = image_byte,
                 mime_type = "image/jpeg",
             )
-            config = types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                temperature=0 # recommended to be 1 but not deterministic
-            )
+
+            if model == "gemini-2.5-flash":
+                config = types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=0,
+                    thinking_config=types.ThinkingConfig(thinking_budget=2048,
+                                                         include_thoughts=True)
+                )
+            elif model == "gemini-2.5-pro":
+                config = types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=0, # recommended to be 1 but not deterministic
+                    thinking_config=types.ThinkingConfig(thinking_budget=2048,
+                                                         include_thoughts=True)
+                )
+            elif model == "gemini-3-flash-preview":
+                config = types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=0,
+                    thinking_config=types.ThinkingConfig(thinking_level="low", # default is high
+                                                         include_thoughts=True) 
+                )
+            elif model == "gemini-3-pro-preview":
+                config = types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=0,
+                    thinking_config=types.ThinkingConfig(thinking_level="low",# default is high
+                                                         include_thoughts=True) 
+                )
             client = genai.Client()
             response = client.models.generate_content(
                 model = model,
                 config = config,
                 contents =[image,question]
             )
+            # get the thinking summary
+            for part in response.candidates[0].content.parts:
+                if not part.text:
+                    continue
+                elif part.thought:
+                    thought_summary = part.text
+                else:
+                    thought_summary = "none"
+                    print("no thoughts")
+
+            print(response)
             generated_answer=response.text
             print(generated_answer)
 
@@ -127,8 +169,9 @@ if __name__ == "__main__":
                     model=model,
                     seed=args.seed
                 )
-            elif model == "gpt-5.1":
-                generated_answer = get_response(
+                thought_summary = "none"
+            elif model == "gpt-5.1" or model == "gpt-5.2":
+                generated_answer, thought_summary = get_response(
                     prompt=[{"role": "system",
                              "content":[
                                  {"type" : "input_text", "text": system_prompt}
@@ -140,7 +183,9 @@ if __name__ == "__main__":
                               ]}],
                     model=model
                 )
-            print(generated_answer)
+            print("answer:", generated_answer)
+            print("thoughts:", thought_summary)
+
         elif model.startswith("qwen"):
             encoded_image = encode_image(image_path)
             model = AutoModelForImageTextToText.from_pretrained(
@@ -176,8 +221,9 @@ if __name__ == "__main__":
             print(output_text)
 
         prompts.loc[i, f"{task}_answer"] = generated_answer
+        prompts.loc[i, f"{task}_thought"] = thought_summary
 
-    output_dir = args.output_dir
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_{args.seed}_low.csv"), index=False)
+    # output_dir = args.output_dir
+    # if not os.path.exists(output_dir):
+    #     os.makedirs(output_dir)
+    # prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_{args.seed}_low.csv"), index=False)
