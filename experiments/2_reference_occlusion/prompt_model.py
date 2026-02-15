@@ -20,8 +20,20 @@ def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
 
-# for gpt-5.1
-def get_response(prompt,model):
+# for gpt-5.1 and gpt-5.2
+def get_response(prompt,model,reasoning_effort):
+    if reasoning_effort == "none":
+        reasoning_config = {
+            "effort": reasoning_effort
+        }
+    elif reasoning_effort in ["low", "medium", "high"]:
+        reasoning_config = {
+            "effort": reasoning_config,
+            "summary": "atuo"
+        }
+    else:
+        raise TypeError("wrong reasoning type!")
+
     response = client.responses.create(
         model=model,
         input=prompt,
@@ -31,16 +43,13 @@ def get_response(prompt,model):
         text={
             "verbosity": "low"
             },
-        reasoning={
-            "effort": "low",
-            "summary": "auto"
-            }
+        reasoning=reasoning_config
         )
-    if response.output[0].summary:
+    if reasoning_effort != "none" and response.output[0].summary:
         thought_summary = response.output[0].summary[0].text
     else:
         thought_summary = "none"
-        print("no thoughts")
+        # print("no thoughts")
     generated_answer = response.output_text
     return generated_answer, thought_summary
 
@@ -77,12 +86,14 @@ if __name__ == "__main__":
     parser.add_argument("--output_dir", "-o", type=str, default="../../data/2_reference_occlusion")
     parser.add_argument("--task", "-t", type=str, default="speaker")
     parser.add_argument("--seed", "-s", type=int, default=1)
+    parser.add_argument("--reasoning", "-r", type=str, default="low")
     args = parser.parse_args()
 
     prompts = pd.read_csv(args.input, header=0)
     task = args.task
     model = args.model
-    
+    reasoning_effort = args.reasoning
+
     for i, row in tqdm(prompts.iterrows()):
         image_file = row.image_file
         image_path = f"stimuli_{task}/"+image_file
@@ -107,14 +118,14 @@ if __name__ == "__main__":
             if model == "gemini-2.5-flash":
                 config = types.GenerateContentConfig(
                     system_instruction=system_prompt,
-                    temperature=0,
+                    temperature=1,
                     thinking_config=types.ThinkingConfig(thinking_budget=2048,
                                                          include_thoughts=True)
                 )
             elif model == "gemini-2.5-pro":
                 config = types.GenerateContentConfig(
                     system_instruction=system_prompt,
-                    temperature=0, # recommended to be 1 but not deterministic
+                    temperature=1, # recommended to be 1 but not deterministic
                     thinking_config=types.ThinkingConfig(thinking_budget=2048,
                                                          include_thoughts=True)
                 )
@@ -144,13 +155,16 @@ if __name__ == "__main__":
                     continue
                 elif part.thought:
                     thought_summary = part.text
+                    break
+                    # print("check the thought summary", thought_summary)
+                    # print("check the text in the first part", response.candidates[0].content.parts[0].text)
+                    # print("check the first elemnent response.parts", response.parts[0].text)
                 else:
                     thought_summary = "none"
                     print("no thoughts")
-
-            print(response)
+            # print("final returned thought",thought_summary)
             generated_answer=response.text
-            print(generated_answer)
+            print("generated answer:",generated_answer)
 
         elif model.startswith("gpt"):
             # getting the Base64 string
@@ -181,10 +195,11 @@ if __name__ == "__main__":
                                   {"type": "input_text", "text": question},
                                   {"type": "input_image", "image_url": f"data:image/jpeg;base64,{base64_image}"}
                               ]}],
-                    model=model
+                    model=model,
+                    reasoning_effort = reasoning_effort
                 )
-            print("answer:", generated_answer)
-            print("thoughts:", thought_summary)
+            print("generated answer:", generated_answer)
+            # print("thoughts:", thought_summary)
 
         elif model.startswith("qwen"):
             encoded_image = encode_image(image_path)
@@ -223,7 +238,7 @@ if __name__ == "__main__":
         prompts.loc[i, f"{task}_answer"] = generated_answer
         prompts.loc[i, f"{task}_thought"] = thought_summary
 
-    # output_dir = args.output_dir
-    # if not os.path.exists(output_dir):
-    #     os.makedirs(output_dir)
-    # prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_{args.seed}_low.csv"), index=False)
+    output_dir = args.output_dir
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_{args.seed}_{args.reasoning}.csv"), index=False)
