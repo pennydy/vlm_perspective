@@ -17,7 +17,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 source("helpers.R")
 
 # 1. Data ----
-gpt4.1_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-gpt-4.1_2.csv", header=TRUE)
+gpt4.1_speaker.data <- read.csv("../../../data/old_files/2_reference_occlusion/listener-gpt-4.1_2.csv", header=TRUE)
 gpt4.1_speaker.data <- gpt4.1_speaker.data %>% 
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
@@ -27,7 +27,7 @@ sum(gpt4.1_speaker.data$listener_answer_correct=="yes")/120 # 0.925
 sum(gpt4.1_speaker.data$listener_answer_correct=="no") # 4
 sum(gpt4.1_speaker.data$listener_answer_correct=="none") # 5
 
-gpt5.1_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-gpt-5.1_1.csv", header=TRUE)
+gpt5.1_speaker.data <- read.csv("../../../data/2_reference_occlusion/old_files/listener-gpt-5.1_1.csv", header=TRUE)
 gpt5.1_speaker.data <- gpt5.1_speaker.data %>% 
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
@@ -37,7 +37,7 @@ sum(gpt5.1_speaker.data$listener_answer_correct=="yes")/120 # 0.99
 sum(gpt5.1_speaker.data$listener_answer_correct=="no") # 0
 sum(gpt5.1_speaker.data$listener_answer_correct=="none") # 1
 
-gpt5.1_low_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-gpt-5.1_1_low.csv", header=TRUE)
+gpt5.1_low_speaker.data <- read.csv("../../../data/old_files/2_reference_occlusion/listener-gpt-5.1_1_low.csv", header=TRUE)
 gpt5.1_low_speaker.data <- gpt5.1_low_speaker.data %>% 
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
@@ -47,7 +47,7 @@ sum(gpt5.1_low_speaker.data$listener_answer_correct=="yes")/120 # 0.992
 sum(gpt5.1_low_speaker.data$listener_answer_correct=="no") # 0
 sum(gpt5.1_low_speaker.data$listener_answer_correct=="none") # 1
 
-gemini2.5_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-gemini2.5_0.csv", header=TRUE)
+gemini2.5_speaker.data <- read.csv("../../../data/old_files/2_reference_occlusion/listener-gemini2.5_0.csv", header=TRUE)
 gemini2.5_speaker.data <- gemini2.5_speaker.data %>% 
   mutate(occlusion=as.factor(occlusion),
          distractor=as.factor(distractor),
@@ -57,7 +57,7 @@ sum(gemini2.5_speaker.data$listener_answer_correct=="yes")/120 # 0.94
 sum(gemini2.5_speaker.data$listener_answer_correct=="no") # 0
 sum(gemini2.5_speaker.data$listener_answer_correct=="none") # 7
 
-qwen3_speaker.data <- read.csv("../../../data/2_reference_occlusion/listener-qwen_1.csv", header=TRUE) # the listener results are very bad...
+qwen3_speaker.data <- read.csv("../../../data/old_files/2_reference_occlusion/listener-qwen_1.csv", header=TRUE) # the listener results are very bad...
 qwen3_speaker.data <- qwen3_speaker.data %>%
   filter(! image_file %in% c("exp2_064.jpeg", "exp2_071.jpeg", "exp2_101.jpeg", "exp2_107.jpeg")) %>% # excluding cases where it uses absolute positions and like the "highlighted box", two in condition1 and two in condition4
   mutate(occlusion=as.factor(occlusion),
