@@ -1,0 +1,121 @@
+image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought_summary,target_shape_list,target_texture_list,contain_shape,contain_color,contain_texture
+exp2_001.jpeg,cond2,absent,present,2,"triangle, triangular",black,stripe,"3,3",the target is the triangle with vertical gray and white stripes.,,"['triangle', 'triangular']",['stripe'],True,False,True
+exp2_002.jpeg,cond4,present,present,4,square,blue,checker,"3,2",pick the square containing a grey and white checkerboard pattern framed by a solid blue border.,,['square'],['checker'],True,True,True
+exp2_003.jpeg,cond3,present,absent,4,"circle, circular",red,"wavy, zigzag","1,3","the target object is the gray circle with white wavy lines, which has a red border and is located inside a dashed red square.",,"['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_004.jpeg,cond1,absent,absent,3,square,blue,checker,"3,3",select the square with a checkerboard pattern inside a blue outline.,,['square'],['checker'],True,True,True
+exp2_005.jpeg,cond2,absent,present,3,square,blue,"wavy, zigzag","2,3",the target object is the square with a wavy horizontal pattern inside and a blue border.,,['square'],"['wavy', 'zigzag']",True,True,True
+exp2_006.jpeg,cond2,absent,present,4,"circle, circular",black,checker,"2,1",pick the circle with a thick black outline and a checkered pattern inside.,,"['circle', 'circular']",['checker'],True,True,True
+exp2_007.jpeg,cond4,present,present,3,"circle, circular",red,stripe,"1,3",please select the grey vertically-striped circle that has a red outline.,,"['circle', 'circular']",['stripe'],True,True,True
+exp2_008.jpeg,cond1,absent,absent,4,"triangle, triangular",blue,stripe,"3,1",select the triangle with the blue outline and vertical stripes.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_009.jpeg,cond4,present,present,2,"circle, circular",red,"wavy, zigzag","1,1",the target is the circle with grey and white horizontal wavy lines.,,"['circle', 'circular']","['wavy', 'zigzag']",True,False,True
+exp2_010.jpeg,cond3,present,absent,3,square,red,stripe,"3,2","the target object is the square containing vertical grey stripes, outlined by a solid red border.",,['square'],['stripe'],True,True,True
+exp2_011.jpeg,cond4,present,present,2,square,black,"wavy, zigzag","1,3","the target is the square with horizontal grey and white wavy lines, enclosed in a thick black border.",,['square'],"['wavy', 'zigzag']",True,True,True
+exp2_012.jpeg,cond1,absent,absent,4,"triangle, triangular",black,"wavy, zigzag","2,3",the target object is the triangle with a wavy horizontal pattern inside.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,False,True
+exp2_013.jpeg,cond2,absent,present,2,square,red,dot,"3,2",the target object is a square with a red outline containing a pattern of many small grey dots.,,['square'],['dot'],True,True,True
+exp2_014.jpeg,cond2,absent,present,4,star,red,checker,"3,2",the target object is the star with a red border and a grey and white checkerboard pattern inside.,,['star'],['checker'],True,True,True
+exp2_015.jpeg,cond4,present,present,2,"triangle, triangular",green,dot,"3,2",please select the triangle with the green outline and the grey polka-dot pattern inside.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_016.jpeg,cond1,absent,absent,2,square,green,dot,"2,3",the target is the square with a green outline and a grey dotted pattern inside.,,['square'],['dot'],True,True,True
+exp2_017.jpeg,cond3,present,absent,4,star,green,stripe,"2,3",the target object is a green-outlined star with a gray and white vertical-striped pattern inside.,,['star'],['stripe'],True,True,True
+exp2_018.jpeg,cond3,present,absent,3,star,blue,dot,"1,1",the target object is the blue-outlined star filled with gray dots.,,['star'],['dot'],True,True,True
+exp2_019.jpeg,cond4,present,present,3,"triangle, triangular",red,dot,"2,1",the triangle with a red border and grey dots inside.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_020.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"1,1",the target object is the triangle filled with a pattern of small gray dots.,,"['triangle', 'triangular']",['dot'],True,False,True
+exp2_021.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,2",the target object is the red-bordered triangle with a vertical grey stripe pattern inside.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_022.jpeg,cond1,absent,absent,4,square,black,stripe,"3,1",the target is the square with vertical stripes and a thick black border.,,['square'],['stripe'],True,True,True
+exp2_023.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",the target is the circle with a green outline and a grey dotted pattern inside.,,"['circle', 'circular']",['dot'],True,True,True
+exp2_024.jpeg,cond2,absent,present,2,"triangle, triangular",green,stripe,"1,2",the target is the green-outlined triangle with vertical grey stripes.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_025.jpeg,cond3,present,absent,2,star,blue,dot,"1,3",the target object is the blue-bordered star with a gray polka-dot pattern inside.,,['star'],['dot'],True,True,True
+exp2_026.jpeg,cond4,present,present,2,star,black,checker,"1,1",select the star with the checkered pattern inside.,,['star'],['checker'],True,False,True
+exp2_027.jpeg,cond3,present,absent,2,star,blue,checker,"1,3","the target is the blue-outlined star with a checkered grey pattern inside, located in a cell with a dashed red border.",,['star'],['checker'],True,True,True
+exp2_028.jpeg,cond2,absent,present,3,"triangle, triangular",blue,dot,"1,1",the target object is the triangle with the blue outline and a grey dotted pattern inside.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_029.jpeg,cond1,absent,absent,4,"circle, circular",red,"wavy, zigzag","1,3",select the circle with the red outline and wavy gray pattern.,,"['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_030.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","3,2",select the green-bordered circle with the wavy pattern inside.,,"['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_031.jpeg,cond3,present,absent,3,"circle, circular",green,checker,"2,1",select the checkered circle with the green outline.,,"['circle', 'circular']",['checker'],True,True,True
+exp2_032.jpeg,cond3,present,absent,4,"triangle, triangular",red,stripe,"3,3",please select the triangle with a red border and vertical grey stripes.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_033.jpeg,cond1,absent,absent,3,star,green,stripe,"3,3",select the star with the vertical gray stripes and green outline.,,['star'],['stripe'],True,True,True
+exp2_034.jpeg,cond4,present,present,4,square,red,dot,"1,3",the target object is the square with a gray polka-dot pattern and a red border.,,['square'],['dot'],True,True,True
+exp2_035.jpeg,cond4,present,present,3,star,black,dot,"3,2",select the star with the black outline.,,['star'],['dot'],True,True,False
+exp2_036.jpeg,cond2,absent,present,4,star,green,dot,"2,1",the target is the star with a green outline and a grey dotted pattern inside.,,['star'],['dot'],True,True,True
+exp2_037.jpeg,cond3,present,absent,3,"triangle, triangular",black,"wavy, zigzag","1,1",the target object is the triangle filled with a grey and white wavy pattern.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,False,True
+exp2_038.jpeg,cond3,present,absent,2,"circle, circular",red,stripe,"3,3",please select the circle with vertical stripes.,,"['circle', 'circular']",['stripe'],True,False,True
+exp2_039.jpeg,cond4,present,present,4,"triangle, triangular",blue,"wavy, zigzag","3,1",the target object is a triangle with a blue border and grey wavy lines inside.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_040.jpeg,cond1,absent,absent,4,square,blue,stripe,"1,3",the target object is a square with a blue border and a pattern of vertical grey and white stripes inside.,,['square'],['stripe'],True,True,True
+exp2_041.jpeg,cond4,present,present,2,"circle, circular",red,dot,"3,1",the target object is the circle with a red border and a grey dotted pattern.,,"['circle', 'circular']",['dot'],True,True,True
+exp2_042.jpeg,cond1,absent,absent,3,"circle, circular",red,"wavy, zigzag","3,3",the target is the wavy-patterned circle with a red border.,,"['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_043.jpeg,cond2,absent,present,4,star,green,"wavy, zigzag","1,1",the target is the star with a green outline and horizontal wavy grey stripes inside.,,['star'],"['wavy', 'zigzag']",True,True,True
+exp2_044.jpeg,cond3,present,absent,3,square,red,dot,"1,3","the target is the square filled with a pattern of gray dots, outlined with a solid red border.",,['square'],['dot'],True,True,True
+exp2_045.jpeg,cond1,absent,absent,2,"triangle, triangular",black,stripe,"2,1",the target object is the triangle with a vertical striped pattern inside.,,"['triangle', 'triangular']",['stripe'],True,False,True
+exp2_046.jpeg,cond2,absent,present,4,star,red,"wavy, zigzag","2,1",pick the star with a red border and wavy lines inside.,,['star'],"['wavy', 'zigzag']",True,True,True
+exp2_047.jpeg,cond4,present,present,3,square,green,stripe,"1,3","the target object is the square with vertical gray stripes, located inside a green frame.",,['square'],['stripe'],True,True,True
+exp2_048.jpeg,cond2,absent,present,3,square,red,stripe,"3,3","the target object is a square with gray vertical stripes, outlined in red, and it is located directly below a dotted circle.",,['square'],['stripe'],True,True,True
+exp2_049.jpeg,cond4,present,present,3,square,green,stripe,"1,1",select the box with vertical grey and white stripes inside a solid green frame.,,['square'],['stripe'],False,True,True
+exp2_050.jpeg,cond3,present,absent,3,star,red,stripe,"2,3",the target is the star with vertical gray stripes and a red border.,,['star'],['stripe'],True,True,True
+exp2_051.jpeg,cond1,absent,absent,3,"triangle, triangular",black,"wavy, zigzag","2,3",the target object is the triangle with a wavy horizontal pattern inside.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,False,True
+exp2_052.jpeg,cond3,present,absent,3,"triangle, triangular",black,checker,"2,1",pick the triangle with the checkered pattern inside.,,"['triangle', 'triangular']",['checker'],True,False,True
+exp2_053.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,1",select the triangle with a red border and vertical stripes.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_054.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",select the green-outlined triangle with a checkerboard pattern.,,"['triangle', 'triangular']",['checker'],True,True,True
+exp2_055.jpeg,cond1,absent,absent,2,"triangle, triangular",blue,dot,"3,3",the target is the blue-outlined triangle containing a pattern of small grey dots.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_056.jpeg,cond2,absent,present,3,"triangle, triangular",blue,"wavy, zigzag","3,2",pick the triangle with the blue outline and the wavy pattern inside.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_057.jpeg,cond4,present,present,3,"triangle, triangular",blue,"wavy, zigzag","3,1",the target object is the blue-bordered triangle filled with grey wavy lines.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_058.jpeg,cond3,present,absent,2,"circle, circular",green,dot,"3,3",the target object is the green circle filled with small grey dots.,,"['circle', 'circular']",['dot'],True,True,True
+exp2_059.jpeg,cond3,present,absent,3,star,black,"wavy, zigzag","2,1","the target object is a five-pointed star filled with a grey and white wavy pattern, surrounded by a thick black outline.",,['star'],"['wavy', 'zigzag']",True,True,True
+exp2_060.jpeg,cond1,absent,absent,2,"circle, circular",red,"wavy, zigzag","2,1",selection: the circle with wavy lines.,,"['circle', 'circular']","['wavy', 'zigzag']",True,False,True
+exp2_061.jpeg,cond3,present,absent,2,star,green,stripe,"2,1",select the star with green outlines and vertical grey stripes.,,['star'],['stripe'],True,True,True
+exp2_062.jpeg,cond1,absent,absent,4,square,green,dot,"2,3",the target object is a square with a solid green border and a grey dotted pattern inside.,,['square'],['dot'],True,True,True
+exp2_063.jpeg,cond2,absent,present,2,"triangle, triangular",red,stripe,"3,2",the target object is a triangle with vertical grey stripes and a red outline.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_064.jpeg,cond1,absent,absent,3,star,red,dot,"1,2",select the red-outlined star filled with dots.,,['star'],['dot'],True,True,True
+exp2_065.jpeg,cond3,present,absent,2,square,blue,checker,"3,2","the target object is a square with a gray and white checkerboard pattern, outlined by a solid blue border.",,['square'],['checker'],True,True,True
+exp2_066.jpeg,cond2,absent,present,4,"circle, circular",black,dot,"1,1",the target object is the circle with a thick black outline filled with a pattern of small grey dots.,,"['circle', 'circular']",['dot'],True,True,True
+exp2_067.jpeg,cond4,present,present,3,square,blue,"wavy, zigzag","2,1",select the wave pattern enclosed in a blue frame.,,['square'],"['wavy', 'zigzag']",False,True,False
+exp2_068.jpeg,cond4,present,present,4,star,black,stripe,"2,1",the target is the star with vertical gray and white stripes and a thick black outline.,,['star'],['stripe'],True,True,True
+exp2_069.jpeg,cond2,absent,present,2,square,green,dot,"1,1",select the square with the green border and a dotted pattern inside.,,['square'],['dot'],True,True,True
+exp2_070.jpeg,cond1,absent,absent,4,square,green,checker,"1,3",select the square with a green border and a grey and white checkered pattern inside.,,['square'],['checker'],True,True,True
+exp2_071.jpeg,cond4,present,present,3,square,black,checker,"1,2",the target image is the checkerboard pattern with a black border.,,['square'],['checker'],False,True,True
+exp2_072.jpeg,cond3,present,absent,2,star,black,stripe,"3,2",the target object is the striped star.,,['star'],['stripe'],True,False,True
+exp2_073.jpeg,cond4,present,present,2,star,green,stripe,"3,2",the target object is the green-outlined star with a grey and white vertical striped pattern inside.,,['star'],['stripe'],True,True,True
+exp2_074.jpeg,cond2,absent,present,3,square,black,"wavy, zigzag","1,3","select the square with the wavy, horizontal grey and white lines.",,['square'],"['wavy', 'zigzag']",True,False,True
+exp2_075.jpeg,cond1,absent,absent,2,star,red,"wavy, zigzag","3,2",the target is a star with a red border and a grey wavy pattern inside.,,['star'],"['wavy', 'zigzag']",True,True,True
+exp2_076.jpeg,cond1,absent,absent,2,"triangle, triangular",green,stripe,"1,3",the target is the green-outlined triangle with vertical grey stripes inside.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_077.jpeg,cond3,present,absent,3,"circle, circular",blue,stripe,"1,3",the target object is a blue-outlined circle filled with vertical grey and white stripes.,,"['circle', 'circular']",['stripe'],True,True,True
+exp2_078.jpeg,cond4,present,present,4,"triangle, triangular",red,stripe,"2,1",the target is the triangle with a red border and vertical grey stripes inside.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_079.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",select the circle with a green border and a grey dotted pattern.,,"['circle', 'circular']",['dot'],True,True,True
+exp2_080.jpeg,cond3,present,absent,3,"triangle, triangular",blue,dot,"2,3",the target is the blue-outlined triangle filled with grey polka dots.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_081.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",the target object is the triangle with the green outline and the checkered pattern.,,"['triangle', 'triangular']",['checker'],True,True,True
+exp2_082.jpeg,cond3,present,absent,2,"triangle, triangular",green,stripe,"2,1",the target object is a triangle with a green border and vertical grey and white stripes inside.,,"['triangle', 'triangular']",['stripe'],True,True,True
+exp2_083.jpeg,cond1,absent,absent,3,star,red,dot,"3,3",select the star with a red border and a grey dotted fill.,,['star'],['dot'],True,True,True
+exp2_084.jpeg,cond4,present,present,4,"circle, circular",black,"wavy, zigzag","2,1",the target is the wavy-patterned circle with a solid black border.,,"['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_085.jpeg,cond3,present,absent,2,"triangle, triangular",green,"wavy, zigzag","1,2",select the triangle with a green border and gray wavy lines.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_086.jpeg,cond4,present,present,3,star,black,dot,"2,3",please select the star that has a dotted pattern inside and a thick black outline.,,['star'],['dot'],True,True,True
+exp2_087.jpeg,cond2,absent,present,3,star,black,checker,"1,2",the target object is the star with a checkered pattern inside.,,['star'],['checker'],True,False,True
+exp2_088.jpeg,cond1,absent,absent,4,"circle, circular",red,checker,"3,2",select the red-outlined circle with the grey and white checkerboard pattern inside.,,"['circle', 'circular']",['checker'],True,True,True
+exp2_089.jpeg,cond3,present,absent,4,square,black,dot,"3,3",please select the square box with a grey dotted pattern and a black border.,,['square'],['dot'],True,True,True
+exp2_090.jpeg,cond3,present,absent,3,"triangle, triangular",green,dot,"3,2",the target object is a green-outlined triangle filled with a grey dotted pattern.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_091.jpeg,cond1,absent,absent,3,square,black,"wavy, zigzag","2,1",the target is the square with horizontal wavy lines and a thick black border.,,['square'],"['wavy', 'zigzag']",True,True,True
+exp2_092.jpeg,cond2,absent,present,3,"triangle, triangular",red,dot,"1,3",the target is the red-outlined triangle containing a grey polka-dot pattern.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_093.jpeg,cond4,present,present,3,square,red,"wavy, zigzag","3,2",select the square containing the grey wavy pattern.,,['square'],"['wavy', 'zigzag']",True,False,True
+exp2_094.jpeg,cond2,absent,present,4,star,green,dot,"1,3",the target is the star with a green outline and a grey dotted pattern inside.,,['star'],['dot'],True,True,True
+exp2_095.jpeg,cond1,absent,absent,2,"circle, circular",blue,dot,"1,3","the target object is a circle with a blue outline, filled with a grey polka-dot pattern.",,"['circle', 'circular']",['dot'],True,True,True
+exp2_096.jpeg,cond4,present,present,4,star,green,dot,"1,3",the target is the green-outlined star with a grey dotted pattern inside.,,['star'],['dot'],True,True,True
+exp2_097.jpeg,cond3,present,absent,3,square,black,stripe,"3,2",the target is the square with vertical grey and white stripes.,,['square'],['stripe'],True,False,True
+exp2_098.jpeg,cond1,absent,absent,2,square,blue,stripe,"1,2",the target is the square with vertical gray stripes and a blue border.,,['square'],['stripe'],True,True,True
+exp2_099.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","2,3",the circle with a green border and gray wavy lines.,,"['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_100.jpeg,cond4,present,present,2,square,green,dot,"3,2","the target is the square filled with a grid of small grey dots, outlined in green.",,['square'],['dot'],True,True,True
+exp2_101.jpeg,cond4,present,present,2,"circle, circular",green,checker,"3,3",the target is the circle with a grey and white checkerboard pattern inside.,,"['circle', 'circular']",['checker'],True,False,True
+exp2_102.jpeg,cond1,absent,absent,4,square,black,checker,"3,1",the target object is the square with a black border and a grey-and-white checkered pattern inside.,,['square'],['checker'],True,True,True
+exp2_103.jpeg,cond3,present,absent,2,square,red,dot,"2,1","the target is the square containing a grid of grey dots, located between a question mark curtain and a circle filled with the same grey dots.",,['square'],['dot'],True,False,True
+exp2_104.jpeg,cond2,absent,present,2,"circle, circular",green,stripe,"2,3",the target is the circle with vertical stripes and a green border.,,"['circle', 'circular']",['stripe'],True,True,True
+exp2_105.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"2,1",the target is the triangle filled with a grey polka-dot pattern.,,"['triangle', 'triangular']",['dot'],True,False,True
+exp2_106.jpeg,cond4,present,present,4,"triangle, triangular",green,dot,"2,1",the target is the green-outlined triangle filled with a grey polka-dot pattern.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_107.jpeg,cond1,absent,absent,4,"triangle, triangular",red,"wavy, zigzag","3,3",the target object is the triangle with a red border and gray wavy lines inside.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_108.jpeg,cond3,present,absent,4,square,red,"wavy, zigzag","1,3","the target is the square with a gray and white wavy pattern inside, surrounded by a red border.",,['square'],"['wavy', 'zigzag']",True,True,True
+exp2_109.jpeg,cond3,present,absent,2,"triangle, triangular",red,dot,"3,3",the target is the triangle with a dotted pattern.,,"['triangle', 'triangular']",['dot'],True,False,True
+exp2_110.jpeg,cond2,absent,present,2,"triangle, triangular",green,dot,"2,3",select the dotted triangle with the green outline.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_111.jpeg,cond1,absent,absent,4,"triangle, triangular",green,"wavy, zigzag","3,1",the target is the triangle with a green border and wavy horizontal lines.,,"['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_112.jpeg,cond2,absent,present,4,"circle, circular",black,"wavy, zigzag","3,2","the target object is a circle with a black border and a wavy, horizontal zigzag pattern inside. it is positioned directly above a triangle that has the same wavy pattern.",,"['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_113.jpeg,cond3,present,absent,2,"circle, circular",red,"wavy, zigzag","3,2",select the circle with a gray and white wavy pattern.,,"['circle', 'circular']","['wavy', 'zigzag']",True,False,True
+exp2_114.jpeg,cond1,absent,absent,2,square,red,"wavy, zigzag","1,2",the target is the square with a wavy gray and white pattern inside.,,['square'],"['wavy', 'zigzag']",True,False,True
+exp2_115.jpeg,cond2,absent,present,4,"triangle, triangular",green,dot,"3,3",please select the green triangle with a grey dotted pattern.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_116.jpeg,cond3,present,absent,2,star,black,stripe,"3,3",the target object is a five-pointed star with black and white vertical stripes inside it.,,['star'],['stripe'],True,True,True
+exp2_117.jpeg,cond4,present,present,2,star,black,"wavy, zigzag","3,3",the target object is the star with a black outline and wavy horizontal grey stripes inside.,,['star'],"['wavy', 'zigzag']",True,True,True
+exp2_118.jpeg,cond2,absent,present,3,star,black,dot,"3,1",the target object is the star with a black outline and a dotted fill pattern inside.,,['star'],['dot'],True,True,True
+exp2_119.jpeg,cond1,absent,absent,4,"triangle, triangular",red,dot,"1,2",the target object is the triangle with a dotted pattern and a red border.,,"['triangle', 'triangular']",['dot'],True,True,True
+exp2_120.jpeg,cond4,present,present,3,square,blue,stripe,"2,1","the target object is the square containing a pattern of vertical gray and white stripes, enclosed in a solid blue border.",,['square'],['stripe'],True,True,True

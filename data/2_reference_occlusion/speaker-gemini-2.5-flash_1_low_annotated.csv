@@ -1,5 +1,5 @@
-image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought_summary
-exp2_001.jpeg,cond2,absent,present,2,"triangle, triangular",black,stripe,"3,3",The triangle with vertical stripes.,"**My Thought Process: Describing the Target Object**
+image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought_summary,target_shape_list,target_texture_list,contain_shape,contain_color,contain_texture
+exp2_001.jpeg,cond2,absent,present,2,"triangle, triangular",black,stripe,"3,3",the triangle with vertical stripes.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, keeping in mind they *might* see things I don't. The instructions specifically mention a ""red curtain with a question mark"" hiding objects, so I need to be careful. Even though I don't *see* a curtain in this image, I'll assume it's possible the listener has access to a more complete view. I need to avoid relying on spatial relationships that might be different for the listener, like ""bottom right"" or ""row 3, column 3.""
 
@@ -14,8 +14,8 @@ I'm making a mental list of alternatives. ""The striped triangle"" is good, mayb
 The instructions specifically talk about hidden objects, so the best approach is to make a description that covers all possible cases that might be there.
 
 Based on the visible objects and a healthy dose of paranoia, ""the triangle with vertical stripes"" is a safe and robust choice. It uses a combination of properties to create an unambiguous description. I feel confident that this description is specific enough.
-"
-exp2_002.jpeg,cond4,present,present,4,square,blue,checker,"3,2","The checkered pattern with the blue outline, which is directly above the wavy pattern.","**Analyzing the Target Object for Precise Identification**
+","['triangle', 'triangular']",['stripe'],True,False,True
+exp2_002.jpeg,cond4,present,present,4,square,blue,checker,"3,2","the checkered pattern with the blue outline, which is directly above the wavy pattern.","**Analyzing the Target Object for Precise Identification**
 
 Okay, here's the breakdown of my thought process. I need to describe this target object so someone else, an expert in this scenario, can identify it. The challenge is to be specific enough without relying on information I *don't* have. The dashed red box isn't usable as it's not visible to the other person. They know what's behind those red curtains, I don't.
 
@@ -28,8 +28,8 @@ Now, for a description, my first thought is to just say ""the checkered pattern"
 I can also incorporate relative positions. I'm consciously avoiding absolute spatial references because they're not robust. The target is above a wavy pattern with a green outline and to the right of an empty space. To make sure my description stands, I can also say, ""The checkered pattern directly above the wavy pattern.""
 
 Combining it all, ""The checkered pattern with the blue outline."" appears to be the most robust and unambiguous, assuming that the hidden patterns would have different features and not be easily confused with the target object.
-"
-exp2_003.jpeg,cond3,present,absent,4,"circle, circular",red,"wavy, zigzag","1,3",The object that is a circle with a red border and a grey wavy pattern inside.,"**Deconstructing the Target Object for Identification**
+",['square'],['checker'],False,True,True
+exp2_003.jpeg,cond3,present,absent,4,"circle, circular",red,"wavy, zigzag","1,3",the object that is a circle with a red border and a grey wavy pattern inside.,"**Deconstructing the Target Object for Identification**
 
 Okay, here's the process I'm following to describe this target object. The goal is to provide enough information that someone, who can see all objects, can pinpoint the one I'm focused on. I *cannot* use positional descriptions; it's all about intrinsic characteristics.
 
@@ -42,8 +42,8 @@ Then I ran through a mental checklist of potential ambiguities: Are there other 
 The prompt is clear: *I* only know what I see. My description must be based on my limited view. So, I need to focus on what makes the target object unique within the set of what *I* know, and what I can observe. If they see more, that's fine. My description will remain valid. I can't say, ""the only circle,"" because that's a positional and not an intrinsic description.
 
 I concluded that the combination of ""circle,"" ""red outline,"" and ""grey wavy pattern"" is specific enough to uniquely identify the target object. It's robust even if other red-bordered circles or wavy patterns are hidden. My description would still work. It's unambiguous given my perspective. I'm going to stick with: ""The object that is a circle with a red outline and a grey wavy pattern inside."" That should be clear and precise.
-"
-exp2_004.jpeg,cond1,absent,absent,3,square,blue,checker,"3,3",The object with the checkerboard pattern inside.,"**My Thought Process: Describing the Checkerboard**
+","['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_004.jpeg,cond1,absent,absent,3,square,blue,checker,"3,3",the object with the checkerboard pattern inside.,"**My Thought Process: Describing the Checkerboard**
 
 Okay, the goal is to describe this checkerboard pattern so someone else can identify it, without using its location on the grid. I need to be precise and unambiguous. First, I'm noting the other objects present: a dotted triangle, a green dotted star, and a blue striped star.
 
@@ -71,8 +71,8 @@ My description must be robust. Therefore:
 *   ""The object with the blue outline and checkerboard pattern"" is more robust and specific.
 
 Ultimately, ""The object that has a checkerboard pattern inside."" is the best. The pattern itself is unambiguous. Considering the unknown, I should be as specific as possible.
-"
-exp2_005.jpeg,cond2,absent,present,3,square,blue,"wavy, zigzag","2,3",The blue square with the wavy pattern.,"**My Thought Process on Identifying the Target Object**
+",['square'],['checker'],False,False,True
+exp2_005.jpeg,cond2,absent,present,3,square,blue,"wavy, zigzag","2,3",the blue square with the wavy pattern.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to describe a specific object in this image so someone else can identify it. The key is to be precise without relying on absolute spatial references, as the arrangement might be different for them. Also, I must note that this time there are no objects hidden behind a red curtain, so all objects are visible.
 
@@ -111,8 +111,8 @@ That covers:
 *   **Pattern:** Wavy (distinguishes it from checkered and striped patterns)
 
 This description is robust, specific, and doesn't rely on spatial location. It nails the target object precisely.
-"
-exp2_006.jpeg,cond2,absent,present,4,"circle, circular",black,checker,"2,1",Please select the circle with the black outline.,"**My Thought Process: Describing the Target Object**
+",['square'],"['wavy', 'zigzag']",True,True,True
+exp2_006.jpeg,cond2,absent,present,4,"circle, circular",black,checker,"2,1",please select the circle with the black outline.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, but they can see things I can't. I'm looking at this image, and I need to craft a description that uniquely identifies the target without relying on spatial cues. I also have to assume that what's behind the ""red curtain"" is visible to the listener but not me, so I need to choose my descriptors carefully.
 
@@ -131,8 +131,8 @@ I'm thinking about the listener here. If there were multiple shapes with black o
 The hint about hidden objects makes me consider a more specific description. I don't know what the hidden objects are, but I do know the listener can see them. However, since I can only describe the visible objects, I will describe the target with the assumption that I have sufficient information to differentiate it from all the other visible objects.
 
 Therefore, ""the circle with the black outline"" is the best way to go.
-"
-exp2_007.jpeg,cond4,present,present,3,"circle, circular",red,stripe,"1,3",Please select the striped circle that has a red outline.,"**My Analysis of the Object Description Task**
+","['circle', 'circular']",['checker'],True,True,False
+exp2_007.jpeg,cond4,present,present,3,"circle, circular",red,stripe,"1,3",please select the striped circle that has a red outline.,"**My Analysis of the Object Description Task**
 
 Okay, here's the situation: I need to describe a specific object in a grid, the target, to someone else so they can identify it. I know the target is highlighted by a dashed red box. Crucially, I have to be careful about *how* I describe it, because the other person might see things differently—specifically, they might know what's behind the red curtains that obscure some cells. I, however, do *not* know what's behind them, indicated by the question marks. My descriptions should be robust even if the grid's spatial arrangement changes for them.
 
@@ -152,8 +152,8 @@ The prompt specifically mentions I can't be sure of the spatial arrangement. The
 I also have to account for the curtains, but they don't affect my description, because my target isn't behind one. The other person knows what's hidden by the curtains, but I do *not*. So, what is behind those curtains is not relevant.
 
 Therefore, the best description of the target object, independent of the grid's arrangement, is ""the striped circle with the red outline."" This is concise, unambiguous, and solely reliant on intrinsic properties of the visible target. I could also say ""the circle with vertical stripes and a red border."" Both are good.
-"
-exp2_008.jpeg,cond1,absent,absent,4,"triangle, triangular",blue,stripe,"3,1",Please select the blue triangle with vertical stripes.,"**Analyzing the Target Object for Description**
+","['circle', 'circular']",['stripe'],True,True,True
+exp2_008.jpeg,cond1,absent,absent,4,"triangle, triangular",blue,stripe,"3,1",please select the blue triangle with vertical stripes.,"**Analyzing the Target Object for Description**
 
 Okay, so the goal is to describe an object such that someone who *can* see everything in the visual space can still identify *which* object I'm referring to, even though I can't see the full visual space myself. I've got to create a description that's good enough for them to pick out the target, even though they have a more complete view. There are no ""red curtains with question marks"" in this case, so I can see everything. The target is a blue triangle with vertical stripes in the top right cell, and it's highlighted with a red dashed box.
 
@@ -169,8 +169,8 @@ The pattern of vertical stripes is clearly unique; nothing else in the image sha
 I could say ""the blue triangle with vertical stripes,"" or ""the triangle with vertical stripes."" The ""triangle"" by itself should be enough, since no other triangles are present. Likewise, ""the object with vertical stripes"" could work on its own.
 
 Now, considering the directions, it's about being clear and concise. If the objects *were* rearranged, then spatial positions would be bad, so let's stick to intrinsic properties, and not location. I'll describe its form, color, and pattern. The color and pattern are useful in the description. So, ""the blue triangle with vertical stripes"" is probably the best. It's very specific. Even just ""the triangle"" would be enough, given the layout. The instructions say to give a clear and unambiguous description. I will choose ""the blue triangle with vertical stripes"" for the most clarity, since it uses its shape, color, and pattern.
-"
-exp2_009.jpeg,cond4,present,present,2,"circle, circular",red,"wavy, zigzag","1,1",The circle with the wavy pattern and the red border.,"**Analyzing the Target Image for Robust Description**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_009.jpeg,cond4,present,present,2,"circle, circular",red,"wavy, zigzag","1,1",the circle with the wavy pattern and the red border.,"**Analyzing the Target Image for Robust Description**
 
 Okay, the task is to describe this target image, a grey circle with a wavy pattern and a red outline, in a way that's robust to different arrangements and hidden elements. The key is to avoid spatial references and focus on inherent features. I'm focusing on the instruction, which says ""the other person knows.""
 
@@ -191,8 +191,8 @@ Since the other person *knows*, I'm going to assume worst-case scenarios behind 
 The goal is to provide a description that would remain unique, even with a hidden object, that does not share *both* the wavy pattern and the red border with the target.
 
 Therefore, the most robust answer is to just give a combined description, ""the circle with the wavy pattern and the red border."" This description uniquely identifies the target, given the information I have.
-"
-exp2_010.jpeg,cond3,present,absent,3,square,red,stripe,"3,2",Please select the object with the vertical stripes.,"**My Thought Process: Describing the Target Object**
+","['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_010.jpeg,cond3,present,absent,3,square,red,stripe,"3,2",please select the object with the vertical stripes.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object on this grid so someone else can identify it, but they can't see the highlighting I can see. I need to avoid any positional references like ""top-left"" and can't make assumptions about what's behind the red curtains, even though the listener might know. I need to describe *only* what I can see.
 
@@ -207,8 +207,8 @@ So, the simplest and most unambiguous description would be, ""the object with ve
 The prompt specifically says that I *don’t* know what’s behind the curtains. I have to avoid guessing about that. So, I shouldn't base my description on anything that might be hidden.
 
 Therefore, the best approach is to say ""the object with vertical stripes."" That's simple, accurate, and avoids any ambiguity or unnecessary detail. That description should allow the listener to identify the target.
-"
-exp2_011.jpeg,cond4,present,present,2,square,black,"wavy, zigzag","1,3",Please select the square that has a black border and a grey and white wavy pattern inside.,"**My Thought Process: Describing the Target Object**
+",['square'],['stripe'],False,False,True
+exp2_011.jpeg,cond4,present,present,2,square,black,"wavy, zigzag","1,3",please select the square that has a black border and a grey and white wavy pattern inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, so I need to describe this object so someone else can pick it out, but they might be looking at a slightly different setup. I'm seeing a grid, and the target is highlighted with a dashed red box – which is just for me, I shouldn't mention it. Also, there are these red curtains with question marks. I don't know what's behind them, but the other person does. That's a bit of a wrinkle, I need to make sure my description is robust.
 
@@ -227,8 +227,8 @@ So, I could say ""the square with the wavy grey and white pattern"". Or, to be r
 Even if there are objects that look similar to the target behind the curtains, the black border and the wavy grey and white pattern is enough to be clear.
 
 So, the other person needs to choose ""the square with the black border and the wavy grey and white pattern."" I'm confident that should be unambiguous.
-"
-exp2_012.jpeg,cond1,absent,absent,4,"triangle, triangular",black,"wavy, zigzag","2,3",The triangle with wavy lines inside it.,"**My Identification Strategy**
+",['square'],"['wavy', 'zigzag']",True,True,True
+exp2_012.jpeg,cond1,absent,absent,4,"triangle, triangular",black,"wavy, zigzag","2,3",the triangle with wavy lines inside it.,"**My Identification Strategy**
 
 Okay, the task is to clearly describe an object so someone else can pinpoint it. I need to avoid using absolute spatial terms since their perspective might be different. I also need to be aware that some objects could be hidden, though I can see everything in this particular image.
 
@@ -245,8 +245,8 @@ So, if I just say ""the triangle"", should the listener immediately know which o
 *   **Fill pattern:** Dots (2 circles), Vertical stripes (1 circle), Wavy lines (triangle, star).
 
 ""The triangle"" it is.
-"
-exp2_013.jpeg,cond2,absent,present,2,square,red,dot,"3,2",Please select the square object that is filled with small gray dots.,"**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,False,True
+exp2_013.jpeg,cond2,absent,present,2,square,red,dot,"3,2",please select the square object that is filled with small gray dots.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, but they *can't* see the visual context I'm seeing, specifically a red dashed box. I need to focus on what *is* visible and avoid terms dependent on relative positions. I need to focus on what *makes* it unique.
 
@@ -269,8 +269,8 @@ Now, let's consider potential listener configurations: If the listener sees *exa
 Therefore, ""the square with the gray dots"" seems like the *most robust* and most natural description. It immediately sets it apart from the other visible objects. The red border could be added, but the dot pattern makes it unique already. And so the statement ""the square with the gray dots and a red border"" seems best.
 
 Let's try to be as explicit as possible without being overly verbose. So, I think ""The square with the small gray dots"" or ""The dotted square with the red outline"" makes the most sense. The dots are clearly gray, and the outline is clearly red.
-"
-exp2_014.jpeg,cond2,absent,present,4,star,red,checker,"3,2",Please select the star that has a red outline.,"**My Thought Process: Identifying the Target Object**
+",['square'],['dot'],True,False,True
+exp2_014.jpeg,cond2,absent,present,4,star,red,checker,"3,2",please select the star that has a red outline.,"**My Thought Process: Identifying the Target Object**
 
 Okay, the task is to describe a specific object so someone else can pick it out, but they can't see the same thing I can. No spatial cues allowed! I also have to consider that some objects are hidden from my view, though the listener *can* see them. This means I can't rely on the absence of features in my descriptions. So, I need to focus on distinguishing features.
 
@@ -289,8 +289,8 @@ I could also say, ""It's the star with the checkered pattern."" The square also 
 But, given the hidden objects, it might be safer to combine both features. What if there *is* a hidden object that also has a red outline, but isn't a star? Describing it as ""the star with the red outline"" makes the description very robust. That's the best option.
 
 So, the optimal description would be: **""The star with the red outline.""** It's clear, precise, and most likely to hold up even if there are hidden objects.
-"
-exp2_015.jpeg,cond4,present,present,2,"triangle, triangular",green,dot,"3,2",Select the triangle that has a green outline and is filled with grey dots.,"**Analyzing and Describing the Target Object**
+",['star'],['checker'],True,True,False
+exp2_015.jpeg,cond4,present,present,2,"triangle, triangular",green,dot,"3,2",select the triangle that has a green outline and is filled with grey dots.,"**Analyzing and Describing the Target Object**
 
 Okay, so I need to describe this object in a way that allows someone else to identify it, even though their perspective might be different from mine. They can see everything, including what's behind the curtains, while I'm limited to what's visible. I need to avoid any descriptions based on its *location* relative to the curtains or empty spaces, as those relationships could change.
 
@@ -312,8 +312,8 @@ This strategy ensures that the listener, even with a different perspective and t
 
 ""Select the triangle with a green outline that is filled with grey dots.""
 This is a precise and unambiguous description.
-"
-exp2_016.jpeg,cond1,absent,absent,2,square,green,dot,"2,3",The green square filled with dots.,"**My Thought Process on Describing the Target Object**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_016.jpeg,cond1,absent,absent,2,square,green,dot,"2,3",the green square filled with dots.,"**My Thought Process on Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, avoiding any spatial references that might change. The target is a green square with grey dots inside, highlighted by a red dashed box, but I need to be careful of what's behind a curtain that I can't see, even though the listener can. I need to be as unambiguous as possible.
 
@@ -330,8 +330,8 @@ So, let's list its features: square shape, green border, grey dots. Comparing th
 *   ""The green object with dots.""
 
 I can't know what the listener sees, only what I see. Given the constraint to not rely on *absence*, combining more features seems the safest bet. I'm going to describe the object as ""The green square with grey dots.""
-"
-exp2_017.jpeg,cond3,present,absent,4,star,green,stripe,"2,3",Please select the green star that has vertical stripes inside.,"**My Thought Process on Describing the Target Object**
+",['square'],['dot'],True,True,True
+exp2_017.jpeg,cond3,present,absent,4,star,green,stripe,"2,3",please select the green star that has vertical stripes inside.,"**My Thought Process on Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, knowing they see more than I do. I can see a green star with vertical grey and white stripes, but there's a red curtain hiding some objects. The listener can see everything. My description has to be unique, even considering what's hidden.
 
@@ -342,8 +342,8 @@ The target is a green star with vertical stripes. I’m thinking, ""Is that enou
 The instructions say to describe based on what *I* see but acknowledge the listener has more information. I need to make the *best* description I can, assuming that the listener can pick the target out from the full image. It’s likely the target has a unique combination of features in the entire set of objects.
 
 My best strategy is to combine all the specific, unique features I can see. So, here's what I've come up with: ""The green star with vertical stripes."" I'm hoping this is enough!
-"
-exp2_018.jpeg,cond3,present,absent,3,star,blue,dot,"1,1",The blue star with the grey dotted pattern.,"**My Thought Process: Describing the Target Object**
+",['star'],['stripe'],True,True,True
+exp2_018.jpeg,cond3,present,absent,3,star,blue,dot,"1,1",the blue star with the grey dotted pattern.,"**My Thought Process: Describing the Target Object**
 
 Okay, so I need to describe this object so someone else can pick it out, even though they might be looking at a different arrangement. The target is a blue star with a grey, dotted fill. There's a 3x3 grid, but the listener might not see the objects in the same locations. I *don't* know what's behind two red curtains with question marks, but the listener *does*. This is going to influence my description, as I need to be careful to assume they can utilize what they know, while I am restricted by what I can see.
 
@@ -358,8 +358,8 @@ Let's see: the listener needs to pick the target out from a *possible* set. So, 
 The most precise description I can give is a combination of these unique features. I need to be as robust as possible. I could say ""the star with grey dots"". However, that might not be sufficient if there are other stars behind the curtains. So, let me be very specific. The most comprehensive is: ""The blue star with the grey dotted fill."" This describes the shape, outline color, and fill.
 
 I'm trying to provide enough detail that even with those hidden objects, my description will still point to the correct object. Even if there are other stars or objects with dotted fills, that specific *combination* should be unique. So, my conclusion is that the description needs to be as comprehensive as possible. My best bet is ""The blue star with the grey dotted fill.""
-"
-exp2_019.jpeg,cond4,present,present,3,"triangle, triangular",red,dot,"2,1",The triangle that has a red border and is filled with small gray dots.,"**My Thought Process: Describing the Target Object**
+",['star'],['dot'],True,True,True
+exp2_019.jpeg,cond4,present,present,3,"triangle, triangular",red,dot,"2,1",the triangle that has a red border and is filled with small gray dots.,"**My Thought Process: Describing the Target Object**
 
 Okay, so the goal is to describe an object, the target, to someone who can see everything, even things I can't. They can see behind these curtains, so I need to avoid spatial descriptions like ""top left"" or anything relative to my view. The focus is on unique visual attributes. My task is to produce a descriptive summary so that the listener can identify the target object.
 
@@ -385,8 +385,8 @@ So, the key features:
 *   Fill: Small dots
 
 I can clearly and concisely describe the target object as ""The triangle that has a red border and is filled with small gray dots."" This combines the two unique, critical visual attributes.
-"
-exp2_020.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"1,1",The triangle filled with dots.,"**My Thought Process on Describing the Target Object**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_020.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"1,1",the triangle filled with dots.,"**My Thought Process on Describing the Target Object**
 
 Okay, so the goal is to describe an object, the ""target,"" in such a way that someone else can identify it, even though they might not be seeing exactly the same arrangement or have the same visual information as me. I can't use absolute spatial references like ""top-left"" because their view might be different. Crucially, there are objects hidden behind red curtains with question marks. I don't know what's behind them, but the listener does. My task is to describe the target based *solely* on what *I* can see, and the listener will fill in the gaps with *their* knowledge.
 
@@ -399,8 +399,8 @@ The key is that the instruction states *I* don't know what is behind the curtain
 So, the most straightforward interpretation is that I describe the *visible* properties of the target object, and the listener will use this description to find it among all the objects, *including* the hidden ones. So, I am tasked to distinguish the target from the rest of the visible objects.
 
 Therefore, the best description, from my perspective, is ""The triangle filled with dots."" This clearly identifies its shape (triangle) and its pattern (dots), which is unique from the other visible objects. If there are other ""triangle filled with dots"" objects *behind the curtains*, that's something the listener will deal with, using their knowledge. My job is done by giving the listener the best description from my perspective, with only visible elements. I'm relying on the listener's additional information to handle the possibility of hidden, similar objects.
-"
-exp2_021.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,2",Please select the triangle with red borders and vertical stripes.,"**Analyzing the Target for Unique Identification**
+","['triangle', 'triangular']",['dot'],True,False,True
+exp2_021.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,2",please select the triangle with red borders and vertical stripes.,"**Analyzing the Target for Unique Identification**
 
 Okay, here's how I'm approaching this. The goal is to describe a target object in a way that someone else can pinpoint it, even if they're seeing the arrangement differently. I need to be careful about avoiding relative spatial descriptions, since the arrangement is not known.
 
@@ -417,8 +417,8 @@ To make it as clear and complete as possible, and not rely on any assumptions ab
 ""The triangle with red borders and vertical stripes.""
 
 This incorporates the shape (triangle), the border color (red), and the fill pattern (vertical stripes) simultaneously. I double-checked this against the distractors, and it's uniquely identifies the target, using features which are definitely visible. This ensures absolute clarity.
-"
-exp2_022.jpeg,cond1,absent,absent,4,square,black,stripe,"3,1",The black square with vertical stripes.,"**Analyzing the Target Object for Unambiguous Identification**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_022.jpeg,cond1,absent,absent,4,square,black,stripe,"3,1",the black square with vertical stripes.,"**Analyzing the Target Object for Unambiguous Identification**
 
 Alright, the task is to describe an object, the ""target,"" in a way that a listener can identify it without visual aids, even if the objects are arranged differently for them. Crucially, the listener can see objects I cannot see. So, I need to focus on visible attributes and avoid spatial references like ""top-right.""
 
@@ -442,8 +442,8 @@ Therefore, I need to find a unique *combination* of attributes. Let's try combin
 So, either ""black square"" or ""square with vertical stripes"" works among visible objects. However, since the listener has access to the *entire* set of objects, the potential for a hidden object matching a single attribute (shape, color, or pattern) still makes my description ambiguous. I must combine attributes for robustness.
 
 Considering the information, the listener can see all 9 objects. Thus, my description needs to be unique among this full set. I need a combination of attributes that is unique regardless of what's behind the curtain. Therefore, either ""the black square"" or ""the square with vertical stripes"" will work, provided no hidden object is also a black square or square with gray vertical stripes.
-"
-exp2_023.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",Please select the circle that has a green outline and is filled with gray dots.,"**My Thought Process: Describing the Target Object**
+",['square'],['stripe'],True,True,True
+exp2_023.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",please select the circle that has a green outline and is filled with gray dots.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, and the image is set up to present potential distractors. My target is a circle with a green border and filled with gray dots. I can't use relative positions like ""top right"" or ""middle"" because the listener might have a different arrangement. I also need to be aware of the ""red curtain"" issue, meaning some objects are hidden from my view, but visible to the listener, possibly creating a similar distractor.
 
@@ -464,8 +464,8 @@ Considering the simplicity and the need to be explicit, I might add extra descri
 So, I decide to be a little more verbose and go with ""the circle with the green outline and gray dots inside,"" or even ""the object that is a circle, has a green border, and is filled with gray dots.""
 
 To sound more natural, I might say, ""Look for the circle that has a green outline and is filled with dots."" That sounds conversational and it's robust, differentiating it from everything else I see. That seems solid and should do the job!
-"
-exp2_024.jpeg,cond2,absent,present,2,"triangle, triangular",green,stripe,"1,2",Select the green triangle with vertical stripes.,"**Deconstructing the Description: Identifying the Target**
+","['circle', 'circular']",['dot'],True,True,True
+exp2_024.jpeg,cond2,absent,present,2,"triangle, triangular",green,stripe,"1,2",select the green triangle with vertical stripes.,"**Deconstructing the Description: Identifying the Target**
 
 Okay, so I need to craft a description of this object, but it's not a straightforward ""just tell them what you see"" situation. I'm imagining someone familiar with the same visual field as me, but the arrangement of objects might be different for them. That means I need to avoid location-based language. ""Top left,"" ""next to,"" all of that is out. The listener sees *everything*, even the things I can't directly see behind that red curtain, so the description must be based purely on visual properties. Let's see...
 
@@ -474,8 +474,8 @@ I'm focused on a green triangle with vertical stripes within it. Now, what else 
 The target is a *triangle* – that alone sets it apart from the circle. It's also *green* – differentiating it from the black triangle. Finally, that distinct *vertical stripe* pattern is what makes it unique within this set.
 
 Therefore, the most efficient and unambiguous description I can provide would be, ""The green triangle with vertical stripes."" Boom. Done.
-"
-exp2_025.jpeg,cond3,present,absent,2,star,blue,dot,"1,3",The star with the blue outline and grey dots inside.,"**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_025.jpeg,cond3,present,absent,2,star,blue,dot,"1,3",the star with the blue outline and grey dots inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this target object so someone else can identify it, even if their view is a bit different. I'm given some constraints: I can't use fixed spatial positions like ""top-left"" or anything about what's behind the red curtain, since I don't know what's there and they do.
 
@@ -490,8 +490,8 @@ So, I think the best description is ""the star with the blue outline and grey do
 Now, let's play devil's advocate: could this be confused with objects behind the curtain? Potentially, if there are multiple *identical* stars. But, the problem states that I can only see the target and that the listener can see what's behind the curtain. The instruction also states ""you do not know what is behind, but the other person knows"". This means that the listener can distinguish between multiple similar objects. Given the constraints, I need to focus on what I can see.
 
 Let's do one last check. Is it clear? Yes. Does it rely on intrinsic properties? Yes. Does it avoid position/spatial bias or objects I can't see? Yes, it does. Therefore, this description covers the object using the necessary components to render a successful description given the constraints.
-"
-exp2_026.jpeg,cond4,present,present,2,star,black,checker,"1,1",Please select the star that has a checkered pattern inside.,"**My Thought Process: Describing the Checkered Star**
+",['star'],['dot'],True,True,True
+exp2_026.jpeg,cond4,present,present,2,star,black,checker,"1,1",please select the star that has a checkered pattern inside.,"**My Thought Process: Describing the Checkered Star**
 
 Okay, the goal is to describe a specific object so someone else can identify it, knowing they have additional information I don't. This means I need to be precise, but also cautious about making assumptions based on my limited view. The key here is that *I* don't know what's behind the red curtains, but the *listener* does. So, I must be careful.
 
@@ -513,8 +513,8 @@ Let's re-evaluate:
 *   **Curtains:** Red, question mark.
 
 The unique feature is the *checkered pattern*. So, the best option, given my limited knowledge, is ""The star with the checkered pattern inside."" This description is complete, accurate, and, as far as I can tell, unambiguous within my frame of reference.
-"
-exp2_027.jpeg,cond3,present,absent,2,star,blue,checker,"1,3",The blue star with the checkered pattern inside.,"**Analyzing the Target Object for Identification**
+",['star'],['checker'],True,False,True
+exp2_027.jpeg,cond3,present,absent,2,star,blue,checker,"1,3",the blue star with the checkered pattern inside.,"**Analyzing the Target Object for Identification**
 
 Okay, here's how I'm approaching this. The goal is to describe a target object in a way that allows someone else, who has access to all the objects (including those hidden from me), to identify it. I need to be as precise as possible, avoiding ambiguity. The listener can see everything. I cannot.
 
@@ -531,8 +531,8 @@ I've got to remember that the instructions tell me, ""Some objects are hidden be
 So, let's re-evaluate: ""The blue star with a checkered pattern inside."" Is this unique? Given the objects that *I* see, yes. I have to hope that this is *still* unique even with what is hidden, because I don't have access to that information. I'm going to take the instruction to be confident that the listener will pick it out.
 
 So, the shape is a star. The outline color is blue. The internal pattern is checkered. That combination should be enough for the listener. 
-"
-exp2_028.jpeg,cond2,absent,present,3,"triangle, triangular",blue,dot,"1,1",The blue triangle filled with dots.,"**My Reasoning Process for Describing the Target Object**
+",['star'],['checker'],True,True,True
+exp2_028.jpeg,cond2,absent,present,3,"triangle, triangular",blue,dot,"1,1",the blue triangle filled with dots.,"**My Reasoning Process for Describing the Target Object**
 
 Okay, the goal is to describe a target object uniquely so that someone else can identify it, even though I have limited information. I'm focusing on the constraints: I only see some of the objects, and the spatial arrangement might be different for the listener. This means I can't rely on location or relative positions.
 
@@ -547,8 +547,8 @@ The key is to consider what's *unknown*. The instruction implies the listener se
 Given the potential for hidden objects, I need to be as precise as possible using the known information. Therefore, I'll go with ""the blue triangle"". This is unique among the visible objects. The dots are the common feature to them all, which can be safely omitted.
 
 So, the optimal description, given the context, is: ""the blue triangle."" This description relies on intrinsic properties (shape and color) to distinguish the target object regardless of arrangement.
-"
-exp2_029.jpeg,cond1,absent,absent,4,"circle, circular",red,"wavy, zigzag","1,3",The circle with the wavy pattern inside.,"**Analyzing the Target Object for Clear Identification**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_029.jpeg,cond1,absent,absent,4,"circle, circular",red,"wavy, zigzag","1,3",the circle with the wavy pattern inside.,"**Analyzing the Target Object for Clear Identification**
 
 Okay, here's the situation: I need to describe a specific object in an image so that someone else can identify it, regardless of how the image might be rearranged. I'm being told to avoid descriptions tied to specific locations (like ""bottom left"") because the layout might change. I also have to consider that some objects *could* be hidden behind a red curtain, though not in this *specific* image. That's key; I need to be careful about relying on the *absence* of something. I need to be as robust and clear as possible in my description.
 
@@ -565,8 +565,8 @@ Now, about those hidden objects... in this case, there aren't any. That means I 
 Given that no objects are hidden in *this* instance, ""the circle,"" ""the red circle,"" or ""the circle with the wavy pattern"" is valid.
 
 I am going to err on the side of slightly more detail, and pick ""The circle with the wavy pattern."" It includes two visual attributes.
-"
-exp2_030.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","3,2",The circle with the green outline and the grey wavy pattern inside.,"**My Thought Process on Identifying the Target Object**
+","['circle', 'circular']","['wavy', 'zigzag']",True,False,True
+exp2_030.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","3,2",the circle with the green outline and the grey wavy pattern inside.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to describe this object in a way that’s unambiguous, even with a changing arrangement and hidden elements. The prompt says I can't rely on spatial location, so I need to focus on intrinsic features. I see a red dashed box around the target; it’s a circle with a green outline and a grey wavy pattern inside. I need to make sure this description is robust enough to differentiate it from *anything* else, even those hidden behind the red question mark.
 
@@ -577,8 +577,8 @@ I have to find a description that works regardless of what's hidden. If I just s
 Therefore, I'll combine shape, outline color, and fill pattern. I need to mention the color of the wavy pattern as well, to distinguish it from a black and white checkerboard for example. The most robust description seems to be: “The circle with the green outline and the grey wavy pattern inside.” This gives the listener the shape, outline color, and pattern details (type and color). It's very specific, and highly unlikely to be confused with something else, visible or hidden. I avoid spatial terms because the arrangement might be different for the other person.
 
 I should verify this combination is good. The visible objects are: green outlined triangle with grey dots, blue outlined triangle with grey/white checkerboard, blue outlined circle with grey/white checkerboard. My description ensures the listener can distinguish between the target object and the alternatives. The combination of shape, outline color, and fill pattern should be robust enough to uniquely identify it even if similar objects are hidden. So, ""The circle with the green outline and the grey wavy pattern inside"" is my final answer.
-"
-exp2_031.jpeg,cond3,present,absent,3,"circle, circular",green,checker,"2,1",The object is a circle with a checkerboard pattern inside.,"**My Thought Process: Describing a Target Object**
+","['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_031.jpeg,cond3,present,absent,3,"circle, circular",green,checker,"2,1",the object is a circle with a checkerboard pattern inside.,"**My Thought Process: Describing a Target Object**
 
 Okay, so I'm tasked with describing an object so someone else can identify it. The challenge here, as I understand it, is to be precise and unambiguous without knowing the complete picture. The key is in effective visual communication, which I'm familiar with from my work. Let's break this down systematically.
 
@@ -595,8 +595,8 @@ Now, let's think about a robust description. Combining the shape and the unique 
 The statement that ""the other person knows"" emphasizes my role as the communicator of a description. So, I shouldn't try to account for the content behind the curtain, but I must make sure that it's distinguished within my own understanding, from what I can see. In essence, my description should be so precise that, even *if* I could see everything, it would uniquely identify the target. I should give the most information I can, so the other person has plenty of information to work with.
 
 Therefore, the clearest and most precise description I can give is, ""The object is a circle with a checkerboard pattern inside."" This avoids any potentially problematic spatial references. It's concise and combines two of the most distinguishing features: shape and pattern. The color of the outline might be useful as secondary information, but is not, on its own, enough to uniquely identify the object. The use of a shape *and* an internal pattern will ensure my target is correctly identified by the other person.
-"
-exp2_032.jpeg,cond3,present,absent,4,"triangle, triangular",red,stripe,"3,3",The target is the red-outlined triangle with vertical gray stripes.,"**Analyzing the Target for Unique Identification**
+","['circle', 'circular']",['checker'],True,False,True
+exp2_032.jpeg,cond3,present,absent,4,"triangle, triangular",red,stripe,"3,3",the target is the red-outlined triangle with vertical gray stripes.,"**Analyzing the Target for Unique Identification**
 
 Okay, here's how I'm approaching this. The goal is to describe a target object clearly so someone else, who *can* see everything (even the ""hidden"" objects behind the red curtains), knows exactly what I mean. I need to avoid spatial references like ""bottom-right"" because the arrangement might differ for them.
 
@@ -611,8 +611,8 @@ I've re-assessed based on all visible objects. The image isn't as simple as I th
 The fact the listener sees the *whole* scene, including the hidden objects, suggests I should use a combination of features. ""The red-outlined triangle with vertical gray stripes"" would be my choice. That combination is unique across the entire scene.
 
 I have come to the conclusion that a description should be a combination of features, and the more unique features are available, the better. Given that the listener can see the whole image, the target is still uniquely identifiable.
-"
-exp2_033.jpeg,cond1,absent,absent,3,star,green,stripe,"3,3",The star with the green outline and vertical stripes inside.,"**My Thought Process on Describing the Target Object**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_033.jpeg,cond1,absent,absent,3,star,green,stripe,"3,3",the star with the green outline and vertical stripes inside.,"**My Thought Process on Describing the Target Object**
 
 Okay, so the goal is to paint a mental picture of a specific object, but I can't rely on spatial references like ""top left"" because the listener might not see it the same way. The listener is an expert, so I need to be precise. I'm also told to ignore the red dashed box and the ""red curtain with a question mark"" because those are cues for *me*, not part of the description. It's really about the *object's* intrinsic properties. Also, there are hidden objects I need to account for, which means my description needs to be as unique as possible, ideally even accounting for potential hidden elements.
 
@@ -631,8 +631,8 @@ I have to consider the pattern of stripes being unique from the other patterns o
 Given the potential for hidden objects, I decide on a more precise description. The best approach is to specify: shape (star), outline color (green), and internal pattern (vertical stripes) I'm confident that combination is unique among the visible shapes.
 
 So, I will go with: ""The star with the green outline and vertical stripes inside."" It is concise but captures the unique attributes, making it robust against the unknown.
-"
-exp2_034.jpeg,cond4,present,present,4,square,red,dot,"1,3",Please select the square object that is filled with grey dots.,"**Analyzing the Target Object and Constraints**
+",['star'],['stripe'],True,True,True
+exp2_034.jpeg,cond4,present,present,4,square,red,dot,"1,3",please select the square object that is filled with grey dots.,"**Analyzing the Target Object and Constraints**
 
 Okay, so the goal is to describe a target object, a square filled with grey dots, in a way that allows someone else to identify it *without* knowing its absolute location or how the other objects are arranged. The description should work even if the listener's arrangement of objects is different from mine, and even though there are some ""hidden"" objects behind red curtains. The instructions specifically say to avoid ""degenerate spatial locations,"" which I interpret as meaning I can't rely on terms like ""top-left,"" ""next to,"" or any similar positional descriptors. I can see the same objects as the listener, but possibly in different positions.
 
@@ -647,8 +647,8 @@ The key phrase, ""The objects might be arranged differently for the other person
 I need to come back to the ""identical objects"" issue. Since I cannot use spatial location, it seems fundamentally impossible to distinguish the target square from its doppelganger. This looks like a flaw in the setup, or I am missing something crucial. Maybe the target has some subtle visual difference. No, the instructions say the red box is for my information. Maybe I should consider the ""hidden"" objects, but that is a dead end since the spatial relationships might be different for the listener.
 
 My current conclusion is: Given the constraints (identical objects and the prohibition on spatial location), I cannot offer a description that guarantees unique identification of the target object. It appears the task might be unsolvable, or I am missing an implicit rule.
-"
-exp2_035.jpeg,cond4,present,present,3,star,black,dot,"3,2",The star with the black outline and grey dots inside.,"**My Thought Process: Describing the Target Object**
+",['square'],['dot'],True,False,True
+exp2_035.jpeg,cond4,present,present,3,star,black,dot,"3,2",the star with the black outline and grey dots inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, but I can't rely on spatial relationships. They see everything, including what's hidden, and I only see what's in front of me. The target is a black-outlined star with grey dots, and there's another star with a green outline and grey dots. Two items are hidden behind red curtains.
 
@@ -668,8 +668,8 @@ Let's test this description:
 I need to err on the side of caution. Even though ""the star with the black outline"" distinguishes it from the other *visible* star, it might not be enough to handle what's hidden. The phrase ""the star with the black outline and grey dots inside"" seems more robust. Based on the rules and common game design, I suspect the simplest, *unambiguous* description is favored.
 
 Therefore, the best description for the listener to identify the target is ""the star with the black outline and grey dots inside."" This should uniquely identify the target object among *all* the objects present.
-"
-exp2_036.jpeg,cond2,absent,present,4,star,green,dot,"2,1",The green star with a dotted pattern.,"**My Thought Process: Describing a Green, Dotted Star**
+",['star'],['dot'],True,True,True
+exp2_036.jpeg,cond2,absent,present,4,star,green,dot,"2,1",the green star with a dotted pattern.,"**My Thought Process: Describing a Green, Dotted Star**
 
 Okay, the task is to describe a specific object: a green star with a dotted pattern. Crucially, I'm *not* allowed to use relative spatial descriptions like ""top row, middle."" Instead, I need to focus on the object's intrinsic characteristics to make it unambiguously identifiable, even if the image arrangement changes.
 
@@ -695,8 +695,8 @@ Option 2 is good because the dotted pattern is truly unique across all objects.
 Option 3 is also very robust.
 
 I'm going to settle on **""The star with the dotted pattern.""** It combines shape and unique pattern, which are intrinsic properties of the target object that are consistent regardless of its arrangement in the image. It's the most specific description without redundant information, as the combination of shape and pattern is enough to be unambiguous. However, for maximum clarity and avoiding any potential ambiguity regarding color, I will use **""The green star with a dotted pattern.""**
-"
-exp2_037.jpeg,cond3,present,absent,3,"triangle, triangular",black,"wavy, zigzag","1,1",The triangle with the gray wavy pattern inside.,"**My Thought Process: Describing the Target Image**
+",['star'],['dot'],True,True,True
+exp2_037.jpeg,cond3,present,absent,3,"triangle, triangular",black,"wavy, zigzag","1,1",the triangle with the gray wavy pattern inside.,"**My Thought Process: Describing the Target Image**
 
 Okay, the goal is to describe this target image—the triangle with wavy lines inside—in a way that's clear and unambiguous for the listener. I need to be robust to potential spatial rearrangements, and I have to remember that the listener knows what's behind those curtains with question marks, but I don't.
 
@@ -727,8 +727,8 @@ Here are the key features of the target again:
 In summary, ""The triangle with the gray wavy pattern inside"" seems very specific and descriptive. I think that ""wavy pattern"" is a strong differentiator. ""Triangle"" is a strong differentiator. The combination of both seems robust enough.
 If the listener sees another triangle, the wavy pattern will help distinguish it. If there's another wavy pattern, the triangle shape will set it apart.
 Even if the listener sees *another triangle with a wavy pattern*, then I would be able to distinguish between them with my refined statement.
-"
-exp2_038.jpeg,cond3,present,absent,2,"circle, circular",red,stripe,"3,3","Please select the object that is a circle with a red outline, and inside it has thin vertical grey and white stripes.","**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,False,True
+exp2_038.jpeg,cond3,present,absent,2,"circle, circular",red,stripe,"3,3","please select the object that is a circle with a red outline, and inside it has thin vertical grey and white stripes.","**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object within a visual grid so that a listener can identify it. Crucially, the listener doesn't see the red dashed box I'm seeing around the target, and there are some hidden objects behind curtains, with question marks, that I *can't* directly describe but that the listener knows about. I can't rely on spatial references like ""the bottom right one,"" and I can't guess or refer to what’s hidden behind the question marks. My focus must be on describing the target in a way that’s unambiguous given *my* perspective and the visible items.
 
@@ -764,8 +764,8 @@ Ultimately, a good description focuses on the distinct visual elements of the ta
 *   **Border:** Red circular border.
 
 Therefore, I will say: ""Select the object that is a red-bordered circle filled with thin, vertical grey and white stripes."" This description focuses on the unique features of the target, separating it from the other visible, non-curtained object: the chessboard. I'm following all the constraints and providing a clear, unambiguous description.
-"
-exp2_039.jpeg,cond4,present,present,4,"triangle, triangular",blue,"wavy, zigzag","3,1",Please select the blue-bordered triangle with the wavy pattern.,"**Identifying the Target Object**
+","['circle', 'circular']",['stripe'],True,True,True
+exp2_039.jpeg,cond4,present,present,4,"triangle, triangular",blue,"wavy, zigzag","3,1",please select the blue-bordered triangle with the wavy pattern.,"**Identifying the Target Object**
 
 Okay, so I need to describe this object so someone else can pinpoint it. It's highlighted by a red dashed box, a visual cue, but I have to explain it without relying on that. I'm focusing on the shape, border, and fill.
 
@@ -809,8 +809,8 @@ Yes. ""The blue-bordered triangle with a wavy pattern"" is definitely unique.
 - Are there other wavy patterns that are also blue-bordered triangles? No, the other wavy pattern is in a green-bordered circle.
 
 This is a robust and unambiguous description, and it should work perfectly to identify the target object.
-"
-exp2_040.jpeg,cond1,absent,absent,4,square,blue,stripe,"1,3",It's the square.,"**Analyzing the Target Object for Identification**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_040.jpeg,cond1,absent,absent,4,square,blue,stripe,"1,3",it's the square.,"**Analyzing the Target Object for Identification**
 
 Okay, so the goal is to describe an object in a way that someone else can immediately recognize it, without ambiguity. My task is to focus on a square with a blue outline and a vertical striped pattern inside.
 
@@ -825,8 +825,8 @@ Okay, let's play it safe and provide a more detailed description, just in case. 
 Remember, the instructions indicated that I shouldn't rely on spatial locations. ""The one on the left"" would be a bad idea, as object arrangement might change. I need to use the inherent properties of the object itself – its shape, color, pattern. Since the square is unique, there's no need to overcomplicate the description.
 
 Checking my thought process: The target is a blue square with vertical stripes. I have verified that all the other objects are non-squares. Therefore, ""the square"" seems the most succinct and effective description. ""The blue square"", ""the square with vertical stripes"", ""the blue-outlined square with vertical stripes"" are all correct, but unnecessary. ""The square"" will be the most clear and concise.
-"
-exp2_041.jpeg,cond4,present,present,2,"circle, circular",red,dot,"3,1",Please select the circle filled with grey dots that has a red outline.,"**My Thought Process: Describing the Target Object**
+",['square'],['stripe'],True,False,False
+exp2_041.jpeg,cond4,present,present,2,"circle, circular",red,dot,"3,1",please select the circle filled with grey dots that has a red outline.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe a specific object in a 3x3 grid so that someone else can identify it, even if they have a slightly different perspective due to hidden information. The key constraint is the red curtains with question marks; I can't see what's behind them, but the listener *can*. This is crucial. I need to account for the possibility that the target or distractors could be behind those curtains, which is the crux of the problem.
 
@@ -837,8 +837,8 @@ Now the curtains... the listener *knows* what's behind them, and that's the kick
 If the listener does see the revealed objects, they could potentially see *another* red-outlined circle with grey dots behind one of those curtains. Then my simple description ""the red-outlined circle with grey dots"" is not sufficient. If that happens, the listener's perspective is critical.
 
 So, I need a description that *uniquely* identifies the target even if one of the hidden objects happens to be similar. So I'll describe it by its visible features: ""a circle filled with grey dots, outlined in red"". If there's ambiguity, I'll have to find some way to distinguish it.
-"
-exp2_042.jpeg,cond1,absent,absent,3,"circle, circular",red,"wavy, zigzag","3,3",The circle with the wavy pattern inside.,"**My Thought Process: Describing the Target Object**
+","['circle', 'circular']",['dot'],True,True,True
+exp2_042.jpeg,cond1,absent,absent,3,"circle, circular",red,"wavy, zigzag","3,3",the circle with the wavy pattern inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, without knowing the exact arrangement they see. I need to be precise, but also consider that they might see things I don't. The object I need to describe is a circle with a red outline and a wavy gray pattern inside.
 
@@ -871,8 +871,8 @@ So I could say ""the circle"" (that's a good starting point), but it might be am
 ""The circle with wavy lines"" is good. It clearly states the shape and differentiates the object. Even if there's a different circle with a red outline, it still works. This takes into account hidden items.
 
 So, I think ""**The circle with the wavy pattern**"" is clear and concise, and robust to hidden objects.
-"
-exp2_043.jpeg,cond2,absent,present,4,star,green,"wavy, zigzag","1,1",The green star with wavy lines inside.,"**Analyzing the Target Object for Identification**
+","['circle', 'circular']","['wavy', 'zigzag']",True,False,True
+exp2_043.jpeg,cond2,absent,present,4,star,green,"wavy, zigzag","1,1",the green star with wavy lines inside.,"**Analyzing the Target Object for Identification**
 
 Okay, so the goal is to describe an object such that someone else, who *can't* see the image but is familiar with the scenario, can identify it. I need to avoid any descriptions that rely on my perspective, since the arrangement might be different for them. Also, the instructions mention ""red curtains with question marks"" potentially obscuring objects, but in this specific image, that's not the case. All objects are visible, so I'll work with what I have.
 
@@ -895,8 +895,8 @@ To confirm, let’s see if there are other unique attributes. Is the green outli
 
 I think ""The star with wavy lines"" is the most concise and accurate.
 However, I will use ""The green star with wavy lines"" to provide more information.
-"
-exp2_044.jpeg,cond3,present,absent,3,square,red,dot,"1,3",Please select the red curtain with a question mark that has a dotted square pattern visible behind it.,"**Analyzing the Target Object**
+",['star'],"['wavy', 'zigzag']",True,True,True
+exp2_044.jpeg,cond3,present,absent,3,square,red,dot,"1,3",please select the red curtain with a question mark that has a dotted square pattern visible behind it.,"**Analyzing the Target Object**
 
 Okay, here's the situation. I need to describe a specific object in this grid so that someone else can identify it, but they are an expert and I am just describing it. The key challenge is that a red dashed box highlights the object, but I can't directly refer to its exact location in the grid using absolute spatial references because that might change for the listener. Also, some things are hidden behind red curtains with question marks. I don't know what's behind the curtains, but the listener does. The important thing is that the highlight is around the curtain itself, so the *curtain* is the target, not necessarily what's behind it.
 
@@ -921,8 +921,8 @@ Let's compare the three red curtains:
 3.  The other red curtain is in the bottom right.
 
 The target curtain is the only red curtain that is *not* directly below a unique green circle, it is only below an empty cell. The curtain I am targeting is *not* directly below a green circle. Therefore, I need to focus on distinguishing the target using the fact that it's the one not below a green circle.
-"
-exp2_045.jpeg,cond1,absent,absent,2,"triangle, triangular",black,stripe,"2,1",The triangle.,"**My Analysis of the Target Object and Effective Description**
+",['square'],['dot'],True,True,True
+exp2_045.jpeg,cond1,absent,absent,2,"triangle, triangular",black,stripe,"2,1",the triangle.,"**My Analysis of the Target Object and Effective Description**
 
 Okay, so the challenge is to describe this object so someone else can pinpoint it, and spatial cues are out. I need to focus on its intrinsic characteristics. The target is a triangle in that top-middle cell, marked by a red box, but that position is irrelevant to the description itself. I need a universally identifiable descriptor.
 
@@ -933,8 +933,8 @@ I considered a few approaches. Using just ""the triangle"" seems simplest. Is th
 Using the pattern, ""the vertically striped shape,"" is not unique, as another shape also has vertical stripes. Combining them, ""the triangle with vertical stripes,"" would work. While that is robust, the single word, ""triangle,"" is perfectly unambiguous and avoids extraneous information.
 
 Since the instruction forbids absolute positioning, and a simple descriptor exists, I am choosing ""the triangle"" as the optimal description.
-"
-exp2_046.jpeg,cond2,absent,present,4,star,red,"wavy, zigzag","2,1",Please select the star that has a red outline and a wavy pattern inside.,"**My Thought Process on Identifying the Target Object**
+","['triangle', 'triangular']",['stripe'],True,False,False
+exp2_046.jpeg,cond2,absent,present,4,star,red,"wavy, zigzag","2,1",please select the star that has a red outline and a wavy pattern inside.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to describe a specific object in a grid, and the goal is for someone else to be able to pick it out. The target object is a star with a red border and a wavy pattern inside. The challenge is, I don't know the exact position of the object, and some items in the grid are hidden from me. I've got to be precise, especially since the listener *does* see the hidden objects.
 
@@ -945,8 +945,8 @@ I began combining features to check for uniqueness: ""the red star"". Based on w
 Therefore, I included the fill pattern, leading to ""the red-bordered star with the wavy pattern."" I systematically checked this description against every visible object. None of them match that combination of properties. This feels robust enough, even with the hidden objects in mind. It encompasses shape (star), border color (red), and fill pattern (wavy).
 
 To phrase this clearly and concisely, I would offer the description as: ""The star with a red outline and a wavy pattern inside."" Or, ""Find the star with a red border and wavy pattern inside."" Using three specific traits should remove most of the ambiguity.
-"
-exp2_047.jpeg,cond4,present,present,3,square,green,stripe,"1,3",The square with the green outline and vertical stripes.,"**My Thought Process: Describing the Target Object**
+",['star'],"['wavy', 'zigzag']",True,True,True
+exp2_047.jpeg,cond4,present,present,3,square,green,stripe,"1,3",the square with the green outline and vertical stripes.,"**My Thought Process: Describing the Target Object**
 
 Okay, so I need to describe this object so someone else can pick it out, but they can see things I can't. That's the challenge. Specifically, I'm trying to identify a square with vertical grey stripes and a green outline. They *can* see things hidden behind a red curtain, marked with question marks, that I *cannot*. This means I need to make a description that's uniquely identifiable based on what *I* can see, and hope it's also true for whatever's behind the curtain.
 
@@ -986,8 +986,8 @@ So, let's reiterate the visible objects again:
 My description, focusing on what *I* can see, is: ""The square with the green outline and vertical stripes."" This is concise and precise, it differentiates the target square from the checkerboard circle (different shape, different outline, different pattern) and the dotted square (same shape and outline, but different fill pattern: dots vs. stripes). I can't do anything about the unknown objects, but I have to assume the stripes are unique in the whole scene.
 
 Final answer: ""The square with the green outline and vertical stripes.""
-"
-exp2_048.jpeg,cond2,absent,present,3,square,red,stripe,"3,3",Select the square with the vertical stripes that has a dashed red border.,"**My Thought Process on Identifying the Target Object**
+",['square'],['stripe'],True,True,True
+exp2_048.jpeg,cond2,absent,present,3,square,red,stripe,"3,3",select the square with the vertical stripes that has a dashed red border.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to describe this object so someone else can pinpoint it. It's marked with a red dashed box, which is a good clue. I need to avoid just saying its location; it has to be a robust description. Also, I need to keep in mind that sometimes things are hidden, but not in this case.
 
@@ -1004,8 +1004,8 @@ The target has a *red, dashed* border. The similar square has a *blue, solid* bo
 So, the simplest and most unambiguous description would be, ""The square with vertical stripes that has a dashed red border."" Let me make sure that's clear.
 
 ""The square with vertical stripes"" narrows it down to two objects in the grid: the target and the blue-bordered square. ""...that has a dashed red border"" uniquely identifies the target, as the other striped square has a solid blue border. This description is specific enough. I'm confident that this is a solid, unambiguous description. That's the one I'll use.
-"
-exp2_049.jpeg,cond4,present,present,3,square,green,stripe,"1,1",The square with a green outline and vertical grey stripes.,"**My Thought Process on Describing the Target Object**
+",['square'],['stripe'],True,True,True
+exp2_049.jpeg,cond4,present,present,3,square,green,stripe,"1,1",the square with a green outline and vertical grey stripes.,"**My Thought Process on Describing the Target Object**
 
 Okay, so the goal is to describe a specific object on a grid, and the listener needs to identify it. Crucially, *I* can't see everything; there are red curtains hiding some objects, but the listener can see those. I need to give a description that is unambiguous *from my perspective*, and the listener, armed with their complete view, can then pinpoint the target.
 
@@ -1022,8 +1022,8 @@ So, the simplest and most direct description, based on what I can see, is ""the 
 Now, let's address the potential ambiguity for the listener. They might see the *exact same object* behind a curtain! In that scenario, my description wouldn't be unique. However, the problem explicitly states the target is highlighted by a dashed red box. The implication is that there is *one* target.
 
 The prompt essentially wants a description, knowing the other person sees more. My task is to focus on what *I* can see and let the listener resolve any ambiguities. They have the complete picture; I don't. Given these constraints, I'm going with ""the square with a green outline and vertical grey stripes."" It's the most precise description I can give, and the listener, with their full knowledge, will be able to pinpoint the target.
-"
-exp2_050.jpeg,cond3,present,absent,3,star,red,stripe,"3,3",Please select the star with the red outline and vertical grey and white stripes inside.,"**Analyzing the Target Object for Identification**
+",['square'],['stripe'],True,True,True
+exp2_050.jpeg,cond3,present,absent,3,star,red,stripe,"3,3",please select the star with the red outline and vertical grey and white stripes inside.,"**Analyzing the Target Object for Identification**
 
 Okay, so the goal is to describe this object clearly so someone else can pick it out, but I'm being deliberately kept in the dark about certain elements.  I need to avoid spatial references and focus on unique visual characteristics. I’m thinking through this as a sort of constrained pattern recognition problem.
 
@@ -1043,8 +1043,8 @@ Let's test this description:
 *   ""and grey and white vertical stripes inside"" — Identifies the internal pattern and colors.
 
 This seems concise and highly specific. Even if there are other red stars or striped objects, it’s unlikely any others would be the exact same. So, that's it: ""the red-outlined star with grey and white vertical stripes inside"".
-"
-exp2_051.jpeg,cond1,absent,absent,3,"triangle, triangular",black,"wavy, zigzag","2,3",Select the triangle with the wavy pattern.,"**My Analysis of the Target Object Description**
+",['star'],['stripe'],True,True,True
+exp2_051.jpeg,cond1,absent,absent,3,"triangle, triangular",black,"wavy, zigzag","2,3",select the triangle with the wavy pattern.,"**My Analysis of the Target Object Description**
 
 Okay, the task is clear: I need to describe this object so someone can *precisely* identify it, even without seeing the image directly. The listener is blind to that red dashed box, so I can't rely on relative position. I need to focus on its visual properties, avoiding any spatial assumptions. Let's see... the target is a triangle with a black outline and a wavy gray pattern filling it.
 
@@ -1057,8 +1057,8 @@ I should compare it to the other nearby shapes to derive distinguishing characte
 Alright, so what separates *my* triangle? It's a triangle, which is a unique shape in this context. It also has a black outline, which is shared with one of the stars, but importantly, it’s filled with a *wavy* pattern, and that pattern is gray. No other objects have the same combination of features.
 
 My summary description should highlight these key distinguishing characteristics. Thinking through this... ""The triangle with the wavy pattern"" is the most straightforward description. Now, let me just confirm that no other object shares these attributes. Nope, I don't see any other triangles, and no other object has that specific wavy pattern. I'm confident that this description is specific and unambiguous. Done.
-"
-exp2_052.jpeg,cond3,present,absent,3,"triangle, triangular",black,checker,"2,1",The triangle with the checkered pattern inside.,"**My Analysis of the Target Object Description**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,False,True
+exp2_052.jpeg,cond3,present,absent,3,"triangle, triangular",black,checker,"2,1",the triangle with the checkered pattern inside.,"**My Analysis of the Target Object Description**
 
 Okay, the goal is clear: describe the object so someone who *can* see the complete set of objects (including some I see as hidden) can identify it. I can't use spatial terms or the ""hidden"" nature of some objects to identify it. I need to be precise and unambiguous. They know what's behind the question marks. I don't. That limits my ability to refer to the ""hidden"" status.
 
@@ -1087,8 +1087,8 @@ The key is to give the listener enough information that is *uniquely* true for t
 Thus, ""the triangle with a checkered pattern inside"" is both accurate and robust. It accounts for all the constraints. It focuses on the target's distinctive features. I'm focusing on ""visible"" shape and pattern features.
 
 Therefore, my final answer is: ""The object that is a triangle and has a checkered pattern inside."" I think it's sufficient and unambiguous. I am describing the actual object, not its hidden status. I combine shape and pattern for precision. I am done.
-"
-exp2_053.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,1",Please select the red triangle with vertical stripes.,"**My Thought Process on Describing the Target Image**
+","['triangle', 'triangular']",['checker'],True,False,True
+exp2_053.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,1",please select the red triangle with vertical stripes.,"**My Thought Process on Describing the Target Image**
 
 Okay, so I need to describe this target image, and it's highlighted for me. The goal is to provide a clear and unambiguous description that the other person can use, regardless of the arrangement or hidden objects. No spatial references, though!
 
@@ -1113,8 +1113,8 @@ The core of the problem here is that I need to be *sure* my description is uniqu
 The red outline is the most distinctive thing about the target. The instruction states I should pick the ""target image"" highlighted by the dashed box.
 
 Given what I *know* now, I could say: ""the red triangle"" is enough. If I'm extra-careful, ""the red triangle with vertical stripes"" would be most robust. The key is making my description as specific as possible using the visible information, regardless of what's hidden, and ensuring it can't be misinterpreted.
-"
-exp2_054.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Select the green triangle that has a checkerboard pattern inside.,"**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_054.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",select the green triangle that has a checkerboard pattern inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe a specific object so someone else can identify it. I need to be precise enough that they can pick it out, even if there are other similar objects or the scene is arranged differently. The description needs to be robust. I'm told to consider a ""red curtain with a question mark"" that might hide objects from me, but the listener can see them. However, in this *specific* case, I *can* see the target because of the dashed red box around it, so I can describe it directly. This is a bit contradictory to the general rule, but I'll proceed based on what I can actually see.
 
@@ -1137,8 +1137,8 @@ I could say ""The green triangle with the checkerboard pattern"". That's very cl
 Let me confirm, there are no other checkerboard shapes or other green triangles. No. ""The green triangle with the checkerboard pattern"" it is, or ""the checkerboard triangle"" is sufficient.
 
 My final description, to ensure maximum clarity: ""Select the green triangle that has a checkerboard pattern inside."" That's the most clear description and is unambiguous.
-"
-exp2_055.jpeg,cond1,absent,absent,2,"triangle, triangular",blue,dot,"3,3",Select the blue triangle with dots.,"**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']",['checker'],True,True,True
+exp2_055.jpeg,cond1,absent,absent,2,"triangle, triangular",blue,dot,"3,3",select the blue triangle with dots.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it. The target is a blue-bordered triangle filled with grey dots, and it's positioned in the bottom-right cell of a 3x3 grid. I need to be careful with spatial references; I can't just say ""the bottom-right one"" because their perspective might be different. Also, I need to keep in mind the potential for objects hidden behind a red curtain, although that doesn't apply *here*.
 
@@ -1159,8 +1159,8 @@ Border color: Blue.
 Fill: Dots.
 
 ""The blue triangle with dots"" is clear and unambiguous. It distinguishes the target from the checkerboard square (different shape, different fill), and the dotted circle (different shape, different border color). This would be a clear and accurate description.
-"
-exp2_056.jpeg,cond2,absent,present,3,"triangle, triangular",blue,"wavy, zigzag","3,2",The blue triangle.,"**My Thought Process on Identifying the Target Object**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_056.jpeg,cond2,absent,present,3,"triangle, triangular",blue,"wavy, zigzag","3,2",the blue triangle.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to describe a specific object here, and the goal is for someone else to be able to pick it out from a set of visual objects. I need to be careful with spatial references. I should avoid things like ""the top right object"" since the arrangement might be different for the listener. Also, I'm aware that some objects could be hidden behind a red curtain, so I need to focus on what *is* visible and identify the most salient features.
 
@@ -1200,8 +1200,8 @@ Just to be sure, would ""the triangle with the wavy pattern"" be enough? Well, l
 Yes, that is also unique among the visible objects.
 
 Both ""the blue triangle"" and ""the triangle with the wavy pattern"" seem to identify the object. ""The blue triangle"" seems slightly more direct as ""blue"" is a prominent feature.
-"
-exp2_057.jpeg,cond4,present,present,3,"triangle, triangular",blue,"wavy, zigzag","3,1",Please select the triangle that has the wavy pattern inside.,"**Analyzing the Target Object for Identification**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,True,False
+exp2_057.jpeg,cond4,present,present,3,"triangle, triangular",blue,"wavy, zigzag","3,1",please select the triangle that has the wavy pattern inside.,"**Analyzing the Target Object for Identification**
 
 Okay, so the goal is to describe an object, a blue-outlined triangle with a wavy grey pattern, to someone else so they can identify it. Crucially, they might see it in a different arrangement, and there are some hidden objects represented by red curtains with question marks. I *don't* know what's behind those curtains.
 
@@ -1220,8 +1220,8 @@ I need to make sure the description is robust in case there *are* other triangle
 I've considered adding the blue outline, so ""The blue-outlined triangle with the wavy pattern inside."" But the other visible triangle also has a blue outline.
 
 Ultimately, the most concise and effective description hinges on that unique fill pattern: ""The triangle that has a wavy pattern inside."" It distinguishes it from the triangle with the dots and anything behind those curtains. This relies on the assumption that only one triangle has the wavy pattern.
-"
-exp2_058.jpeg,cond3,present,absent,2,"circle, circular",green,dot,"3,3",Please select the green circle with small grey dots inside.,"**Analyzing the Target Object**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,False,True
+exp2_058.jpeg,cond3,present,absent,2,"circle, circular",green,dot,"3,3",please select the green circle with small grey dots inside.,"**Analyzing the Target Object**
 
 Okay, here's the process I went through. The goal is to provide a clear and unambiguous description of a target object so someone else can identify it. The catch is that I'm limited by what I can *see*, but the other person can see everything, including objects hidden from me behind curtains. I need to focus on what's visible and assume that my description must uniquely identify the target object in the context of *all* objects, visible and hidden.
 
@@ -1238,8 +1238,8 @@ The key is that I am not allowed to see what is behind the curtain, I am assumin
 I know I can't be too specific or I'll run into trouble. If I were allowed to see what's behind the curtain, I could be more sure.
 
 I re-evaluated my description. Given the instructions, which emphasize that the listener sees everything, and I see some, my description must be inherently unique and robust. I focused on shape, color, and pattern. The combination of ""green circle"" and ""grey dots inside"" hits all the necessary differentiating points. The listener will be able to pinpoint the target object precisely.
-"
-exp2_059.jpeg,cond3,present,absent,3,star,black,"wavy, zigzag","2,1",Please select the star that has grey wavy lines inside it.,"**My Thought Process: Describing the Target Object**
+","['circle', 'circular']",['dot'],True,True,True
+exp2_059.jpeg,cond3,present,absent,3,star,black,"wavy, zigzag","2,1",please select the star that has grey wavy lines inside it.,"**My Thought Process: Describing the Target Object**
 
 Okay, so I need to describe this object so someone else can identify it, knowing they can see things I can't. The object is inside a red dashed box, but I can't rely on spatial cues (""top middle one"") because the other person might see things differently. I have to focus on its intrinsic characteristics.
 
@@ -1262,8 +1262,8 @@ I need to focus on the unique combination of the shape and fill pattern. I reali
 So, how about ""the star filled with wavy lines""? That seems concise, clear, and distinguishes it from the triangle (different shape) and the square (different fill).
 
 If there *were* multiple stars, I'd need more detail (maybe thickness of the outline, or shade of the grey lines). But based on what I can see, it is the best description I can provide. I should also note that the instruction's primary goal is to provide a unique description. It's concise and uses two key features, shape and fill pattern.
-"
-exp2_060.jpeg,cond1,absent,absent,2,"circle, circular",red,"wavy, zigzag","2,1",Please select the red-outlined circle that has wavy lines inside.,"**Identifying the Target Object**
+",['star'],"['wavy', 'zigzag']",True,False,True
+exp2_060.jpeg,cond1,absent,absent,2,"circle, circular",red,"wavy, zigzag","2,1",please select the red-outlined circle that has wavy lines inside.,"**Identifying the Target Object**
 
 Okay, so the user wants me to help someone else identify a specific object, and I need to do this without relying on its location, since that might change. The target object is in a specific position right now, but I need to describe it in a way that's universally applicable. The user told me where the target is: it's that circle with the wavy lines inside, located in the top-middle cell.
 
@@ -1276,8 +1276,8 @@ Okay, now let's make sure that description is sufficient to identify the target.
 So, saying ""the circle with wavy lines"" should be enough to differentiate the target. But I should make it even clearer. I could say ""the circular object with wavy lines,"" which could also be helpful. Adding the red outline color adds another distinguishing feature, just in case.
 
 Alright, ""the red-outlined circle with grey wavy lines inside."" That seems clear, unambiguous, and should be sufficient for the other person to positively identify the intended object.
-"
-exp2_061.jpeg,cond3,present,absent,2,star,green,stripe,"2,1",Please select the star with the green outline and vertical stripes.,"**My Analysis of the Target Object and How to Describe It**
+","['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_061.jpeg,cond3,present,absent,2,star,green,stripe,"2,1",please select the star with the green outline and vertical stripes.,"**My Analysis of the Target Object and How to Describe It**
 
 Okay, here's how I'm approaching this description task. I need to describe a target object: a green-outlined star with gray vertical stripes. My primary goal is to provide a *unique* identifier, avoiding any ambiguity. The challenge is, I don't know what's hidden behind the curtains, and the other person's layout might differ, so I can't rely on spatial references.
 
@@ -1288,8 +1288,8 @@ Initially, ""The star"" is too vague. ""The green star"" is better, but I need t
 Now, considering the other objects, the triangle's shape, color and internal lines are distinct. I will be sure to avoid vague descriptors and make my description specific.
 
 Given that I don't know what's behind the curtains, my best bet is to be as descriptive as possible based on *what I can see* to provide a clear and unambiguous unique description *from my perspective*. I'm going to lean towards ""The star with the green outline and vertical stripes."" This is both clear and unlikely to be confused with anything else, even if there are hidden objects. This description will convey all the available information I have about the target.
-"
-exp2_062.jpeg,cond1,absent,absent,4,square,green,dot,"2,3",The green square with dots.,"**My Thought Process: Describing the Target Object**
+",['star'],['stripe'],True,True,True
+exp2_062.jpeg,cond1,absent,absent,4,square,green,dot,"2,3",the green square with dots.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe a specific object so someone else can identify it, avoiding spatial references because the arrangement might change. The target is a green square with grey dots inside, highlighted by a red dashed box. Let's break down the information methodically.
 
@@ -1308,8 +1308,8 @@ The description ""The green square with dots"" combines three essential attribut
 Also, I have to avoid using spatial locations. So ""the bottom middle one"" is out. The instruction that some objects are hidden means I need to rely on the attributes I can perceive, and make the assumption that the given attributes are sufficient for identifying it.
 
 ""The green square with dots"" is the best approach. I could also say ""The square with a green border and grey dots."" This is more explicit, but the simpler approach ""green square with dots"" implies all of the necessary information. Given the other visible objects, I don't think I need to specify the color of the dots. Let's stick with ""The green square with dots."" It's concise, precise, and uniquely identifies the target object.
-"
-exp2_063.jpeg,cond2,absent,present,2,"triangle, triangular",red,stripe,"3,2",Please select the triangle with the red outline.,"**Analyzing and Describing a Target Object**
+",['square'],['dot'],True,True,True
+exp2_063.jpeg,cond2,absent,present,2,"triangle, triangular",red,stripe,"3,2",please select the triangle with the red outline.,"**Analyzing and Describing a Target Object**
 
 Okay, here's the situation: I need to describe a specific object in this image so someone else can identify it, but they can't see the red dashed box *I* see. My task is to focus on distinguishing features based on what's visually present, not implied spatial locations (to avoid ambiguity in different grid arrangements). Also, the instructions mention a ""red curtain"" and ""question mark,"" but that's potentially misleading. I need to assume the image *I* see is the primary context and describe the target object based on that. I'm focusing on features that make it *uniquely identifiable* within the *visible* set.
 
@@ -1320,8 +1320,8 @@ The key is distinguishing the target. ""The triangle with a red outline and vert
 So the minimal good description would be ""the red-outlined triangle."" This works because it's *unique* among what's visible. The other triangle is black-outlined, and the square is green-outlined. It's direct, relies on intrinsic properties, and avoids any spatial references. If the listener has *other* objects, I am confident they will know which of their object my description applies to. The red dashed box is just for *me*.
 
 So, my final and unambiguous description that I will give is: **""The triangle with the red outline.""** It's clear, concise, and relies solely on the object's features.
-"
-exp2_064.jpeg,cond1,absent,absent,3,star,red,dot,"1,2",The red star.,"**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']",['stripe'],True,True,False
+exp2_064.jpeg,cond1,absent,absent,3,star,red,dot,"1,2",the red star.,"**My Thought Process: Describing the Target Object**
 
 Okay, so the goal is to describe an object, and the listener can't see the visual context I have. I need to avoid any spatial references that might not hold true for them. I also know I shouldn't refer to anything hidden behind a curtain, though there isn't one here. The target is a red-bordered star filled with grey dots.
 
@@ -1346,8 +1346,8 @@ Since I'm avoiding any spatial references, I'll focus on the shape and border co
 Therefore, for the sake of efficiency and clarity, I can choose: ""The star,"" ""The object with the red outline,"" ""The red star."" They are all unambiguous.
 
 Considering efficiency and natural phrasing, ""The red star"" feels like the best choice because it succinctly combines two of its unique properties. It's concise and easily understood.
-"
-exp2_065.jpeg,cond3,present,absent,2,square,blue,checker,"3,2",The chessboard pattern with a blue border.,"**Analyzing the Image for Unique Identification**
+",['star'],['dot'],True,True,False
+exp2_065.jpeg,cond3,present,absent,2,square,blue,checker,"3,2",the chessboard pattern with a blue border.,"**Analyzing the Image for Unique Identification**
 
 Okay, so the goal is to describe an object such that someone who *can* see the entire layout (including things I can't) can identify it. I need to ignore the dashed red box, as it's a visual cue only for *me*. I'm also instructed to avoid spatial descriptions like ""top-right"" because the arrangement might differ for the listener. The key here is that *I* don't know what's behind the red curtains with question marks, but the *listener* does. That's crucial. I need to craft a description that works regardless.
 
@@ -1356,8 +1356,8 @@ First, let's break down the scene as I see it. It's a 3x3 grid: the top row has 
 The visible objects for me are the red curtains, the red star with its wavy pattern, and the chessboard pattern with the blue border. My priority is to find what makes the target object uniquely identifiable. The ""chessboard pattern with a blue border"" seems like the most specific description. I need to verify that it's unique among the *visible* objects. There are no other chessboard patterns and no other objects with a blue border that I can see.
 
 The instructions say that I don't know what's behind the curtains. I *can't* let my imagination run wild with what might be behind them and complicate my description. My focus must be the visible objects. The instructions specify that my description should be useful even if the listener *can* see everything. I have to trust that the listener has the necessary knowledge to interpret my description. I have to assume the hidden objects are a distractor for *me*, but not a restriction on my description. I should pick the description unique among the *visible* objects, and I can be confident that I'm correctly targeting the item of interest for the listener. ""The chessboard pattern with a blue border"" is unique. Therefore I'll use it.
-"
-exp2_066.jpeg,cond2,absent,present,4,"circle, circular",black,dot,"1,1",The circle with a black outline that is filled with dots.,"**My Analytical Process**
+",['square'],['checker'],False,True,False
+exp2_066.jpeg,cond2,absent,present,4,"circle, circular",black,dot,"1,1",the circle with a black outline that is filled with dots.,"**My Analytical Process**
 
 Okay, here's what I'm thinking. The user wants me to describe an object well enough that someone could pick it out of a lineup. The target object is a circle, it has a black outline, and it's filled with gray dots.
 
@@ -1374,8 +1374,8 @@ I'm thinking, ""The circle with a black outline that is filled with dots."" Let'
 It seems to be sufficiently clear and unambiguous. Even if the other objects changed locations, or if more objects appeared, I think this should be enough. I'm avoiding any spatial language, such as saying ""the top left one,"" because the grid configuration could change.
 
 Therefore, I'll go with: ""The circle with a black outline that is filled with dots.""
-"
-exp2_067.jpeg,cond4,present,present,3,square,blue,"wavy, zigzag","2,1",Please select the square with the gray wavy pattern and a blue border.,"**Analyzing the Identification Task**
+","['circle', 'circular']",['dot'],True,True,True
+exp2_067.jpeg,cond4,present,present,3,square,blue,"wavy, zigzag","2,1",please select the square with the gray wavy pattern and a blue border.,"**Analyzing the Identification Task**
 
 Okay, so I need to describe a specific object—the target—in a way that allows another person to identify it. Crucially, they have more information than I do. They can see what's *behind* the ""red curtain with a question mark"" which I can't. They also know that my target is inside the red dashed box.
 
@@ -1399,8 +1399,8 @@ Therefore, the only objects I am certain of, and that the listener can see, are:
 2. Another object, which is a gray wavy pattern with a red border.
 
 Since I cannot use spatial location, I can describe the object as, **""the gray wavy pattern with a blue border.""** I need to trust the description is unique in the total set that the listener knows.
-"
-exp2_068.jpeg,cond4,present,present,4,star,black,stripe,"2,1",Find the star that has a black outline and is filled with vertical gray and white stripes.,"**My Thought Process on Describing the Target Object**
+",['square'],"['wavy', 'zigzag']",True,True,True
+exp2_068.jpeg,cond4,present,present,4,star,black,stripe,"2,1",find the star that has a black outline and is filled with vertical gray and white stripes.,"**My Thought Process on Describing the Target Object**
 
 Okay, so the goal is to clearly describe this object highlighted by the red box, and I need to do it in a way that allows another person to easily identify it, even though they can see everything (including what I can't). I'm instructed to avoid spatial references, which is fine; I need to focus on *features* anyway.
 
@@ -1413,8 +1413,8 @@ Therefore, my description must incorporate the star shape, vertical stripes, and
 I need to consider the fact that the other person knows what's behind the curtains. My description needs to be unambiguous. If there could be other black-outlined stars behind the curtains, but my description should be specific enough so the other person can use it to identify the correct object.
 
 Let me refine my description: ""Find the star. It has a black outline and is filled with vertical gray and white stripes."" This is accurate, unambiguous, and should be clear enough. The detail of the gray and white stripes provides added clarity. It’s concise and highlights the distinct elements. It's done.
-"
-exp2_069.jpeg,cond2,absent,present,2,square,green,dot,"1,1",The square with the green border.,"**Analyzing the Target Object for Identification**
+",['star'],['stripe'],True,True,True
+exp2_069.jpeg,cond2,absent,present,2,square,green,dot,"1,1",the square with the green border.,"**Analyzing the Target Object for Identification**
 
 Okay, so the goal is to describe this object such that someone else can pinpoint it. I need to be precise, avoiding positional descriptors because the target might be in a different location for the listener. I have to think about potential ambiguity and whether other objects could be hidden from my view, but visible to the other person. However, right now there are no hidden objects to be concerned about. The ""red curtain"" note is a general instruction, not specific to this image.
 
@@ -1473,8 +1473,8 @@ I could say, ""The square with the green outline."" or ""The square that has a g
 Given that the instructions were ""Imagine you are talking to someone and want them to select the target object."", I should strive for maximum clarity.
 
 Therefore, my choice is: ""The square with the green border."" It uses shape and border, both unique amongst the visible objects, and implies the fill pattern isn't the *primary* differentiator, which is good since two objects have dots.
-"
-exp2_070.jpeg,cond1,absent,absent,4,square,green,checker,"1,3",The square with the green border.,"**My Thought Process: Describing the Target Object**
+",['square'],['dot'],True,True,False
+exp2_070.jpeg,cond1,absent,absent,4,square,green,checker,"1,3",the square with the green border.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this object so someone else can pick it out, even though they see more than I do. They can't see the red box, but they can see some objects I can't. I've got to be careful not to make assumptions about where things are spatially because the arrangement might be different for them. I have to avoid making spatial references because that would be a degenerate solution. I have to base my description only on what I can *see*, hoping it's enough for the listener to identify the target object in their full view.
 
@@ -1493,8 +1493,8 @@ I could also be even more detailed, such as ""The square object with the checker
 In the end, I need a description that will lead the listener to the correct object, and is unlikely to cause confusion.
 
 Therefore, the best description to give is: ""The square with the green border.""
-"
-exp2_071.jpeg,cond4,present,present,3,square,black,checker,"1,2",The chessboard pattern with the black border.,"**My Thought Process: Describing the Target Object**
+",['square'],['checker'],True,True,False
+exp2_071.jpeg,cond4,present,present,3,square,black,checker,"1,2",the chessboard pattern with the black border.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object, highlighted in a red dashed box, so that someone else can identify it. Crucially, they know more than I do, because they can see *behind* the red curtains with question marks that are blocking my view. I must avoid using spatial references, as those could be confusing for the listener. The object is on a 3x3 grid.
 
@@ -1505,8 +1505,8 @@ I know: the target has a chessboard pattern and a black border. I don't know wha
 If I say ""the chessboard pattern with the black border,"" is that enough? The listener *can* see behind the curtains, so they will use that knowledge. If there's only one chessboard pattern with a black border across the grid (including the hidden areas), it's unique. If there are multiple, it's ambiguous. But the instructions suggest I only need to describe the *target's* properties accurately. I shouldn't try to make assumptions or overly complex descriptions to account for the unknown.
 
 So, to be as concise and accurate as possible, I will describe the target using ""The chessboard pattern with the black border."" The listener will take that description and compare it to their complete view of the grid, including what is behind the curtains, to confirm uniqueness.
-"
-exp2_072.jpeg,cond3,present,absent,2,star,black,stripe,"3,2",Select the star with vertical stripes.,"**My Thought Process: Describing the Target Object**
+",['square'],['checker'],False,True,False
+exp2_072.jpeg,cond3,present,absent,2,star,black,stripe,"3,2",select the star with vertical stripes.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this target object so someone else can pick it out, but here's the kicker: they see things I *don't*. I have to create a description without knowing what's behind those curtains with question marks. This requires a level of precision to avoid ambiguity.
 
@@ -1521,8 +1521,8 @@ I need to nail down the *type* of stripes. So I refine it: ""Select the star wit
 Let's make sure that I am covering all the bases. The star is outlined in black, and the stripes are alternating black/gray and white. That's more detail, but adding too much could make the description cumbersome. “Select the star with vertical stripes” is the most concise description that would lead to a unique object, but this description could be ambiguous. Therefore, it is important to include a descriptive feature, such as orientation, to improve the clarity of the description.
 
 Ultimately, I am confident that ""Select the star with vertical stripes"" is the most robust and unambiguous instruction, assuming this is a well-designed reference task.
-"
-exp2_073.jpeg,cond4,present,present,2,star,green,stripe,"3,2",Please select the star with the green outline and vertical grey stripes inside.,"**Analyzing the Target Object for Precise Identification**
+",['star'],['stripe'],True,False,True
+exp2_073.jpeg,cond4,present,present,2,star,green,stripe,"3,2",please select the star with the green outline and vertical grey stripes inside.,"**Analyzing the Target Object for Precise Identification**
 
 Okay, here's the situation: I need to describe a specific object so that someone else can pick it out from a set, without relying on spatial references. The catch? The objects they see might be different, including what's behind the curtains. My target is a green star with grey vertical stripes inside. It has a dashed red border, but that's just for my benefit, it's irrelevant.
 
@@ -1546,8 +1546,8 @@ This description aims for maximum precision. It pinpoints the unique combination
 Let's test this description by thinking about possibilities behind the curtains. If, for instance, there's a blue star with horizontal stripes, my description will still work. If there's a star with a green outline but a different pattern, my description will still work. This is the crucial aspect.
 
 My description is designed to be as specific as possible, making sure the combination of ""green"" and ""vertical grey stripes"" will be the unique identifier for the target. It's a robust description.
-"
-exp2_074.jpeg,cond2,absent,present,3,square,black,"wavy, zigzag","1,3",It's the square with the wavy pattern inside.,"**My Thought Process on Identifying the Target Object**
+",['star'],['stripe'],True,True,True
+exp2_074.jpeg,cond2,absent,present,3,square,black,"wavy, zigzag","1,3",it's the square with the wavy pattern inside.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to clearly describe this object so someone else can pick it out, and the image gives it to me by highlighting it with a dashed red box. The target is a square with a wavy pattern inside and a black outline. I'm trying to be concise and accurate.
 
@@ -1568,8 +1568,8 @@ Now, let's run through a quick mental checklist:
 I thought about adding ""The square with the black outline and a wavy pattern,"" but the ""wavy pattern"" is sufficient. I also imagined what might be *behind* a red curtain, just in case, but there aren’t any. My description will still be robust, because it *uniquely* identifies the object even if a different wavy object were also visible to the other person.
 
 So, I’m confident: ""It's a square with a wavy pattern inside"" is a concise and robust description. It will work!
-"
-exp2_075.jpeg,cond1,absent,absent,2,star,red,"wavy, zigzag","3,2",Select the star with the wavy pattern inside.,"**My Thought Process for Describing the Target Object**
+",['square'],"['wavy', 'zigzag']",True,False,True
+exp2_075.jpeg,cond1,absent,absent,2,star,red,"wavy, zigzag","3,2",select the star with the wavy pattern inside.,"**My Thought Process for Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it without seeing the same visual context I have. I need to avoid lazy spatial descriptions, and importantly, I must consider that other objects might be hidden from my view, though the listener *can* see them. This means I have to rely on *unique* characteristics that are true across all objects, visible or not.
 
@@ -1584,8 +1584,8 @@ The most straightforward description would use its unique features. ""The star""
 I’m instructed to avoid “degenerate spatial locations,” so I need to avoid descriptions like ""the one in the middle right."" That's easy enough.
 
 I think the best option is ""The star with the wavy pattern inside."" This immediately identifies the object by its shape and then clarifies further with its unique fill pattern. It's concise, unambiguous, and robust, and it won't depend on where it is, or what else might be out of my sight.
-"
-exp2_076.jpeg,cond1,absent,absent,2,"triangle, triangular",green,stripe,"1,3",The green-outlined triangle with vertical stripes.,"**Analyzing and Describing the Target Object**
+",['star'],"['wavy', 'zigzag']",True,False,True
+exp2_076.jpeg,cond1,absent,absent,2,"triangle, triangular",green,stripe,"1,3",the green-outlined triangle with vertical stripes.,"**Analyzing and Describing the Target Object**
 
 Okay, here's the breakdown of my thought process. The task is to describe the target object so someone else can identify it, knowing there might be hidden objects the other person can see, but I can't. I need to be as unambiguous as possible.
 
@@ -1600,8 +1600,8 @@ I thought about combining features: ""the green triangle with vertical stripes."
 I went back to the features, considering their uniqueness: Shape (triangle), Outline color (green), Fill pattern (vertical stripes). Now, the question became, which combination of these features would be most robust to whatever is behind the curtain? The fill pattern, ""vertical stripes,"" seemed to be the most definitive. The triangle is the only *visible* object with vertical stripes.
 
 My final thought was to be as specific as possible, using the ""vertical stripes"" attribute. ""The triangle with vertical stripes"" is highly likely to be unambiguous to the listener. If there's another triangle behind the curtain, it's unlikely to have the exact same fill pattern. Adding the outline color as well makes it even *more* robust to potential hidden distractors. Even though ""the green triangle"" is likely sufficient, ""the triangle with vertical stripes"" is likely to be completely unambiguous, regardless of what's behind the curtain. The combination is the most reliable way to uniquely identify the target object.
-"
-exp2_077.jpeg,cond3,present,absent,3,"circle, circular",blue,stripe,"1,3",The blue-outlined circle with vertical stripes.,"**My Thought Process: Describing a Target Object**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_077.jpeg,cond3,present,absent,3,"circle, circular",blue,stripe,"1,3",the blue-outlined circle with vertical stripes.,"**My Thought Process: Describing a Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it, even though they have more information than I do. They can see behind these red curtains, but I can't. They also know that spatial locations are not useful, as the objects could be arranged differently for them. I have to focus on the inherent properties of the object itself.
 
@@ -1616,8 +1616,8 @@ So, the shape is a circle. The outline is blue and solid (which contrasts with t
 Let's do a uniqueness check. Could there be another blue-outlined circle with stripes behind a curtain? Possibly, but in these situations, there is usually a unique one. ""The blue-outlined circle with vertical stripes"" is a good description.
 
 I am not sure if I should be overly verbose. I can distinguish the object from the two other visible objects based on shape, outline style and fill pattern. I can be precise with ""The circle with a blue outline and vertical stripes inside."" That should do the trick. That should distinguish it.
-"
-exp2_078.jpeg,cond4,present,present,4,"triangle, triangular",red,stripe,"2,1",Please select the striped triangle with the red border.,"**My Thought Process: Describing the Target Object**
+","['circle', 'circular']",['stripe'],True,True,True
+exp2_078.jpeg,cond4,present,present,4,"triangle, triangular",red,stripe,"2,1",please select the striped triangle with the red border.,"**My Thought Process: Describing the Target Object**
 
 Okay, so the goal is to describe an object, the ""target,"" in a way that someone else, the ""listener,"" can identify it. Crucially, the listener can see things I can't. Some items are hidden behind red curtains with question marks. I can see only the visible objects, and I need to avoid any absolute spatial references as the arrangement might be different for the listener. The target is a red-bordered, striped triangle in the top middle of the visible objects.
 
@@ -1660,8 +1660,8 @@ The most distinguishing features are:
 If there is a red-bordered dotted triangle, ""The striped triangle with a red border"" will work well. If there is a red-bordered striped square, then this description will work well.
 
 The ideal description should incorporate all these features to make the object uniquely identifiable. ""The striped triangle with the red border"" is ideal.
-"
-exp2_079.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",The green circle.,"**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_079.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",the green circle.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this object so someone else can pinpoint it. I need to be precise enough to distinguish it, but also robust to potential changes or hidden objects that I can't see, but the user can. So, I need to focus on what's visible right now, and think about potential additions. The red dashed box around the green circle with grey dots is the target.
 
@@ -1717,8 +1717,8 @@ Other objects:
 - Are there other circles? Yes, one (blue circle with wavy lines).
 - Is that other circle green? No.
 So, ""the green circle"" is unique.
-"
-exp2_080.jpeg,cond3,present,absent,3,"triangle, triangular",blue,dot,"2,3","The triangle shape with a blue border, filled with small grey dots.","**My Analysis of the Target Object Description**
+","['circle', 'circular']",['dot'],True,True,False
+exp2_080.jpeg,cond3,present,absent,3,"triangle, triangular",blue,dot,"2,3","the triangle shape with a blue border, filled with small grey dots.","**My Analysis of the Target Object Description**
 
 Okay, the task is to describe a target image, a blue-bordered triangle filled with grey dots, in a way that's clear and unambiguous for the listener. The key challenge is that I don't know what's hidden behind red question-mark curtains, but the listener does. I need to make the description *relative* to the objects *I* can see, but framed in a way that considers what the *listener* sees. Spatial locations like ""left"" or ""middle"" are off-limits due to the possible rearrangement of objects for the listener.
 
@@ -1729,8 +1729,8 @@ My initial thoughts were to zero in on what makes the target unique. It’s the 
 I needed to make sure my description covered all the unique visual aspects: shape, fill, and border. I decided ""The blue-bordered triangle filled with grey dots"" is the most robust description. It directly calls out each relevant visual characteristic. I ran through a mental checklist: What if there are other triangles, dot-filled shapes, or blue-bordered shapes? This description distinguishes the target by virtue of containing the combination of attributes.
 
 The description is: ""The triangle shape with a blue border and filled with small grey dots."" This description is specific enough to identify it precisely, even if there are different-looking triangles or dot-filled patterns. I think it addresses all the constraints, ensuring clarity for the listener without assuming anything about the hidden objects.
-"
-exp2_081.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Select the triangle with the checkerboard pattern inside.,"**Analyzing the Target Object for Unambiguous Identification**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_081.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",select the triangle with the checkerboard pattern inside.,"**Analyzing the Target Object for Unambiguous Identification**
 
 Okay, so the goal is to describe a specific object, the target, in a way that someone else, who can see all the objects in a grid, can readily identify it. I'm given a red dashed box, but the listener *can* see everything, including stuff I *can't* directly see if there were a red curtain – which, in *this* specific case, there *isn't*. I must avoid relative spatial terms like ""top-left"" because the other person's view could be different.
 
@@ -1748,8 +1748,8 @@ Since the prompt indicated ""The triangle with the checkerboard pattern"" is eno
 *   Fill Pattern: Checkerboard.
 
 The ""Middle-right"" triangle is different, it has wavy lines. Therefore, my initial description, ""The triangle with the checkerboard pattern"" is sufficiently detailed and unambiguous within the given visible context. It's the most concise and precise description possible.
-"
-exp2_082.jpeg,cond3,present,absent,2,"triangle, triangular",green,stripe,"2,1",The object is the green triangle with vertical gray stripes.,"**My Thought Process on Describing the Target**
+","['triangle', 'triangular']",['checker'],True,False,True
+exp2_082.jpeg,cond3,present,absent,2,"triangle, triangular",green,stripe,"2,1",the object is the green triangle with vertical gray stripes.,"**My Thought Process on Describing the Target**
 
 Okay, the task is to describe a specific object—a green triangle with gray vertical stripes—in a way that allows someone else to identify it, given the context.  The tricky part is the ambiguity about spatial descriptions. The prompt explicitly says to avoid degenerate spatial locations because the arrangement might differ for the listener. My initial instinct is to interpret this as meaning ""absolute"" positions within a grid (like ""top-middle"") are off-limits, but ""relative"" positions within the structure of the grid could still be valid, *provided the grid structure itself is preserved*.
 
@@ -1764,8 +1764,8 @@ The prompt is careful: ""you do not know what is behind, but the other person kn
 Therefore, under the strictest interpretation (no spatial information), I'm left with: ""The object is a green triangle with gray vertical stripes."" If I relax that a bit and assume relative spatial relations in the grid are valid, then I can also say things like, ""The target is directly to the left of a curtain,"" or ""The target is in the same row as the top-right curtain,"" or ""The target is to the right of an empty cell.""
 
 In short, I'll provide the description that is unique among the visible objects. ""The green triangle with gray vertical stripes,"" and then, if I'm able to use relative positions within the grid, add the position description as well.
-"
-exp2_083.jpeg,cond1,absent,absent,3,star,red,dot,"3,3",The star with the red outline and gray dots inside.,"**My Thought Process: Describing the Target Object**
+","['triangle', 'triangular']",['stripe'],True,True,True
+exp2_083.jpeg,cond1,absent,absent,3,star,red,dot,"3,3",the star with the red outline and gray dots inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this object so someone else can identify it, avoiding spatial references because their perspective might be different. I need to be careful because some items might be hidden from *me* but visible to them. This means focusing on truly distinguishing features, things that make the target unique regardless of what else is present.
 
@@ -1782,8 +1782,8 @@ Let's refine this to be as clear and unambiguous as possible. ""The star with a 
 Considering what could be hidden, focusing on the combination of shape and pattern is the strongest approach. The border color is extra detail. The final description should be robust enough to handle any unknown distractors.
 
 Therefore, the best description for the target object is: ""The star with a red outline and gray dots inside"". It is precise, robust, and unambiguous.
-"
-exp2_084.jpeg,cond4,present,present,4,"circle, circular",black,"wavy, zigzag","2,1",The black-bordered circle.,"**Analyzing the Target Image for Precise Description**
+",['star'],['dot'],True,True,True
+exp2_084.jpeg,cond4,present,present,4,"circle, circular",black,"wavy, zigzag","2,1",the black-bordered circle.,"**Analyzing the Target Image for Precise Description**
 
 Okay, here's my thought process. The task is to describe the highlighted target image, and I need to do so in a way that's robust to potential variations or ambiguities, especially since I can't see what's behind the curtains. I need to focus on what *I* can see.
 
@@ -1800,8 +1800,8 @@ I'm making a key assumption here, based on reference game conventions. It's like
 So, I'm refining the description: shape (circle), internal pattern (wavy grey lines), and border color (black). Compared to the other visible objects, the black border is the distinguishing feature.
 
 I'm thinking, ""The black-bordered circle."" Is that concise and accurate? ""Outline"" is a good synonym. ""The black-outlined circle"" also works. Since the wavy pattern is common to the two visible circles, it could be redundant to mention it if the border colour is unique. I'll go for concise and accurate: ""The black-bordered circle."" That's the best description I can give based on what *I* can see, and what I assume, with the least ambiguity.
-"
-exp2_085.jpeg,cond3,present,absent,2,"triangle, triangular",green,"wavy, zigzag","1,2",Select the triangle with the green border and the wavy pattern inside.,"**Deconstructing the Description Problem**
+","['circle', 'circular']","['wavy', 'zigzag']",True,True,False
+exp2_085.jpeg,cond3,present,absent,2,"triangle, triangular",green,"wavy, zigzag","1,2",select the triangle with the green border and the wavy pattern inside.,"**Deconstructing the Description Problem**
 
 Okay, so I need to describe this object so that someone else, who *can* see things I can't, will know which one I'm talking about. My primary constraint is that the listener can see what's behind those red curtains, but I can't. That means I need to be *really* careful with my description to avoid any ambiguity arising from those hidden elements.
 
@@ -1820,8 +1820,8 @@ I want to be sure that my description isn't accidentally referencing the star, s
 Now I need to guard against the unknowns behind the curtains. It's improbable that there is a triangle with that combination of features.  There could be another triangle that's plain green or one with a red border and wavy lines, but it would not be a match to my description of the triangle that has the green border and wavy pattern.
 
 To summarize, my description is: ""the triangle with the green border and the wavy pattern inside.""  It's as specific as I can make it, relying solely on visible features and hopefully minimizing any chance of confusion with those hidden objects. The goal is clarity through precision.
-"
-exp2_086.jpeg,cond4,present,present,3,star,black,dot,"2,3",Please select the star that has a black outline and is filled with grey dots.,"**Analyzing the Target Object for Unique Identification**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_086.jpeg,cond4,present,present,3,star,black,dot,"2,3",please select the star that has a black outline and is filled with grey dots.,"**Analyzing the Target Object for Unique Identification**
 
 Okay, the goal is clear: I need to describe this target object so someone else can identify it without me giving away its location. I see a black-outlined star filled with tiny grey dots, and there are other objects, including a green-outlined star with a grey wavy pattern and two red curtains with question marks on them. The curtains are important because while *I* don't know what's behind them, the person I'm describing the object to *does*. This means my description needs to be specific enough to be distinct even when considering unseen possibilities.
 
@@ -1832,8 +1832,8 @@ So, I need to make the description precise. Saying simply ""the star with grey d
 Thinking more broadly, I know that games like this typically design the hidden objects to be variations of the visible ones, or something completely different. I can't be sure, but it is unlikely that all hidden stars would use the same fill patterns and outlines. Therefore, I need to use the full combination: a black outline *and* grey dots.
 
 ""The star with the black outline and the grey dots"" is the phrase that comes to mind. This is robust. The outline color, combined with the fill pattern, gives the most precision. The ""game logic"" tells me that this combination is likely to be unique, even among hidden objects. It's concise, avoiding all spatial descriptors. So I can say with confidence, this is the safest and most efficient description.
-"
-exp2_087.jpeg,cond2,absent,present,3,star,black,checker,"1,2",Please select the star that has a checkerboard pattern inside.,"**My Thought Process: Describing the Target Object**
+",['star'],['dot'],True,True,True
+exp2_087.jpeg,cond2,absent,present,3,star,black,checker,"1,2",please select the star that has a checkerboard pattern inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object so someone else can identify it without me pointing or using relative spatial terms. The target is a star, and it has a checkerboard pattern inside, with a black outline. It's in the middle-left cell of a 3x3 grid, but I can't rely on the listener seeing a grid or knowing its structure.
 
@@ -1848,8 +1848,8 @@ The easiest way to make this unique is to focus on the shape *and* the internal 
 I need to avoid referring to “the red dashed box,” because I’m the only one who sees that. I should also avoid the term ""red square,"" and be more precise in my description if I were to refer to the other object framed by a red box. In that case, I should use ""red-outlined square with a grey polka dot pattern.""
 
 Ultimately, my target is uniquely described by its combination of shape and pattern. I can say, ""Select the star that has a checkerboard pattern inside."" That should be perfectly clear and unambiguous.
-"
-exp2_088.jpeg,cond1,absent,absent,4,"circle, circular",red,checker,"3,2",Please select the circle.,"**My Analysis of the Target Object's Description**
+",['star'],['checker'],True,False,True
+exp2_088.jpeg,cond1,absent,absent,4,"circle, circular",red,checker,"3,2",please select the circle.,"**My Analysis of the Target Object's Description**
 
 Okay, so the goal is to describe an object, the ""target,"" in such a way that another person can identify it, even though they can't see the red dashed box that highlights it for *me*. Right, the red box... it's just a visual aid, a mental note. The crucial part is avoiding descriptions that rely on my private knowledge of the visual.
 
@@ -1879,8 +1879,8 @@ Let me analyze that a little more. What if I tried to use the fill pattern? Well
 My goal is to be concise and unambiguous. ""The circle"" wins. I should avoid positional descriptions like ""the middle-right object"", just in case the other person is looking at a differently arranged display.
 
 Therefore, the best description of the target object is simply **""The circle.""** That's clear.
-"
-exp2_089.jpeg,cond3,present,absent,4,square,black,dot,"3,3",The object that is a square with many small gray dots inside.,"**Analyzing the Target Object for Identification**
+","['circle', 'circular']",['checker'],True,False,False
+exp2_089.jpeg,cond3,present,absent,4,square,black,dot,"3,3",the object that is a square with many small gray dots inside.,"**Analyzing the Target Object for Identification**
 
 Okay, so the goal is to describe an object, the ""target,"" in such a way that another person can pinpoint it among other potential objects they might also see. I have a lot of information to consider here, especially given the constraints. Let's break it down.
 
@@ -1937,8 +1937,8 @@ I can see the following:
 Hidden behind curtains are 2 more objects.
 
 ""The object that is a square and has small gray dots inside"" This is my strongest description and is likely going to be uniquely identifying.
-"
-exp2_090.jpeg,cond3,present,absent,3,"triangle, triangular",green,dot,"3,2",The green triangle filled with gray dots.,"**Analyzing the Description Task: Identifying a Target Object**
+",['square'],['dot'],True,False,True
+exp2_090.jpeg,cond3,present,absent,3,"triangle, triangular",green,dot,"3,2",the green triangle filled with gray dots.,"**Analyzing the Description Task: Identifying a Target Object**
 
 Okay, so the challenge is to describe an object, the ""target,"" in such a way that another person can identify it, even though they can't see what *I* see directly. They have access to some hidden information, specifically what's behind the red curtains, but I do not. The target object is a green triangle filled with gray dots, and it's highlighted for me with a red dashed box, meaning it is not behind a curtain.
 
@@ -1956,8 +1956,8 @@ Looking at each aspect:
 *   **Internal Pattern:** Gray dots (target), Vertical stripes (circle), Question marks (curtains). The dots are unique.
 
 Therefore, ""the green triangle with dots"" is an unambiguous description. Even if a hidden object shares one property, the target is unique by the combination of its properties: a green triangle that contains dots, and the other objects cannot satisfy all three requirements.
-"
-exp2_091.jpeg,cond1,absent,absent,3,square,black,"wavy, zigzag","2,1",The square.,"**Analyzing the Target Object for Identification**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_091.jpeg,cond1,absent,absent,3,square,black,"wavy, zigzag","2,1",the square.,"**Analyzing the Target Object for Identification**
 
 Okay, the goal is to describe a specific object so someone else can pick it out. I need to be precise and avoid anything that relies on a specific arrangement or that could be misconstrued if some objects are hidden.
 
@@ -1982,8 +1982,8 @@ It will be robust across different spatial arrangements, and it will be unambigu
 -   A circle
 
 Thus, ""The square"" is the most concise and accurate identifier for the target object based on the presented image. It is the best choice.
-"
-exp2_092.jpeg,cond2,absent,present,3,"triangle, triangular",red,dot,"1,3",Please select the triangle with dots inside.,"**Analyzing and Describing the Target Object**
+",['square'],"['wavy', 'zigzag']",True,False,False
+exp2_092.jpeg,cond2,absent,present,3,"triangle, triangular",red,dot,"1,3",please select the triangle with dots inside.,"**Analyzing and Describing the Target Object**
 
 Okay, the task is to describe this object so someone can identify it. It's a red-outlined triangle filled with gray dots, and a dashed red box is around the object. The listener could have a different layout, so I need to avoid absolute spatial terms. I need to ignore anything hidden behind the red curtain with a question mark; although this image doesn't have such a curtain.
 
@@ -2030,8 +2030,8 @@ If I say ""the red-outlined triangle"": Only one triangle has a red outline. The
 ""The triangle with dots inside"" seems more direct, focusing on the core identity and the distinctive fill.
 
 I'm confident. I'll go with ""The triangle with dots inside.""
-"
-exp2_093.jpeg,cond4,present,present,3,square,red,"wavy, zigzag","3,2",The square with the red border.,"**My Thought Process: Describing a Target Object**
+","['triangle', 'triangular']",['dot'],True,False,True
+exp2_093.jpeg,cond4,present,present,3,square,red,"wavy, zigzag","3,2",the square with the red border.,"**My Thought Process: Describing a Target Object**
 
 Okay, so I'm tasked with describing an object – the one inside the red dashed box – to someone who can't see it but *can* see other elements. I need to be as clear as possible, without using any descriptions that rely on fixed positions. I also need to be careful because some objects are hidden behind red curtains with question marks. The listener knows what's behind those curtains, but I do *not*.
 
@@ -2060,8 +2060,8 @@ If there are *multiple* red-bordered squares, ""the square with the red border""
 The prompt implies that I need to provide a description that is unique based on *my knowledge.* The listener, with complete knowledge, can resolve any ambiguity.
 
 So, the simplest and most unambiguous description is: ""The square with the red border.""
-"
-exp2_094.jpeg,cond2,absent,present,4,star,green,dot,"1,3",Please select the green star with dots.,"**My Reasoning Process for Describing the Target Object**
+",['square'],"['wavy', 'zigzag']",True,True,False
+exp2_094.jpeg,cond2,absent,present,4,star,green,dot,"1,3",please select the green star with dots.,"**My Reasoning Process for Describing the Target Object**
 
 Okay, so the goal is to describe a specific object – a green star with a dotted pattern – in such a way that another person can identify it, even if their view of the scene is slightly different or if there are ""hidden"" elements. I need to be precise, avoiding spatial descriptors like ""the bottom left one"" because the arrangement might be different for the other person. The instructions also hint at a potential twist: there might be objects *I* can't see that *they* can.
 
@@ -2091,8 +2091,8 @@ Is there another ""green star""? No, only the dotted one.
 Is there another ""green object with dots?"" The green circle has stripes. The *red* circle has dots. So ""green object with dots"" refers *only* to the target star.
 
 This combined description is robust, in the sense that no other visible object is a ""green star with dots."" If those empty cells are *also* just empty cells, or are full of distracting shapes that are *not* a green star with dots, then this description will work perfectly. If there's another green star with dots hidden from me, then my description is ambiguous, but I have no way of knowing and I can only use this as my best description. The goal is to maximize the precision of the description based on the information *I* have.
-"
-exp2_095.jpeg,cond1,absent,absent,2,"circle, circular",blue,dot,"1,3",The circle with dots.,"**My Thought Process: Describing the Target Object**
+",['star'],['dot'],True,True,True
+exp2_095.jpeg,cond1,absent,absent,2,"circle, circular",blue,dot,"1,3",the circle with dots.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object clearly enough that someone else can pick it out, and avoid any spatial descriptions. I need to focus on what *makes* this object unique. First, I'm noting the visible objects: there's a blue-outlined circle filled with grey dots (that's my target), a blue-outlined triangle with a grey and white checkerboard, and a green-outlined square, also with a grey and white checkerboard.
 
@@ -2109,8 +2109,8 @@ I'm leaning toward ""The circle with dots"" or ""The dotted circle"" because it 
 I need to confirm I'm not using spatial language. ""The circle with dots"" doesn't reference any locations, so that's good.
 
 So, I'm going to go with ""The circle with dots."" It's clear, precise, and meets the criteria. ""The dotted circle"" is also acceptable.
-"
-exp2_096.jpeg,cond4,present,present,4,star,green,dot,"1,3",Please select the star with the green outline.,"**My Thought Process: Describing the Target Object**
+","['circle', 'circular']",['dot'],True,False,True
+exp2_096.jpeg,cond4,present,present,4,star,green,dot,"1,3",please select the star with the green outline.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this object so someone else can pick it out, even though the layout might be different for them. The object is a green star with a dotted pattern inside. There are other objects around: red curtains, triangles, circles, and another star that's blue with a dotted fill. I need to be precise, especially since I don't know what's behind those curtains with question marks. The listener *does* know, which means I have to be extra careful.
 
@@ -2129,8 +2129,8 @@ Now, if I say ""the green star,"" this should work. It's unique among the visibl
 ""The star with the green outline and the dotted pattern"" is also accurate. This might be better, because if there's *any* hidden green star, at least I am differentiating the two objects.
 
 I am concluding that the simplest unique description is ""the green star."" I need to remember that the listener *does* know about those hidden objects and can resolve ambiguity.
-"
-exp2_097.jpeg,cond3,present,absent,3,square,black,stripe,"3,2",The square object that has vertical grey and white stripes.,"**My Thought Process: Describing the Target Object**
+",['star'],['dot'],True,True,False
+exp2_097.jpeg,cond3,present,absent,3,square,black,stripe,"3,2",the square object that has vertical grey and white stripes.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe an object clearly enough that someone else can identify it, even if their ""mental grid"" is arranged differently. This means I need to avoid directional terms like ""top"" or ""right"" if possible, or only use them relative to other objects if those relationships will *always* hold true, regardless of the listener's layout. A key constraint is the hidden objects behind red curtains; the listener knows what's behind them, but I don't. So, if the target object is behind a curtain, I have to describe the curtain and ask for help. However, in this instance, the target is not hidden.
 
@@ -2154,8 +2154,8 @@ My strategy is to identify the object by its core visual characteristics, and th
 So, the simplest and clearest description is: ""The square with vertical grey and white stripes."" It's concise. It specifies the square shape, vertical stripes, and the grey/white colors. This should be enough to distinguish it from the striped stars, as well.
 
 Let me double-check the constraints: avoid absolute spatial terms and account for hidden objects. Done. The description is good. I think ""The square with vertical grey and white stripes"" should be sufficient to convey the correct object in this case.
-"
-exp2_098.jpeg,cond1,absent,absent,2,square,blue,stripe,"1,2",Select the square that has a blue outline and is filled with vertical gray and white stripes.,"**My Thought Process: Describing a Target Object**
+",['square'],['stripe'],True,False,True
+exp2_098.jpeg,cond1,absent,absent,2,square,blue,stripe,"1,2",select the square that has a blue outline and is filled with vertical gray and white stripes.,"**My Thought Process: Describing a Target Object**
 
 Okay, so I need to describe this object clearly and unambiguously for someone else to identify it, without giving away its location in any specific grid. It's a square with a blue outline and vertical gray and white stripes inside. I need a robust description, as there's a red curtain with a question mark, indicating unseen objects are present.
 
@@ -2174,8 +2174,8 @@ Now I'm thinking about the ""degenerate spatial locations"" instruction; I shoul
 Let's check for ambiguity. The stripes are definitely vertical, so that's fine. The stars are wavy and checkered.
 
 So, the optimal description is ""The square object with a blue outline, which is filled with vertical gray and white stripes."" It distinguishes the target clearly from the stars in terms of shape and internal pattern, and from any objects hidden behind the curtain.
-"
-exp2_099.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","2,3",Please select the circle that has a wavy pattern inside.,"**My Thought Process: Describing the Target Object**
+",['square'],['stripe'],True,True,True
+exp2_099.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","2,3",please select the circle that has a wavy pattern inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this target object so someone else can identify it. I need to be precise and avoid relying on relative locations because those might be different for the listener. I also need to make sure I am accounting for what I see and assuming the listener sees the same, barring any specific clues to the contrary.
 
@@ -2211,8 +2211,8 @@ And with ""The green-outlined circle with the wavy pattern"":
 *   Object 4 (Circle, green, wavy): This is the target.
 
 Both work, but the first is more concise, and it leverages both shape and pattern. Therefore, I will use: ""The circle with the wavy pattern.""
-"
-exp2_100.jpeg,cond4,present,present,2,square,green,dot,"3,2",The square with the grid of grey dots.,"**My Thought Process on Describing the Target Object**
+","['circle', 'circular']","['wavy', 'zigzag']",True,False,True
+exp2_100.jpeg,cond4,present,present,2,square,green,dot,"3,2",the square with the grid of grey dots.,"**My Thought Process on Describing the Target Object**
 
 Okay, the goal is to describe a specific object on this grid so that someone else can identify it, and I need to do so in a way that avoids spatial directions and uses only the information available to *me*. The listener has more complete information, knowing what's behind the red curtains, but I cannot see behind them. They can also see a dashed red box, but I cannot, so I have to describe the object itself.
 
@@ -2232,8 +2232,8 @@ So, based on what *I* can see, I'm going to describe the target as the:
 *   ""Object patterned with a lot of grey circles.""
 
 If the listener has full knowledge, they'll know which one I'm referring to, even if they can also see another pattern of dots or circles elsewhere.
-"
-exp2_101.jpeg,cond4,present,present,2,"circle, circular",green,checker,"3,3",Please select the circle with the green outline and the checkerboard pattern inside.,"**My Analysis of the Target Object for Identification**
+",['square'],['dot'],True,False,True
+exp2_101.jpeg,cond4,present,present,2,"circle, circular",green,checker,"3,3",please select the circle with the green outline and the checkerboard pattern inside.,"**My Analysis of the Target Object for Identification**
 
 Okay, so I need to provide a description that another person can use to identify a specific object, and I need to do so robustly, meaning I can't rely on spatial location. The target object is highlighted, and I know it's a circle with a green outline and a checkerboard pattern inside. I'm also told that some objects are hidden behind red curtains with question marks *for me*, but the *other person* knows what's behind them. Crucially, I must describe the *target object itself*, not relative to the hidden objects I can't see, but in such a way that the description is accurate, and unambiguous *from the listener's point of view*.
 
@@ -2248,8 +2248,8 @@ I need to make sure my description works even if the hidden objects are, in some
 So, how can I be sure that the *other person* can identify the target from a broader visual context? The prompt is clear: the other person knows the actual objects behind the curtains. It asks me to describe the target, not to describe it *relative* to the other *visible* objects. I must focus on enabling the listener to select the target from a range of possibilities they know.
 
 Therefore, the most accurate and precise description of the target, *based on what I know*, is: ""The circle with the green outline and the checkerboard pattern."" I believe this description is robust to whatever the other person sees behind the curtains, since I can only describe the characteristics of the *target object* itself. I am not asked to deal with *possibilities*.
-"
-exp2_102.jpeg,cond1,absent,absent,4,square,black,checker,"3,1",The square with the black border.,"**My Thought Process: Describing the Target Object**
+","['circle', 'circular']",['checker'],True,True,True
+exp2_102.jpeg,cond1,absent,absent,4,square,black,checker,"3,1",the square with the black border.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe a target object so someone else can identify it. I need to be precise and avoid relying on spatial arrangements, as the other person's perspective might be different. Let's break down the visible object. The target is a square, black border, with a black and white checkerboard pattern.
 
@@ -2275,8 +2275,8 @@ I need to be confident. No red curtains!
 
 I'll go with ""The square with the black border.""
 It's succinct, unambiguous, and covers the primary distinguishing features.
-"
-exp2_103.jpeg,cond3,present,absent,2,square,red,dot,"2,1",The square filled with grey dots.,"**Analyzing the Target and Listener's Perspective**
+",['square'],['checker'],True,True,False
+exp2_103.jpeg,cond3,present,absent,2,square,red,dot,"2,1",the square filled with grey dots.,"**Analyzing the Target and Listener's Perspective**
 
 Okay, so I need to describe the target image – a square filled with grey dots – in a way that allows the listener to identify it without using absolute spatial references, like ""top middle"". I'm also aware that there are hidden objects behind red curtains with question marks. This introduces an interesting asymmetry: I don't know what's behind the curtains, but the listener does. The key is to craft a description unique *from my perspective* while keeping in mind that the listener has extra information.
 
@@ -2293,8 +2293,8 @@ The most robust approach is to focus only on what's visible and describe the tar
 Now, let's consider a worst-case scenario: If the listener *sees* multiple squares with dots (because there is one behind the curtain), my description ""the square with dots"" is then ambiguous, and it would fail. However, the constraints state that I do not know what's behind the curtains, but the listener does, so I should not guess the content of what's behind them. So, the description should work even if there are multiple objects for the listener.
 
 The listener should be able to select the *target object* which is explicitly the square with dots in the top-middle. Therefore, the description should be unique based on what *I* can see, and the listener should choose correctly.
-"
-exp2_104.jpeg,cond2,absent,present,2,"circle, circular",green,stripe,"2,3",Select the circle that has vertical stripes inside it.,"**My Analysis of the Image Description Task**
+",['square'],['dot'],True,False,True
+exp2_104.jpeg,cond2,absent,present,2,"circle, circular",green,stripe,"2,3",select the circle that has vertical stripes inside it.,"**My Analysis of the Image Description Task**
 
 Okay, so the task is to describe an object within an image in a way that someone *else* can identify it, even though they can't see the specific visual markers I'm seeing (like the dashed box). I need to avoid any absolute spatial terms, which makes sense. I also have to assume the listener can see the *whole* image, even if some parts appear hidden to *me* because of things like ""red curtains with question marks"" (though there aren't any in *this* case, which is good).
 
@@ -2310,8 +2310,8 @@ Therefore, ""the circle with vertical stripes"" is the most direct way to descri
 *   Distractor 2 has vertical stripes, *but* it’s a star, not a circle.
 
 I've made sure to cover potential ambiguity by asking if there are other objects with the same traits. Since there aren't any other circles with vertical stripes in the image, the description is unambiguous. The description is robust and accurate, so I should be good to go.
-"
-exp2_105.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"2,1",The triangle filled with dots.,"**Analyzing the Target and the Unknowns**
+","['circle', 'circular']",['stripe'],True,False,True
+exp2_105.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"2,1",the triangle filled with dots.,"**Analyzing the Target and the Unknowns**
 
 Okay, so I need to describe this target object – a triangle with a dotted pattern – in a way that allows someone else to identify it, even though they see more than I do. The key is avoiding any spatial descriptors because the arrangement might change. I'm focusing on intrinsic properties.
 
@@ -2322,8 +2322,8 @@ Initially, ""the triangle with dots"" seems sufficient. It clearly distinguishes
 I need to focus on what I can say with certainty about the target: it's a triangle with a dotted fill pattern. Its outline is solid and black. It is the only triangle with dots *that I can see*.
 
 I have to interpret ""do not use degenerate spatial locations"" as a directive to focus on intrinsic, unchanging features. So, I need to assume the listener can see all objects. The main distinction between the two visible triangles is the dotted vs. striped pattern. I can't be sure if there is another dotted triangle hidden, but my main focus is on the object I have in front of me: the triangle with a dotted pattern. Therefore, I will respond with the most simple, direct description.
-"
-exp2_106.jpeg,cond4,present,present,4,"triangle, triangular",green,dot,"2,1",Please select the green-outlined triangle that is filled with grey dots.,"**Analyzing the Target Object for Unique Identification**
+","['triangle', 'triangular']",['dot'],True,False,True
+exp2_106.jpeg,cond4,present,present,4,"triangle, triangular",green,dot,"2,1",please select the green-outlined triangle that is filled with grey dots.,"**Analyzing the Target Object for Unique Identification**
 
 Okay, here's the breakdown of my thought process. The challenge is to describe this object so that someone *else* can identify it, even though they can see something I can't. I need to be precise and avoid anything that depends on the layout, since the arrangement could be changed. The target is highlighted, so it's a matter of describing it well enough so that they can select it from the possible set of items, even if more items are present.
 
@@ -2338,8 +2338,8 @@ I'm considering, ""Could there be another 'green triangle with grey dots' behind
 Even if I don't know the hidden objects, I can be confident that the features I see are sufficient to describe the target. The point is that the listener knows what the target is *relative* to the other items. If the unseen items *were* the same, I could be sure the listener could easily identify the item.
 
 Therefore, the final description is:  ""The green-outlined triangle with grey dots inside."" It's precise, comprehensive, and should be enough to allow the expert listener to identify the target, regardless of what's behind the red curtain.
-"
-exp2_107.jpeg,cond1,absent,absent,4,"triangle, triangular",red,"wavy, zigzag","3,3",The red-bordered triangle filled with wavy lines.,"**Analyzing the Target Image**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_107.jpeg,cond1,absent,absent,4,"triangle, triangular",red,"wavy, zigzag","3,3",the red-bordered triangle filled with wavy lines.,"**Analyzing the Target Image**
 
 Okay, so I need to describe this target image, which is a red-bordered triangle filled with grey wavy lines, and I need to do so in a way that doesn't rely on its position. I am aware that some objects might be hidden from me, but the prompt emphasizes that I can only describe what I *see*.
 
@@ -2357,8 +2357,8 @@ So, let's explore more detailed descriptions: The target is a red-bordered trian
 If I consider *hypothetical* hidden objects, even a hidden triangle with a different border or fill pattern would still be distinguished by the red border and the wavy fill. ""The red-bordered triangle with wavy lines"" provides maximum precision based on the visible features, and minimizes the possibility of ambiguity related to hidden objects.
 
 Therefore, the most robust description, while remaining concise and unambiguous based on only visible features, is ""the red-bordered triangle with wavy lines.""
-"
-exp2_108.jpeg,cond3,present,absent,4,square,red,"wavy, zigzag","1,3",Select the square object that has a wavy pattern inside and a red border.,"**Analyzing the Target Object for Identification**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_108.jpeg,cond3,present,absent,4,square,red,"wavy, zigzag","1,3",select the square object that has a wavy pattern inside and a red border.,"**Analyzing the Target Object for Identification**
 
 Okay, so the task is to describe this object highlighted by the red box, in a way that allows the listener to pick it out from a set of objects, some of which are hidden from me but *not* from the listener.  I need to be precise, avoiding relative positioning as it could be arranged differently for them. The biggest challenge is that I don't know what's behind the ""red curtain with a question mark"", but the listener does! This changes everything. My description has to work even if there are squares, circles, or who-knows-what behind those curtains.
 
@@ -2398,8 +2398,8 @@ Let's go through the possible objects one last time. Could my description be con
 7.  **Empty square:** No pattern, no explicit border.
 8.  **Hidden B:** The listener knows what this is. Could it be a ""square with a wavy pattern and a red border""?
 
-I must make the assumption, that the listener can see a square with a wavy pattern and a red border hidden behind one of the curtains. In"
-exp2_109.jpeg,cond3,present,absent,2,"triangle, triangular",red,dot,"3,3",Please select the red-outlined triangle with grey dots inside.,"**Identifying the Target Object**
+I must make the assumption, that the listener can see a square with a wavy pattern and a red border hidden behind one of the curtains. In",['square'],"['wavy', 'zigzag']",True,True,True
+exp2_109.jpeg,cond3,present,absent,2,"triangle, triangular",red,dot,"3,3",please select the red-outlined triangle with grey dots inside.,"**Identifying the Target Object**
 
 Okay, so I need to describe this object so someone can pick it out, even though they can see everything in the grid – unlike me, who only sees the target highlighted in a dashed box. That’s the crux. They see the whole picture, so I can’t rely on the “highlighted” aspect, and definitely not its position like ""bottom right."" I’ve got to give them a description that’s robust enough to work even if there’s other visual noise.
 
@@ -2410,8 +2410,8 @@ I considered a few descriptions. Initially, I thought ""The triangle with the re
 The simple description ""The red-outlined triangle with grey dots inside"" seems pretty solid. The star has a black outline, and the curtain is, well, a curtain. So that should be unique. Just to be sure, I’ll consider the relationship to the red curtain. ""The triangle to the right of the red curtain"" is also a perfectly valid description. It is good and non-degenerate.
 
 Since the listener can see the full grid, the specific description is the most robust and doesn't rely on positions that could change, so I'll go with that: ""The red-outlined triangle with grey dots inside."" It should be crystal clear.
-"
-exp2_110.jpeg,cond2,absent,present,2,"triangle, triangular",green,dot,"2,3",The green triangle.,"**My Thought Process: Describing a Visual Target**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_110.jpeg,cond2,absent,present,2,"triangle, triangular",green,dot,"2,3",the green triangle.,"**My Thought Process: Describing a Visual Target**
 
 Okay, so the goal is to describe a specific object in an image so that someone else can identify it. They need to be able to pick it out from other objects, and I can't use vague spatial references because their view may be different. Let's see... the target is a green-outlined triangle with grey dots inside. There are two other shapes, a black-outlined triangle with grey dots and a blue-outlined circle with grey waves.
 
@@ -2435,8 +2435,8 @@ I'm thinking about ambiguity now. Could there be another green triangle hidden? 
 Okay, let me check myself. If I say ""The green triangle"" that's clear and concise. The target's a green triangle and the other triangle is black. The circle is blue. That should be good! ""The green triangle"" works.
 
 I need to make sure I followed the constraints. I avoided degenerate spatial references. And, there are no curtains in this image, so I'm good. I'll go with ""The green triangle"". It's simple and precise.
-"
-exp2_111.jpeg,cond1,absent,absent,4,"triangle, triangular",green,"wavy, zigzag","3,1",Select the triangle that has a green border and a wavy pattern inside.,"**My Identification of the Target Object**
+","['triangle', 'triangular']",['dot'],True,True,False
+exp2_111.jpeg,cond1,absent,absent,4,"triangle, triangular",green,"wavy, zigzag","3,1",select the triangle that has a green border and a wavy pattern inside.,"**My Identification of the Target Object**
 
 Okay, so the goal is to describe an object such that someone else can pinpoint it. I'm focusing on features that make it *uniquely* identifiable. I need to avoid direct spatial references because the arrangement could be different for the listener. The prompt mentions hidden objects, but in this specific scene, nothing is concealed.
 
@@ -2449,8 +2449,8 @@ I'm considering potential ambiguities. Could there be *another* green triangle? 
 However, in this particular scene, the combination of a triangle, a green border, and the wavy grey and white lines is unique. No other object has that particular configuration of shape, border color, and internal pattern.
 
 So, the simplest and most robust description I can provide is: **""The triangle with a green border and wavy pattern inside.""** It's concise and should definitively identify the intended object. This should work for *this* image, even if there are different arrangements of the visible objects. The prompt has a disclaimer about hidden objects, but since they don't apply to *this* scene, I have not included any additional information regarding them.
-"
-exp2_112.jpeg,cond2,absent,present,4,"circle, circular",black,"wavy, zigzag","3,2",The circle with the wavy pattern inside.,"**Analyzing the Target Object for Unique Identification**
+","['triangle', 'triangular']","['wavy', 'zigzag']",True,True,True
+exp2_112.jpeg,cond2,absent,present,4,"circle, circular",black,"wavy, zigzag","3,2",the circle with the wavy pattern inside.,"**Analyzing the Target Object for Unique Identification**
 
 Okay, the task is to describe this object so someone can pinpoint it, and they're likely an expert, so I need to be precise. The target is a circle, a black outline, and a wavy pattern inside, highlighted by a red dashed box. I need to make sure my description allows the listener to pick the correct object out of the set of distractors.
 
@@ -2465,8 +2465,8 @@ Then, I started combining properties. ""Circle with a wavy pattern"" seems promi
 I went back and tested those combinations. ""Circle with a wavy pattern"" is very clear and concise, separating it from the circle with polka dots and the triangle with wavy lines. I need to avoid ambiguity.
 
 My best strategy is to describe its attributes distinctly: the shape and the internal pattern. I need to balance brevity and clarity. I decided on ""the circle that has a wavy pattern inside."" It's unique and straightforward. ""The circle with the wavy pattern."" will work.
-"
-exp2_113.jpeg,cond3,present,absent,2,"circle, circular",red,"wavy, zigzag","3,2",Select the grey circle with white wavy lines and a red border.,"**My Thought Process on Identifying the Target Object**
+","['circle', 'circular']","['wavy', 'zigzag']",True,False,True
+exp2_113.jpeg,cond3,present,absent,2,"circle, circular",red,"wavy, zigzag","3,2",select the grey circle with white wavy lines and a red border.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to describe this object so someone else can identify it. The goal is to be precise without relying on potentially changing spatial locations. Also, I need to keep in mind that I don't know what's behind the red curtains with question marks, but the other person does. That's key: I need to focus on what *I* see.
 
@@ -2492,8 +2492,8 @@ Let's check it against my plan:
 The question of hidden objects is interesting. If there *were* another circle, does it also have waves and a red outline? If there is another hidden object, it is highly likely that there is a way to distinguish them using color and pattern.
 
 So, for maximum clarity and precision, I'm going with: ""The grey circle with white wavy lines and a red border."" I'm confident that this should be enough to distinguish it, even if there are other, unseen, objects behind those red curtains.
-"
-exp2_114.jpeg,cond1,absent,absent,2,square,red,"wavy, zigzag","1,2",The square with the wavy pattern.,"**My Thought Process on Identifying the Target Object**
+","['circle', 'circular']","['wavy', 'zigzag']",True,True,True
+exp2_114.jpeg,cond1,absent,absent,2,square,red,"wavy, zigzag","1,2",the square with the wavy pattern.,"**My Thought Process on Identifying the Target Object**
 
 Okay, so I need to describe this object so someone else can pick it out, but I have to be careful. The instructions say to avoid spatial descriptions, since the other person might see things arranged differently. They also mentioned hidden objects, which adds another layer of complexity. Let's see...
 
@@ -2504,8 +2504,8 @@ To make sure I nail this, I'll consider its properties: shape, outline color, an
 But, I need to be *thorough*. If there *were* other squares, I need to be more precise. So, I need to choose a description that holds up against hypothetical hidden objects. I want to keep this concise, so ""the square with the wavy pattern"" seems best. It's unique to what I see. Even if there was a hidden object, the wavy pattern seems robust as a distinguishing factor. It leverages *only* intrinsic properties, as requested, without relying on spatial information.
 
 The instructions specifically mentioned that I *shouldn't* know what is behind the red curtain, so I should be conservative with my description. Therefore, ""the square with the wavy pattern"" is the most robust and elegant solution.
-"
-exp2_115.jpeg,cond2,absent,present,4,"triangle, triangular",green,dot,"3,3",Please select the triangle with the green outline and grey dots inside.,"**My Thought Process: Describing the Target Object**
+",['square'],"['wavy', 'zigzag']",True,False,True
+exp2_115.jpeg,cond2,absent,present,4,"triangle, triangular",green,dot,"3,3",please select the triangle with the green outline and grey dots inside.,"**My Thought Process: Describing the Target Object**
 
 Okay, the goal is to describe this object so someone else can pick it out, and the constraints say to avoid location-based descriptions. The target is a green triangle with grey dots inside and, for me, a dashed red box. I need to focus on what *defines* it.
 
@@ -2532,8 +2532,8 @@ I need to make sure the attributes I describe are not easily confused. So: Shape
 I have to be explicit and precise. ""The triangle with the green outline and grey dots inside"" ensures there’s no room for confusion. ""The triangle with the green border"" works well too, as it is a synonym.
 
 Because of the constraints of the task, I will combine features: shape, color, and fill. So, I will go with ""The triangle with the green outline and grey dots inside"" to be precise, clear, and unambiguous. This specifies: shape, unique outline, and fill. This should be a robust and reliable description.
-"
-exp2_116.jpeg,cond3,present,absent,2,star,black,stripe,"3,3",Please select the star that has vertical stripes inside.,"**My Thought Process on Describing the Target Object**
+","['triangle', 'triangular']",['dot'],True,True,True
+exp2_116.jpeg,cond3,present,absent,2,star,black,stripe,"3,3",please select the star that has vertical stripes inside.,"**My Thought Process on Describing the Target Object**
 
 Okay, so the goal is to get the listener to pick out a specific object that they can see, but I can't. The description needs to be precise enough to distinguish it from anything else they might see. I need to be careful to only use features that *I* can perceive and that would uniquely identify the object to the listener.
 
@@ -2544,8 +2544,8 @@ I need to focus on what makes this star special. It's a star, sure, but what if 
 I need to be robust. Let's see...there's also a triangle with wavy stripes that *I* can see, so I know the listener can differentiate a triangle from a star, and wavy lines from straight vertical stripes.
 
 My gut says to go with ""The star with vertical stripes."" It's simple, direct, and focuses on the two most distinctive visual features I can clearly define. I considered adding more detail, like the gray and white colors of the stripes, but I think ""vertical stripes"" already implies a contrast that makes them easily seen. I want to avoid being too wordy; I just want to focus on key distinguishing features. ""The star with vertical stripes"" seems to fit. The listener can pick it out, I think. They can see the full image, and I bet it's distinct enough. If they see another star or striped object that's the same, then maybe I'm going to have a hard time, but it's unlikely since both are pretty unusual in one object.
-"
-exp2_117.jpeg,cond4,present,present,2,star,black,"wavy, zigzag","3,3",The black star with a wavy pattern inside.,"**My Thought Process on Describing the Target**
+",['star'],['stripe'],True,False,True
+exp2_117.jpeg,cond4,present,present,2,star,black,"wavy, zigzag","3,3",the black star with a wavy pattern inside.,"**My Thought Process on Describing the Target**
 
 Okay, so I need to describe a target image in a way that allows someone else to identify it, but with a few constraints.  First, the location of the target might be different for the listener, so I can't rely on spatial references like ""bottom right.""  Second, there are objects hidden behind curtains, and I *don't* know what's behind them, though the other person *does*. This is the tricky bit, I need to focus on what *I* can see. I can't use the hidden objects' content for differentiation, I can only refer to the curtain itself as a placeholder.
 
@@ -2562,8 +2562,8 @@ Let's double-check. I can't say ""bottom right"" because of the location constra
 I could be more verbose: ""The star that has a black border and a wavy pattern,"" but that's less concise. ""The star with the zigzag pattern"" is less accurate than ""wavy."" I'm sticking with ""wavy"" to describe the pattern. And, because of the instruction to avoid ""degenerate spatial locations,"" I am not using the object's position to describe it.
 
 Therefore, ""The black star with the wavy pattern inside"" is the most robust and accurate description, given the constraints. It's concise, relies on inherent features, and implicitly assumes that the listener can differentiate my target from everything *they* see, even if *I* don't know what it is.
-"
-exp2_118.jpeg,cond2,absent,present,3,star,black,dot,"3,1",Select the star with the black outline.,"**My Analysis of the Target Object and Descriptor Strategy**
+",['star'],"['wavy', 'zigzag']",True,True,True
+exp2_118.jpeg,cond2,absent,present,3,star,black,dot,"3,1",select the star with the black outline.,"**My Analysis of the Target Object and Descriptor Strategy**
 
 Okay, so the goal is to clearly identify a specific object within a set, ensuring my description is unambiguous. The user wants me to help another person identify the object. This demands precision. My target object is a black-outlined star filled with small grey dots. I need to make sure I am distinguishing it from the other objects.
 
@@ -2576,8 +2576,8 @@ Considering the fill pattern, the star shares the grey dot fill with the square,
 I'm thinking ""the black-outlined star"" is a concise and unique descriptor. It immediately excludes the green-outlined star, the green-outlined square, and the red-outlined triangle. It's a very clear distinguishing feature! I also considered ""the black-outlined shape filled with dots,"" but that seems redundant.
 
 I was told there might be hidden objects, but in this context, all objects are visible. This means I don't need to consider unseen objects, which simplifies my task. I also need to make sure the target does not depend on location as the objects might be re-arranged, so I can ignore spatial descriptions. The most concise and effective description is ""the black-outlined star."" That seems like the right answer.
-"
-exp2_119.jpeg,cond1,absent,absent,4,"triangle, triangular",red,dot,"1,2",Please select the triangle with the red outline.,"**My Thought Process: Describing the Target Object**
+",['star'],['dot'],True,True,False
+exp2_119.jpeg,cond1,absent,absent,4,"triangle, triangular",red,dot,"1,2",please select the triangle with the red outline.,"**My Thought Process: Describing the Target Object**
 
 Okay, so the goal is to provide a description that lets someone identify a specific object, and that object *isn't* behind a curtain, as all objects in the set are visible to me. I need to be careful with spatial references as I was advised. The target is clearly highlighted for me, a red-outlined triangle with grey dots inside.
 
@@ -2592,8 +2592,8 @@ Given that I'm supposed to avoid spatial descriptions, I should stick with intri
 So, the most efficient and robust options are: ""the red triangle"" or ""the triangle with the red outline."" Since there's only one triangle and only one red-outlined shape, either of these is sufficient.  ""The triangle with grey polka dots"" is also good.
 
 Ultimately, I'll go with ""the red triangle,"" it's simple and unambiguous. Or ""The triangle with the red outline.""
-"
-exp2_120.jpeg,cond4,present,present,3,square,blue,stripe,"2,1",Select the image that contains vertical grey and white stripes inside a blue rectangle.,"**My Analysis of the Target Image**
+","['triangle', 'triangular']",['dot'],True,True,False
+exp2_120.jpeg,cond4,present,present,3,square,blue,stripe,"2,1",select the image that contains vertical grey and white stripes inside a blue rectangle.,"**My Analysis of the Target Image**
 
 Okay, so the user wants a description of the target, the image highlighted by that dashed red box. I immediately need to frame this within the context of a potential larger grid – even though I only see this specific 3x3 section. Importantly, the description should be position-agnostic; I can't assume this arrangement will be the same for the recipient.
 
@@ -2611,4 +2611,4 @@ Given these visible elements, the target image should be straightforward to desc
 My strategy will be to focus on the key features: the stripe pattern, the colors, and the enclosing shape. Let's see... I could say, ""vertical stripes,"" ""grey and white,"" and ""inside a blue rectangle.""
 
 The description I'll give is: ""The image with the vertical grey and white stripes, enclosed in a blue rectangle."" That feels precise and unambiguous, given the available visual elements. There aren't any other striped patterns or blue rectangles to cause confusion. That should be crystal clear.
-"
+",['square'],['stripe'],False,True,True

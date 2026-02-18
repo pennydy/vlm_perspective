@@ -28,8 +28,8 @@ def get_response(prompt,model,reasoning_effort):
         }
     elif reasoning_effort in ["low", "medium", "high"]:
         reasoning_config = {
-            "effort": reasoning_config,
-            "summary": "atuo"
+            "effort": reasoning_effort,
+            "summary": "auto" # 'concise', 'detailed', or 'auto' 
         }
     else:
         raise TypeError("wrong reasoning type!")
@@ -37,9 +37,9 @@ def get_response(prompt,model,reasoning_effort):
     response = client.responses.create(
         model=model,
         input=prompt,
-        # temperature=0, # not supported when reasoning is not none
+        temperature=1, # "temperature" is only supported when reasoning is not none
         store=False,
-        max_output_tokens = 256,
+        max_output_tokens = 1024,
         text={
             "verbosity": "low"
             },
@@ -49,7 +49,8 @@ def get_response(prompt,model,reasoning_effort):
         thought_summary = response.output[0].summary[0].text
     else:
         thought_summary = "none"
-        # print("no thoughts")
+        print("no thoughts")
+        # print("check the output summary: ", response.output[0])
     generated_answer = response.output_text
     return generated_answer, thought_summary
 
@@ -59,7 +60,7 @@ def get_prediction(prompt, model, seed):
         model = model,
         messages = prompt,
         seed = seed,
-        temperature = 0,
+        temperature = 1,
         max_tokens = 256,
         logprobs=True,
         top_logprobs=5 # ranging from 0 to 20, the number of most likely tokens to return at each token position
@@ -68,8 +69,32 @@ def get_prediction(prompt, model, seed):
 
     return generated_answer
 
+def get_flash_budget(effort):
+    mapping = {
+        "none": 0,
+        "low": 2048,
+        "medium": 8192,
+        "high": 24576
+    }
+    try:
+        return mapping[effort]
+    except KeyError:
+        raise ValueError(f"Invalid effort level: {effort}")
+    
+def get_pro_budget(effort):
+    mapping = {
+        "none": 128,
+        "low": 2048,
+        "medium": 8192,
+        "high": 32768
+    }
+    try:
+        return mapping[effort]
+    except KeyError:
+        raise ValueError(f"Invalid effort level: {effort}")
+
 # geting response
-system_prompt_speaker = "You are the speaker in a reference game. Please use the shortest description possible." # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
+system_prompt_speaker = "You are the speaker in a reference game. " # Please use either one word or two words. # Please use the shortest description possible. # Please use only one word.
 speaker_question = "Imagine you are talking to someone and want them to select the target object. The objects might be arranged differently for the other person, so please do not use degenerate spatial locations. Some objects are hidden behind a red curtain with a question mark, so you do not know what is behind, but the other person knows. The target image is highlighted by a dashed red box that only you can see."
 system_prompt_listener = "Your are the listener in a reference game. Please only provide the column number and the row number."
 
@@ -92,18 +117,31 @@ if __name__ == "__main__":
     prompts = pd.read_csv(args.input, header=0)
     task = args.task
     model = args.model
-    reasoning_effort = args.reasoning
+    reasoning_effort = args.reasoning.lower()
 
     for i, row in tqdm(prompts.iterrows()):
+        speaker_answer = row.get("speaker_answer")
+        listener_answer = row.get("listener_answer")
         image_file = row.image_file
         image_path = f"stimuli_{task}/"+image_file
 
         if task == "speaker":
+            # skip lines that are already processed
+            if pd.notna(speaker_answer) and str(speaker_answer).strip() != "":
+                print("skip:", i)
+                continue
             system_prompt = system_prompt_speaker
             question = speaker_question
         elif task == "listener":
+            # check if the speaker answer exists
+            if speaker_answer == None:
+                raise KeyError("speaker_answer column missing!")
+            # skip lines that are already processed
+            if pd.notna(listener_answer) and str(listener_answer).strip() != "":
+                print("skip:", i)
+                continue
             system_prompt = system_prompt_listener
-            question = row.listener_question
+            question = "Imagine someone is talking to you and tells you \'" + speaker_answer + "\' Which object are they telling you about? Please refer to the object by the column number and the row number."
         else:
             raise TypeError("wrong task type!")
         
@@ -116,55 +154,105 @@ if __name__ == "__main__":
             )
 
             if model == "gemini-2.5-flash":
+                thinking_budget = get_flash_budget(reasoning_effort)
+                # print("thinking budget!", thinking_budget)
+                have_thoughts = reasoning_effort != "none"
                 config = types.GenerateContentConfig(
+                    # candidate_count=1,
                     system_instruction=system_prompt,
                     temperature=1,
-                    thinking_config=types.ThinkingConfig(thinking_budget=2048,
-                                                         include_thoughts=True)
+                    thinking_config=types.ThinkingConfig(thinking_budget=thinking_budget,
+                                                         include_thoughts=have_thoughts)
                 )
             elif model == "gemini-2.5-pro":
+                thinking_budget = get_pro_budget(reasoning_effort)
+                # print("thinking budget!", thinking_budget)
                 config = types.GenerateContentConfig(
+                    # candidate_count=1,
                     system_instruction=system_prompt,
                     temperature=1, # recommended to be 1 but not deterministic
-                    thinking_config=types.ThinkingConfig(thinking_budget=2048,
+                    thinking_config=types.ThinkingConfig(thinking_budget=thinking_budget,
                                                          include_thoughts=True)
                 )
             elif model == "gemini-3-flash-preview":
                 config = types.GenerateContentConfig(
+                    # candidate_count=1,
                     system_instruction=system_prompt,
-                    temperature=0,
-                    thinking_config=types.ThinkingConfig(thinking_level="low", # default is high
+                    temperature=1,
+                    thinking_config=types.ThinkingConfig(thinking_level=reasoning_effort, # default is high
                                                          include_thoughts=True) 
                 )
             elif model == "gemini-3-pro-preview":
                 config = types.GenerateContentConfig(
+                    # candidate_count=1,
                     system_instruction=system_prompt,
-                    temperature=0,
-                    thinking_config=types.ThinkingConfig(thinking_level="low",# default is high
+                    temperature=1,
+                    thinking_config=types.ThinkingConfig(thinking_level=reasoning_effort,# default is high
                                                          include_thoughts=True) 
                 )
-            client = genai.Client()
+
+            generated_answer = ''
+            thought_summary = ''
+
+            client = genai.Client(http_options=types.HttpOptions(timeout=300000))
+            
             response = client.models.generate_content(
                 model = model,
                 config = config,
                 contents =[image,question]
             )
+
+            # response = client.models.generate_content_stream(
+            #     model = model,
+            #     config = config,
+            #     contents =[image,question]
+            # )
+
+            # try chunking to help with timeouts
+            # for chunk in response:
+            #     if not chunk.candidates:  # Does not contain a response candidate
+            #         continue
+
+            #     candidate = chunk.candidates[0]  # We choose the first answer provided
+
+            #     if candidate.content and candidate.content.parts:
+            #         part = candidate.content.parts[0]  # Get the text part
+
+            #         if hasattr(part, 'thought') and part.thought:  # Part is a thought
+            #             thought_summary += part.text
+            #         elif not chunk.text:  # Part is not a thought; part doesn't have text
+            #             continue
+            #         else:  # Part has text
+            #             generated_answer += chunk.text
+
+            #     # Multi-part content of the response (Content obj)
+            #     # if chunk.candidates[0].content.parts[0].thought_signature:
+            #     #     thought_summary += chunk.candidates[0].content.parts[0].text
+            #     # if not chunk.text:
+            #     #     print('Chunk is missing text...')
+            #     #     continue
+            #     # else:
+            #     #     generated_answer += chunk.text
+
             # get the thinking summary
             for part in response.candidates[0].content.parts:
                 if not part.text:
                     continue
                 elif part.thought:
                     thought_summary = part.text
-                    break
+                    # break 
                     # print("check the thought summary", thought_summary)
                     # print("check the text in the first part", response.candidates[0].content.parts[0].text)
                     # print("check the first elemnent response.parts", response.parts[0].text)
                 else:
-                    thought_summary = "none"
+                    generated_answer = part.text
                     print("no thoughts")
-            # print("final returned thought",thought_summary)
-            generated_answer=response.text
-            print("generated answer:",generated_answer)
+            # generated_answer = response.text
+
+            print(f"Response text: {generated_answer}\n\n")
+            print(f"Thought text: {thought_summary}")
+
+            # print('Completed a run')
 
         elif model.startswith("gpt"):
             # getting the Base64 string

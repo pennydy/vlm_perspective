@@ -1,121 +1,323 @@
-image_file,condition,occlusion,distractor,non_target,speaker_answer
-exp2_001.jpeg,cond2,absent,present,2,the triangle with vertical straight stripes
-exp2_002.jpeg,cond4,present,present,4,
-exp2_003.jpeg,cond3,present,absent,4,Select the grey circle with white wavy stripes and a red outline.
-exp2_004.jpeg,cond1,absent,absent,3,Select the blue-outlined square with a gray checkerboard pattern inside.
-exp2_005.jpeg,cond2,absent,present,3,Select the blue-outlined square that has a gray wavy (wave-like
-exp2_006.jpeg,cond2,absent,present,4,Pick the circle with a checkerboard pattern inside and a plain black border.
-exp2_007.jpeg,cond4,present,present,3,Select the vertically striped gray-and-white circle with the reddish border (not the one with the blue border).
-exp2_008.jpeg,cond1,absent,absent,4,Pick the blue-outlined triangle with vertical stripes.
-exp2_009.jpeg,cond4,present,present,2,Pick the circle that has gray wavy lines inside and a red border (not the one with dots).
-exp2_010.jpeg,cond3,present,absent,3,
-exp2_011.jpeg,cond4,present,present,2,Pick the square that has gray background with repeating white wavy horizontal lines (not the one with straight vertical stripes).
-exp2_012.jpeg,cond1,absent,absent,4,Pick the grey triangle with the wavy pattern and thick black outline.
-exp2_013.jpeg,cond2,absent,present,2,Pick the square with a pink border that has a gray polka‑dot pattern inside.
-exp2_014.jpeg,cond2,absent,present,4,Select the star with a red outline and a gray checkerboard pattern inside.
-exp2_015.jpeg,cond4,present,present,2,"Select the **green triangle with a gray polka‑dot pattern inside, not the blue triangle with the checkerboard pattern.**"
-exp2_016.jpeg,cond1,absent,absent,2,Pick the green-outlined square that has the same gray dot pattern as the red-outlined circle.
-exp2_017.jpeg,cond3,present,absent,4,Select the green
-exp2_018.jpeg,cond3,present,absent,3,
-exp2_019.jpeg,cond4,present,present,3,"Select the gray triangle with a red border and small dots inside it, not the gray triangle with wavy lines and a blue border."
-exp2_020.jpeg,cond4,present,present,3,
-exp2_021.jpeg,cond1,absent,absent,3,Select the vertically striped triangle with the red outline.
-exp2_022.jpeg,cond1,absent,absent,4,Select the gray square with vertical stripes and a thick black outline.
-exp2_023.jpeg,cond2,absent,present,4,
-exp2_024.jpeg,cond2,absent,present,2,Select the green-outlined triangle with vertical gray stripes inside.
-exp2_025.jpeg,cond3,present,absent,2,Pick the blue-outlined five-pointed star that has a gray polka‑dot pattern inside.
-exp2_026.jpeg,cond4,present,present,2,"Select the visible star whose inside is a gray checkerboard pattern, not the star with vertical stripes and not anything behind a red curtain."
-exp2_027.jpeg,cond3,present,absent,2,
-exp2_028.jpeg,cond2,absent,present,3,Select the triangle with the blue outline and dotted interior.
-exp2_029.jpeg,cond1,absent,absent,4,Select the gray wavy circle with the red border.
-exp2_030.jpeg,cond2,absent,present,3,Select the green-outlined circle with the gray wavy pattern inside.
-exp2_031.jpeg,cond3,present,absent,3,Select the green-outlined circle with a gray checkerboard pattern inside.
-exp2_032.jpeg,cond3,present,absent,4,
-exp2_033.jpeg,cond1,absent,absent,3,Select the green-outlined star whose inside is filled with vertical gray stripes.
-exp2_034.jpeg,cond4,present,present,4,
-exp2_035.jpeg,cond4,present,present,3,Select the gray polka‑dot star with the **black outline**.
-exp2_036.jpeg,cond2,absent,present,4,Choose the green-outlined star with a white center covered in gray polka dots (not the blue striped star).
-exp2_037.jpeg,cond3,present,absent,3,Pick the gray triangle with a black outline that’s filled with wavy stripes.
-exp2_038.jpeg,cond3,present,absent,2,Pick the gray circle with vertical stripes (not the gray checkerboard square).
-exp2_039.jpeg,cond4,present,present,4,
-exp2_040.jpeg,cond1,absent,absent,4,Select the vertically striped blue-outlined square.
-exp2_041.jpeg,cond4,present,present,2,Choose the polka‑dot circle that has a red border (not the one with a black border).
-exp2_042.jpeg,cond1,absent,absent,3,Pick the grey circle with the red outline that has a wavy pattern inside.
-exp2_043.jpeg,cond2,absent,present,4,Select the green star that has a wavy gray pattern inside it (not the one with straight stripes).
-exp2_044.jpeg,cond3,present,absent,3,
-exp2_045.jpeg,cond1,absent,absent,2,Select the vertically striped triangle.
-exp2_046.jpeg,cond2,absent,present,4,Select the red-outlined star with the wavy gray pattern inside.
-exp2_047.jpeg,cond4,present,present,3,"Pick the square filled with vertical grey and white stripes (no dots, no checkerboard, not a"
-exp2_048.jpeg,cond2,absent,present,3,Select the square with vertical gray stripes and a red outline.
-exp2_049.jpeg,cond4,present,present,3,
-exp2_050.jpeg,cond3,present,absent,3,
-exp2_051.jpeg,cond1,absent,absent,3,Pick the gray triangle with a black outline and wavy stripes inside.
-exp2_052.jpeg,cond3,present,absent,3,
-exp2_053.jpeg,cond1,absent,absent,3,Select the red-outlined
-exp2_054.jpeg,cond2,absent,present,4,Select the green-outlined triangle that has a gray-and-white checkerboard pattern inside.
-exp2_055.jpeg,cond1,absent,absent,2,Select the grey polka‑dotted triangle with a thick blue outline.
-exp2_056.jpeg,cond2,absent,present,3,Select the blue triangle that has grey wavy stripes inside.
-exp2_057.jpeg,cond4,present,present,3,"Pick the blue-outlined triangle that has grey wavy lines inside it, not the one"
-exp2_058.jpeg,cond3,present,absent,2,Select the grey circle filled with small dark dots and outlined in green.
-exp2_059.jpeg,cond3,present,absent,3,
-exp2_060.jpeg,cond1,absent,absent,2,Pick the gray circle with the wavy stripe pattern and red border.
-exp2_061.jpeg,cond3,present,absent,2,Select the green-outlined star that has vertical gray stripes inside.
-exp2_062.jpeg,cond1,absent,absent,4,
-exp2_063.jpeg,cond2,absent,present,2,Pick the triangle with vertical stripes and a red outline.
-exp2_064.jpeg,cond1,absent,absent,3,Select the polka‑dotted star with the red outline.
-exp2_065.jpeg,cond3,present,absent,2,Pick the picture that shows a gray‑and‑white checkerboard pattern inside a blue square frame.
-exp2_066.jpeg,cond2,absent,present,4,Select the gray polka‑dotted circle with the black outline.
-exp2_067.jpeg,cond4,present,present,3,
-exp2_068.jpeg,cond4,present,present,4,Pick the gray vertically striped star with the black outline (not the blue-outlined star).
-exp2_069.jpeg,cond2,absent,present,2,Pick the square with a green border and a white background covered in gray polka dots.
-exp2_070.jpeg,cond1,absent,absent,4,"Pick the green-outlined square with the gray checkerboard pattern (the only square, not a circle or star)."
-exp2_071.jpeg,cond4,present,present,3,
-exp2_072.jpeg,cond3,present,absent,2,Pick the gray striped star shape with a black outline.
-exp2_073.jpeg,cond4,present,present,2,Pick the star with a green outline and vertical gray stripes inside.
-exp2_074.jpeg,cond2,absent,present,3,
-exp2_075.jpeg,cond1,absent,absent,2,Pick the red-outlined star with gray wavy stripes inside.
-exp2_076.jpeg,cond1,absent,absent,2,Pick the green-outlined triangle that has vertical gray stripes inside it.
-exp2_077.jpeg,cond3,present,absent,3,
-exp2_078.jpeg,cond4,present,present,4,Select the vertically striped triangle that has a red outline (the one matching the striped green-outlined triangle but
-exp2_079.jpeg,cond2,absent,present,4,Pick the
-exp2_080.jpeg,cond3,present,absent,3,
-exp2_081.jpeg,cond2,absent,present,4,Pick the green-outlined triangle with
-exp2_082.jpeg,cond3,present,absent,2,
-exp2_083.jpeg,cond1,absent,absent,3,Select the red-outlined star that has a gray polka‑dot pattern inside.
-exp2_084.jpeg,cond4,present,present,4,
-exp2_085.jpeg,cond3,present,absent,2,Select the green-outlined triangle with the gray wavy pattern inside.
-exp2_086.jpeg,cond4,present,present,3,Select the star with a black outline and a light interior filled with grey polka dots.
-exp2_087.jpeg,cond2,absent,present,3,Select the black-outlined star that has a grey checkerboard
-exp2_088.jpeg,cond1,absent,absent,4,Select
-exp2_089.jpeg,cond3,present,absent,4,Pick the gray square filled with small evenly spaced gray dots—the only non‑star shape.
-exp2_090.jpeg,cond3,present,absent,3,Select the green-outlined triangle that has a gray polka‑dot pattern inside.
-exp2_091.jpeg,cond1,absent,absent,3,Select the black-outlined square with gray wavy stripes inside.
-exp2_092.jpeg,cond2,absent,present,3,
-exp2_093.jpeg,cond4,present,present,3,
-exp2_094.jpeg,cond2,absent,present,4,Pick the green-outlined star with a gray polka-dot pattern inside.
-exp2_095.jpeg,cond1,absent,absent,2,Select the dotted circle with a blue outline (the only polka‑dot shape).
-exp2_096.jpeg,cond4,present,present,4,Select the green-outlined star with the gray
-exp2_097.jpeg,cond3,present,absent,3,
-exp2_098.jpeg,cond1,absent,absent,2,Pick the blue-outlined square filled with vertical gray stripes.
-exp2_099.jpeg,cond2,absent,present,3,Select the green-outlined circle with the wavy grey pattern inside.
-exp2_100.jpeg,cond4,present,present,2,
-exp2_101.jpeg,cond4,present,present,2,Pick the green-outlined circle that has a gray-and-white checkerboard pattern of small squares (not the one with vertical stripes).
-exp2_102.jpeg,cond1,absent,absent,4,
-exp2_103.jpeg,cond3,present,absent,2,"Pick the light-gray dotted **square**, filled with evenly spaced gray dots, with no thick black outline (not the dotted circle)."
-exp2_104.jpeg,cond2,absent,present,2,"Pick the green-outlined circle that has straight vertical gray stripes (not the wavy pattern, and not the star)."
-exp2_105.jpeg,cond4,present,present,3,
-exp2_106.jpeg,cond4,present,present,4,
-exp2_107.jpeg,cond1,absent,absent,4,Pick the red-outlined triangle that has a gray wavy pattern inside.
-exp2_108.jpeg,cond3,present,absent,4,"Pick the gray square filled with wavy white lines (the only wavy-patterned square, not a circle)."
-exp2_109.jpeg,cond3,present,absent,2,Select the grey polka‑dotted triangle with a red outline.
-exp2_110.jpeg,cond2,absent,present,2,Select the dotted triangle with the green outline.
-exp2_111.jpeg,cond1,absent,absent,4,Pick the green-outlined triangle filled with a gray wavy pattern.
-exp2_112.jpeg,cond2,absent,present,4,"Select the gray circle with the wavy pattern and a thick black outline (not the dotted circle, and not any square or triangle)."
-exp2_113.jpeg,cond3,present,absent,2,
-exp2_114.jpeg,cond1,absent,absent,2,"Pick the red-framed square with gray and white wavy stripes (the only square, not a star)."
-exp2_115.jpeg,cond2,absent,present,4,Choose the green-outlined triangle that has a pattern of gray dots inside it.
-exp2_116.jpeg,cond3,present,absent,2,Select the gray star with vertical stripes and a black outline.
-exp2_117.jpeg,cond4,present,present,2,
-exp2_118.jpeg,cond2,absent,present,3,Pick the star with a black outline that is filled with gray polka dots.
-exp2_119.jpeg,cond1,absent,absent,4,Pick the triangle with gray polka dots inside.
-exp2_120.jpeg,cond4,present,present,3,
+image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought
+exp2_001.jpeg,cond2,absent,present,2,"triangle, triangular",black,stripe,"3,3",Select the triangle with vertical stripes (not the wavy-patterned one).,"**Choosing a clear description**
+
+I need to provide a clear referring expression for a triangle with vertical stripes and a black outline. There's also another triangle with a wavy pattern, plus a star that has a wavy pattern as well. To distinguish them, I think I'll describe it as ""the vertically striped triangle"" to keep things concise and avoid using spatial language. That should help in selecting the target more effectively!"
+exp2_002.jpeg,cond4,present,present,4,square,blue,checker,"3,2",Select the square with the gray-and-white checkerboard pattern (a grid of alternating light and dark squares).,none
+exp2_003.jpeg,cond3,present,absent,4,"circle, circular",red,"wavy, zigzag","1,3",Pick the grey circle with wavy stripes and a red border.,"**Describing visual targets**
+
+I need to describe a target that includes a circle with grey wavy stripes and a pink-red outline. There are also two stars: one has a blue outline with a checkerboard interior, and the other has a black outline with a polka dot interior. I want to avoid using spatial terms like ""bottom left"" and focus on identifying the visible shapes uniquely. The phrase ""the grey wavy circle with a red border"" seems minimal and effective."
+exp2_004.jpeg,cond1,absent,absent,3,square,blue,checker,"3,3",Pick the blue-outlined square with the gray-and-white checkerboard pattern.,"**Referring to the target shape**
+
+I need to describe the target, which is a checkered square with a blue border, without using spatial terms like ""bottom right."" I can refer to its shape, border color, and fill pattern while comparing it to other objects like a dotted triangle and stars with different borders. A good way to phrase it could be: “Select the only square with a blue border and a grey-and-white checkerboard pattern.” That should keep it clear and concise!"
+exp2_005.jpeg,cond2,absent,present,3,square,blue,"wavy, zigzag","2,3",Select the blue-outlined square that has a gray wavy pattern inside.,"**Describing the target shape**
+
+I need to clearly describe the target, which is a blue-outlined square with gray wavy lines. I want to ensure I focus on unique attributes without emphasizing its position. There are other objects, like a blue-outlined triangle with a checkerboard, a red-outline square also with a checkerboard, and a blue-outline star with vertical stripes. So, I’ll be careful to highlight aspects like shape, outline color, and fill pattern when describing!"
+exp2_006.jpeg,cond2,absent,present,4,"circle, circular",black,checker,"2,1",Pick the circle with a black outline and a gray-and-white checkerboard pattern inside.,"**Crafting a clear description**
+
+I need to provide a description that helps the listener pick the target object. I can't use vague spatial terms like ""top left"" since arrangements might differ. It seems I have a 3x3 grid with some empty cells and specific objects to describe. The target is a circle with a checkerboard inside and a black outline. I need a unique description, like “the only circle with a checkerboard pattern” to distinguish it from the others."
+exp2_007.jpeg,cond4,present,present,3,"circle, circular",red,stripe,"1,3",Pick the vertically striped gray circle with the red outline (not the blue-outlined one,"**Describing visual features**
+
+I'm working on describing some intrinsic visual features. There's a circle with vertical gray stripes and a red border, compared to another with the same stripes but a blue border. The unique property here is that striped circle with the red outline. I also want to clarify that it's not hidden behind a curtain. So, my final message for the user would be: ""Choose the vertically striped circle with the red border (not the blue-bordered one or anything behind a curtain)."""
+exp2_008.jpeg,cond1,absent,absent,4,"triangle, triangular",blue,stripe,"3,1",Select the blue-outlined triangle that has vertical grey stripes inside (the only striped triangle).,"**Describing a target object**
+
+I need to make sure the listener can identify the target object, which is the blue-outlined triangle with vertical stripes. Relying solely on spatial references isn't enough since there are hidden objects. I’ll focus on unique attributes to ensure clarity, like the triangle's color and shape. I'll phrase it as “the blue-outlined triangle with grey vertical stripes inside.” That should provide a clear and concise description without mentioning any curtains since there's nothing there."
+exp2_009.jpeg,cond4,present,present,2,"circle, circular",red,"wavy, zigzag","1,1",Pick the circle filled with gray wavy,"**Describing objects effectively**
+
+I need to create a referring expression for the target object, which is a grid. The visible items include a top-left circle with a wavy gray pattern inside a red border and a bottom-right circle with polka dots. Since some objects are hidden behind curtains, I can't rely on spatial descriptions like ""top-left."" Instead, I must focus on unique visual properties. The gray wavy striped circle contrasts with the dotted gray circle, keeping in mind that hidden ones might not be distinct."
+exp2_010.jpeg,cond3,present,absent,3,square,red,stripe,"3,2",Pick the square picture with vertical gray stripes inside a red border.,"**Crafting a description**
+
+I need to accurately describe the target object to the listener so they can select it. The grid has some unknown curtains and a circle with gray polka dots within a red border. The target object is a square with vertical gray stripes that look like a barcode, surrounded by a red frame. I want to avoid using spatial locatives like ""bottom right."" So my description will be: ""the square with vertical gray and white stripes and a red frame,"" keeping it minimal and clear."
+exp2_011.jpeg,cond4,present,present,2,square,black,"wavy, zigzag","1,3","Pick the square that has gray and white wavy lines across it (like ripples), not the one with straight vertical stripes.","**Clarifying visual cues**
+
+I need to create a clear expression to help the listener identify a specific target, which is the grey-and-white wavy patterned box. There's also a grey vertical stripes pattern nearby. I can't reference locations like ""bottom left"" or ""top right"" since there are unknown elements like curtains that could hide similar patterns. So, I’ll focus on describing the unique aspect of the patterns, ultimately suggesting: ""Choose the grey square with white wavy lines over the one with straight vertical stripes."""
+exp2_012.jpeg,cond1,absent,absent,4,"triangle, triangular",black,"wavy, zigzag","2,3",Select the gray triangle with black outline that has a wavy pattern inside.,"**Crafting a unique description**
+
+I’m working on describing a target so the listener can identify it easily, but I need to avoid spatial words. The target has a black outline with wavy-filled triangles, while other options include circular patterns and a star with a similar wavy design. To distinguish it, I could say it's ""the only wavy triangle."" So, maybe I'll go with ""triangle with a black outline and gray wavy stripes inside."" Conciseness is key here!"
+exp2_013.jpeg,cond2,absent,present,2,square,red,dot,"3,2",Pick the square with the gray polka‑dot pattern and a thin light‑red frame (not the checkerboard ones).,"**Describing a visual target**
+
+I'm examining a grid layout, specifically a 3x4 setup. I notice a circular checkerboard with a red border, a square polka-dotted grey shape framed in light red, and a square checkerboard with a thick black border at the bottom. I need to describe the target without using spatial references, focusing instead on shapes, patterns, and border colors. The instruction will be to “Choose the only polka-dotted square with a thin red border.”"
+exp2_014.jpeg,cond2,absent,present,4,star,red,checker,"3,2",Select the star with a red outline and a gray checkerboard pattern inside.,none
+exp2_015.jpeg,cond4,present,present,2,"triangle, triangular",green,dot,"3,2",Pick the triangle with a green outline and gray polka dots inside.,none
+exp2_016.jpeg,cond1,absent,absent,2,square,green,dot,"2,3","Select the green-outlined square with gray polka dots (the only square, not a circle).",none
+exp2_017.jpeg,cond3,present,absent,4,star,green,stripe,"2,3",Select the green star with vertical gray stripes inside.,"**Describing visible objects**
+
+I'm thinking about the attributes we can see in objects. Among them, there's only a star shape with a green outline, and it's not rectangular, except for circles. It has vertical stripes similar to the circle, but with a different shape and border color. So, I’ll phrase it as ""the striped green star-shaped object"" to keep it straightforward. No need for any spatial references; the description should be clear on its own!"
+exp2_018.jpeg,cond3,present,absent,3,star,blue,dot,"1,1",Select the blue-outlined star that is filled with gray polka dots.,"**Describing visual objects**
+
+I need to provide a clear description of a target object, specifically a dashed red box, so the listener can identify it. However, since the board can be permuted, I can't use spatial language, relying instead on visible properties. For example, I would describe it as a ""five-pointed hollow star with a blue outline and filled with small gray polka dots"" against a white background. I have to uniquely identify this among four cells while considering potential ambiguity with hidden objects. So, I need to consider which attributes are unlikely to overlap."
+exp2_019.jpeg,cond4,present,present,3,"triangle, triangular",red,dot,"2,1",Select the triangle with a red outline and a gray dotted pattern inside (not the blue-outlined triangle with wavy stripes).,"**Communicating shapes clearly**
+
+I need to be precise when describing a target in a reference game. I'll choose descriptions that uniquely identify it, accounting for the arrangement of different shapes and avoiding vague spatial mentions. In this case, I have a 3x3 grid with visible shapes—a grey polka-dotted triangle with a red outline as my target. I'll communicate this as ""the triangle with a red border and dotted interior,"" to avoid confusion with any similar shapes behind the curtains."
+exp2_020.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"1,1",Pick the triangle that has a dotted (polka‑dot) pattern inside.,"**Describing visual objects**
+
+I'm examining a 3x3 grid where I can identify some shapes. In the first row, the leftmost shape is a triangle outline with a dotted fill and a black border, next to a wavy square. The second row has a curtain, and the third has a striped triangle, again with a curtain in the middle. I need to describe these without using spatial language while ensuring clarity in distinguishing them from potentially hidden objects. I'll focus on specific properties, like saying, ""Choose the triangle with small gray dots inside."""
+exp2_021.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,2",Select the gray-and-white vertically striped triangle with a red outline.,"**Describing a target shape**
+
+I'm tasked with describing a target shape uniquely without using spatial terms. The target is a red-outlined triangle with vertical gray and white stripes, located in the middle-left of a 3x3 grid. I need to make it clear there's also a red-outlined star with similar stripes to avoid confusion. Therefore, I'll refer to it specifically as the ""striped red-outlined triangle."" This concise description should help identify it accurately among all other shapes in the grid."
+exp2_022.jpeg,cond1,absent,absent,4,square,black,stripe,"3,1",Select the gray vertically striped square with the thick black outline.,"**Defining shapes and colors**
+
+I need to describe a target with a dashed red box around a square featuring vertical stripes and a thick black border. There are also other shapes to consider, like a star with a red outline and a checkerboard fill, and circles with vertical stripes and different outlines. I should avoid using spatial terms and focus on a clear description, emphasizing the striped square and its border while distinguishing it from the circles and stars."
+exp2_023.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",Pick the green-outlined circle with a gray polka-dot fill.,"**Describing target shape**
+
+I need to describe the target in a clear way. It's a green-outlined circle filled with gray polka dots. I have to make sure to distinguish it from other shapes: the only star has a green outline with polka dots, and there's also a blue circle that has a checkered pattern, not polka dots. So I’ll just keep it succinct and focus on the unique features of the target shape."
+exp2_024.jpeg,cond2,absent,present,2,"triangle, triangular",green,stripe,"1,2",Select the green-outlined triangle that has vertical gray stripes inside.,"**Describing target objects**
+
+I need to find a referring expression for the target object in the dashed red box. I can't rely on spatial descriptions like ""bottom left"" or ""second row."" Instead, I'll use properties to describe it: it's a green-outlined triangle with vertical gray stripes inside. I should differentiate it from others, such as a green circle with wavy stripes and a black-outlined triangle with dots. A concise option might be ""the green triangle with vertical stripes."""
+exp2_025.jpeg,cond3,present,absent,2,star,blue,dot,"1,3",Select the blue-outlined star that is filled with gray polka dots.,"**Clarifying reference expressions**
+
+I need to produce a referring expression for a target object in a reference game. I must avoid spatial descriptions like ""bottom left,"" as layouts can vary. Instead, I should mention intrinsic features. For instance, I might say: “Select the blue-outlined star filled with gray polka dots,” instead of using vague terms. It's important to be concise while ensuring clarity. Let’s make sure to communicate clearly!"
+exp2_026.jpeg,cond4,present,present,2,star,black,checker,"1,1","Select the star whose inside is a grey checkerboard pattern instead of stripes, outlined in black.","**Describing the target object**
+
+I need to create a referring expression for a target object in a 3x3 grid. The image shows star icons with various fill patterns. The target star in the top-left has a black outline and a checkerboard transparent fill, while the bottom-left shows a vertically striped star. To avoid using spatial terms, I'll use clear properties to ensure the receiver can identify it without confusion. So, I'll describe it precisely: ""the star with a transparent grey checker pattern fill, not vertical stripes, with a thick black outline."""
+exp2_027.jpeg,cond3,present,absent,2,star,blue,checker,"1,3",Pick the blue-outlined star with a checkered inside.,"**Clarifying target selection**
+
+I need to focus on selecting the target, which is a blue outlined star with a checkered interior. I shouldn't mention its location but need to give a clear description that distinguishes it from other visible objects like red triangle dots and unknown curtains. I want to avoid confusing spatial references and just reference other shapes. I could say, “Pick the only star” to make it clear which one to choose."
+exp2_028.jpeg,cond2,absent,present,3,"triangle, triangular",blue,dot,"1,1",Pick the triangle with a blue border and gray polka dots inside.,none
+exp2_029.jpeg,cond1,absent,absent,4,"circle, circular",red,"wavy, zigzag","1,3",Select the gray wavy-patterned **circle** with a **red outline**.,"**Clarifying target description**
+
+I need to describe a target as a dashed red box around a circle that has a red border and a wavy fill. I want to avoid using relative positions like ""bottom left."" There are other shapes to consider too: a red-bordered star with a wavy fill, a green-bordered triangle with a checkered pattern, a blue-bordered triangle with a dotted outline, and a black-bordered star with a checkered design. So, focusing on the circle is essential to distinguish it from the star."
+exp2_030.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","3,2",Pick the green-outlined circle with the gray wavy lines inside.,"I'm thinking about how to describe the target object without using spatial terms. The target is a green-bordered circle filled with a gray wavy pattern. Among visible objects, there's a bottom row with a green-bordered triangle with dots, a blue-bordered triangle with checkerboard, and a blue-bordered circle also with a checkerboard. Ultimately, I’ll describe the target clearly and concisely as ""the green-outlined circle with gray squiggly stripes inside."" It feels straightforward enough!"
+exp2_031.jpeg,cond3,present,absent,3,"circle, circular",green,checker,"2,1",Pick the green-outlined circle that has a gray-and-white checkerboard pattern inside.,"**Describing the target object**
+
+I need to create a clear description for someone to choose the right target object, which is a circle with a checkerboard pattern and a green outline. I can't rely on spatial terms because some options are hidden. I must use visible features only, like the green-outlined circle and the triangle with wavy stripes. Since we don't know what's behind the curtains, the description should uniquely identify the circle without referencing hidden attributes or mentioning its uniqueness."
+exp2_032.jpeg,cond3,present,absent,4,"triangle, triangular",red,stripe,"3,3",Pick the gray‑and‑white **striped triangle** with the **red outline** (the one that matches the striped pattern of the green‑outlined circle but is a triangle).,"**Guiding selection clearly**
+
+I need to help someone choose the red triangle with vertical stripes, which has a red outline. It’s important to avoid vague spatial descriptions like “bottom right,” but I can mention that it's the only triangle and compare it to the green circle with the same pattern. I should also be mindful that hidden triangles might be obscured, so I can reference visible options like the star or blue-outline shapes. My phrasing should be concise!"
+exp2_033.jpeg,cond1,absent,absent,3,star,green,stripe,"3,3",Choose the green-outlined star with vertical gray stripes inside.,"**Describing grid shapes**
+
+I see a 3x3 grid, and I'm focusing on the bottom middle cell, which has a red dashed box around it and a green star outline with gray vertical stripes inside. Other shapes include a green-bordered circle with a gray checkerboard in the top middle, a black-bordered square with gray dots in the top right, and a blue-bordered triangle with gray dots in the bottom left. I want to create a referring expression using the attributes, like ""green star with gray stripes."""
+exp2_034.jpeg,cond4,present,present,4,square,red,dot,"1,3",,none
+exp2_035.jpeg,cond4,present,present,3,star,black,dot,"3,2",Select the star with a black outline and a gray polka‑dotted interior.,"**Describing target objects**
+
+I'm in a reference game where I need to describe a target object without using spatial terms like ""bottom right."" Instead, I'll focus on attributes like shape, color, and pattern. The target is a black outline star filled with grey polka dots. There's also a green outline star with the same grey dots visible. I want to ensure my description is unique but not too specific since the listener knows what's behind the curtain. I'll say, ""the star with a black border, not green."""
+exp2_036.jpeg,cond2,absent,present,4,star,green,dot,"2,1","Select the green-outlined star with a white, polka‑dotted interior.","**Describing the object**
+
+I’m focusing on creating a unique description for a dashed red box with a target object that’s a green-outlined star filled with gray dots. I see other shapes like a black circle with a checkerboard pattern, a blue star with vertical stripes, a red triangle with a checkerboard, and a green triangle also with a checkerboard. I should clarify, “the green star with polka dots inside,” and maybe add, “not the blue striped star.” This keeps things clear and concise!"
+exp2_037.jpeg,cond3,present,absent,3,"triangle, triangular",black,"wavy, zigzag","1,1",,"**Describing a shape**
+
+Alright, I need to describe the features of a ""gray triangle with wavy horizontal stripes inside a thick black outline."" I want to avoid any ambiguity, so I have to focus solely on this shape without introducing other elements. I’ll make sure the details are clear: the grey triangle itself, the wavy stripes, and the prominence of the thick black outline. That's my primary goal! Let’s make it as explicit as possible!"
+exp2_038.jpeg,cond3,present,absent,2,"circle, circular",red,stripe,"3,3",Pick the circular object that’s filled with vertical gray-and-white stripes (not the square checkerboard).,"**Describing target objects**
+
+I’m trying to identify objects in a reference game. There's a gray vertical stripes circle in a dashed red box, and I need to avoid spatial references like ""bottom left"". I must focus on distinguishing this circular shape from a green-boxed gray checkerboard, which is hidden behind two curtains with some empty cells. Since we can't see the hidden objects, I’ll clarify by emphasizing the unique attributes: I'll describe it as ""the only circular shape filled with vertical gray and white stripes."""
+exp2_039.jpeg,cond4,present,present,4,"triangle, triangular",blue,"wavy, zigzag","3,1",,"**Considering reference clarity**
+
+I need to create a clear referring expression for the target, which is in a dashed red box and shaped like a triangle with a wavy fill and blue outline. I shouldn’t use explicit coordinates and must avoid ambiguous locations like the top-left corner. Given that there are hidden shapes behind curtains, I need to identify unique attributes that distinguish my target from all visible and potentially hidden objects, even though some features might overlap. It's all about making sure the listener clearly understands!"
+exp2_040.jpeg,cond1,absent,absent,4,square,blue,stripe,"1,3",Pick the vertically striped square with a blue border.,"**Describing the target object**
+
+I'm trying to describe a target object, which is a dashed red box over a blue-bordered square with vertical stripes. I want to focus on unique features without referring to its spatial location. For the properties, it’s a square with a blue border and interior vertical stripes. Since it's the only square visible among other shapes, I’ll phrase it as ""the striped square with a blue border,"" emphasizing the unique pattern to avoid confusion with other shapes."
+exp2_041.jpeg,cond4,present,present,2,"circle, circular",red,dot,"3,1",,"**Crafting a referring expression**
+
+I need to create a clear expression to help identify a target from a set of objects. There are two visible polka-dot circles, one with a red outline (the target) and another with a black outline, plus there are hidden elements with curtain question marks. I want to avoid confusing spatial terms. The description could be something like ""polka-dot circle with a red outline."" However, I have to account for potential unknowns behind the curtains that could be similar to the target."
+exp2_042.jpeg,cond1,absent,absent,3,"circle, circular",red,"wavy, zigzag","3,3",Pick the red-outlined circle with the wavy gray pattern.,none
+exp2_043.jpeg,cond2,absent,present,4,star,green,"wavy, zigzag","1,1",Pick the green star with the wavy gray-and-white pattern inside (not the one with straight vertical stripes).,none
+exp2_044.jpeg,cond3,present,absent,3,square,red,dot,"1,3",,"**Clarifying target description**
+
+I need to provide a clear expression to help identify a target effectively. It looks like we have a 3x3 grid with some objects visible and others hidden. There are two circular objects with green borders: one has gray polka dots, and the other has vertical stripes. The important detail is that our target is a square with small gray dots, which distinguishes it from the circular polka-dotted object. So, I’ll say: “the gray polka-dotted square (not the circle).”"
+exp2_045.jpeg,cond1,absent,absent,2,"triangle, triangular",black,stripe,"2,1",Select the vertically striped triangle.,"**Describing shapes and patterns**
+
+I'm looking at a 3x3 grid that includes various items. The target shape is a triangle with vertical stripes. There are also a star and a circle with different stripe patterns. I need to provide a clear, non-spatial description. The best way to phrase it might be ""the vertically striped triangle,"" and it's important to mention that it’s the only triangle in the set. Clarity is key here!"
+exp2_046.jpeg,cond2,absent,present,4,star,red,"wavy, zigzag","2,1",Select the red-outlined star with the wavy striped pattern inside.,"**Describing a target object**
+
+I need to give a description of a target object, the dashed red box, without using spatial references. It’s a red-outlined star with a wavy interior pattern. The other shapes include a red triangle with polka dots, a green triangle with waves, and a black square and star, both with wavy patterns. Since the red star is unique, I’ll describe it as ""a red-outlined star with wavy stripes inside"" for clarity."
+exp2_047.jpeg,cond4,present,present,3,square,green,stripe,"1,3",Select the green-outlined square that has vertical gray and white stripes.,"**Describing visual patterns**
+
+I need to give a clear reference for the target highlighted in the dashed red box without using vague spatial terms like ""bottom left."" Instead, I should focus on describing the unique visual pattern. The challenge is that I can't account for hidden items, so it's tricky. I see a board with a 3x3 layout, visible shapes include a circle with a checkerboard pattern and a middle left square with gray dots. The target is a square with vertical gray and white stripes and a green border."
+exp2_048.jpeg,cond2,absent,present,3,square,red,stripe,"3,3",Select the square with gray vertical stripes that has a red border (not the one with a blue border).,none
+exp2_049.jpeg,cond4,present,present,3,square,green,stripe,"1,1","Select the vertically striped square with the green border (not the striped square with the black border, and not the star or a curtain).","**Clarifying target identification**
+
+I need to create a describing reference for the target item, which is a green-bordered striped square located at the top-left corner of a 3x3 grid. The other visible items include a green outline star with a checker pattern, a black-bordered striped square, and two unknown curtains. I should focus on how to clearly distinguish the green-bordered striped square from the others, without making assumptions about the contents of the curtains. I'll describe what is visible without relying on possible hidden information."
+exp2_050.jpeg,cond3,present,absent,3,star,red,stripe,"3,3",Pick the,"**Describing the target object**
+
+I need to describe the target object so that the listener can identify it without using spatial terms, like ""second from the left.” We can’t rely on hidden objects behind the curtains either. So, I think I should focus on distinguishing features that are clearly visible. There are two curtains, a striped star outlined in red, and a dotted grey circle with a green border. I should call it the ""only star"" or the ""only red outlined shape"" since those are likely unique descriptors, but I still don't know what's hidden."
+exp2_051.jpeg,cond1,absent,absent,3,"triangle, triangular",black,"wavy, zigzag","2,3",Select the grey triangle with a black outline and wavy stripes inside.,none
+exp2_052.jpeg,cond3,present,absent,3,"triangle, triangular",black,checker,"2,1",Select the triangle that is filled with a checkerboard pattern.,"**Describing target objects**
+
+I need to describe the target object using only content-based descriptions, without positional references. I see a 3x3 grid where one object is a triangle filled with a gray and white checkerboard pattern, outlined in black. Other objects include blank cells, a circle with vertical stripes, and a square with a checkerboard pattern. To clarify, I should specify to select the triangle with the checkerboard fill, without mentioning the other elements like the red box. It should be concise!"
+exp2_053.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,1",Select the red-outlined triangle that has vertical gray stripes inside.,"**Describing target shapes**
+
+I need to create a referring expression for the target shape inside a dashed red box, which is a striped triangle outline in red. There are other shapes to describe too: a dotted square in blue, a striped rectangle in blue, and a dotted star also in blue. Since the description needs to be non-spatial, I’ll focus on specific attributes. For example, I could say, ""the red triangle with vertical gray stripes."" I want to keep it concise!"
+exp2_054.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Pick the green-outlined triangle with a gray-and-white checkerboard pattern inside.,"**Describing the target object**
+
+I need to provide a clear description of the target shape so the listener can identify it among similar images without using terms like ""top left."" The target is a triangle with a green outline and a checkered gray and white interior, which makes it distinct. Other nearby shapes include a green-bordered vertically striped square, a black-outlined vertically striped triangle, a striped star, and a dotted square with a black outline. So, I could say: ""It's a green-outlined triangle with a checkered pattern inside."""
+exp2_055.jpeg,cond1,absent,absent,2,"triangle, triangular",blue,dot,"3,3",Pick the grey triangle with the blue outline and dotted pattern inside.,"**Describing a shape**
+
+I’m looking at a 3x3 grid filled with different shapes. The target is a blue-outlined triangle with a polka dot fill. I want to convey this to the listener without using spatial references. So, I’ll emphasize that the triangle is unique in its shape, sharing the dotted interior with the circle, and it also has the same blue border as the checkerboard square. I need to be concise while ensuring they understand which shape to choose."
+exp2_056.jpeg,cond2,absent,present,3,"triangle, triangular",blue,"wavy, zigzag","3,2",Pick the blue-outlined triangle with the wavy gray pattern inside.,"**Creating a clear description**
+
+I need to come up with a descriptive expression for the target object, which is a blue triangle with a wavy pattern. I can't rely on spatial words like ""top left"" since those depend on arrangement. I also want to distinguish it from other shapes: a red triangle with polka dots, a green circle with polka dots, and a red circle with wavy lines. I think a good option would be “the only blue triangle” or “the triangle with blue border and wavy gray stripes.”"
+exp2_057.jpeg,cond4,present,present,3,"triangle, triangular",blue,"wavy, zigzag","3,1","Pick the grey triangle with a blue outline that has wavy horizontal stripes inside, not the one with dots.","**Describing target objects**
+
+I need to create a message for the listener to pick a target object. There’s a 3x3 grid with visible items: two blue-trimmed grey triangles—one has polka dots and the other has wavy horizontal stripes. The target is the upper right triangle with wavy stripes. I have to describe it robustly without using spatial references like ""top left"". To avoid ambiguity, I can highlight the pattern: ""grey triangle with blue outline and wavy stripes"". I must consider that there could be hidden, identical shapes."
+exp2_058.jpeg,cond3,present,absent,2,"circle, circular",green,dot,"3,3",Select the gray polka‑dotted circle outlined in green.,"**Figuring out descriptions**
+
+I need to create a referring expression for a visible gray polka dot circle with a green outline and a wavy gray star with a red outline. There are also two hidden objects behind curtains, but I shouldn't mention spatial locations like top left. I must focus on the unique properties that stand out for the listener, ensuring they can choose correctly despite not knowing what might be hidden. A good description might be: ""Choose the gray polka-dotted circle with a green outline."""
+exp2_059.jpeg,cond3,present,absent,3,star,black,"wavy, zigzag","2,1",Pick the gray star with the wavy pattern and black outline.,"**Describing the star icon**
+
+I'm focusing on describing the star with a wavy pattern and black outline without using spatial references like ""top"" or ""middle."" Instead, I can reference other visible objects, but those could be arranged differently, so I’ll avoid those comparisons. I want to emphasize intrinsic properties like shape, pattern, and color since hidden objects might share properties, which is uncertain. The best way to describe it might be: ""the star-shaped icon with gray wavy stripes and a black outline."""
+exp2_060.jpeg,cond1,absent,absent,2,"circle, circular",red,"wavy, zigzag","2,1",Select the circle with gray wavy lines inside and a red outline.,"**Describing shapes in a grid**
+
+I’m looking at a 3x3 grid with three rows and three columns, and specific shapes in each. There's a gray circle with wavy stripes, a star with vertical stripes, and a square with polka dots. The target is to describe the gray wavy circle without using spatial terms like ""top middle."" I can say, ""Pick the gray circle filled with horizontal wavy lines and a red border,"" as this distinguishes it as the unique shape among them."
+exp2_061.jpeg,cond3,present,absent,2,star,green,stripe,"2,1",Pick the green-outlined star with gray vertical stripes inside.,"**Describing visual objects**
+
+I need to ensure I give clear, non-spatial descriptions for identifying items within a 3x3 grid. There's a green star with vertical gray stripes and a red triangle with wavy stripes. I should instruct: ""Choose the green star with vertical gray stripes."" It’s critical to ensure it's a unique description compared to any hidden objects. However, I have to face the reality that I can’t guarantee uniqueness due to hidden items. So, I’ll focus on concise and clear descriptions, mentioning shapes, patterns, and colors."
+exp2_062.jpeg,cond1,absent,absent,4,square,green,dot,"2,3",Pick the green‐outlined square that has gray polka dots inside (not the green triangle).,none
+exp2_063.jpeg,cond2,absent,present,2,"triangle, triangular",red,stripe,"3,2",Pick the triangle with vertical grey-and-white stripes and a red border.,"**Describing visual targets**
+
+I’m trying to refer to a specific target—the dashed red square—so that the other person can select it easily. I can't use vague spatial references like ""top left,"" so I need a description that remains effective even if things get rearranged. I see three visible objects: a triangle with a black outline and dot fill, a green square with vertical stripes, and the target, which is a red-outlined triangle with vertical stripes. I think saying ""the striped triangle with red outline"" will work well!"
+exp2_064.jpeg,cond1,absent,absent,3,star,red,dot,"1,2",Select the red-outlined star with the gray polka-dot pattern inside.,"**Describing target shapes**
+
+I’m figuring out how to describe the speaker reference game target. It’s a red-outlined star shape with a gray polka dot interior and a red border. I also have other shapes to consider: green triangle waves, blue triangle waves, and blue square dots. I need to avoid spatial terms and focus on unique descriptions, emphasizing the star shape with its red outline and dotted interior, while noting the blue square’s dotted interior too."
+exp2_065.jpeg,cond3,present,absent,2,square,blue,checker,"3,2","Select the visible gray-and-white checkerboard pattern inside a blue border, not hidden behind a red curtain.","**Describing visual features**
+
+I’m focusing on a speaker targeting a specific area, which is the gray-and-white checkerboard with a blue border. I need a concise expression, avoiding spatial references like ""right"" to keep it clear from other objects. I’m considering whether blank cells count as objects too. So, I’m aiming for something like “the visible gray-and-white checkered pattern inside a blue square frame” to ensure it’s precise and distinguishes it from anything hidden behind the curtain."
+exp2_066.jpeg,cond2,absent,present,4,"circle, circular",black,dot,"1,1",Pick the gray polka-dotted circle with the thick black outline.,"**Describing target attributes**
+
+I need to focus on describing the target object based on its attributes rather than its spatial position. It’s important to ensure clear communication since I am the speaker. I'll be highlighting specific features indicated by a dashed red box in the image. By doing so, I can provide a more engaging and informative description that captures the essence of the target object without getting lost in its location. Let's see how I can best express this!"
+exp2_067.jpeg,cond4,present,present,3,square,blue,"wavy, zigzag","2,1",Pick,"**Clarifying visual reference**
+
+I need to specify the visual reference clearly. It’s about the ""wavy grey-and-white square with the blue border,"" not the red border. I hope there’s nothing identical that could confuse things, but I want to be as clear as possible. I can’t say ""the one that doesn’t have a red frame"" since that might be vague. So, I’ll say: ""Choose the square with gray and white horizontal wavy stripes and a blue border."" That should do it!"
+exp2_068.jpeg,cond4,present,present,4,star,black,stripe,"2,1",Pick the star with gray vertical stripes and a black outline (not the blue-outlined star).,"**Providing object description**
+
+I'm focused on giving a clear description of the target object in this reference game. The target is a black-outlined star with vertical gray stripes inside, and there's also a blue-outlined star with similar stripes that I want to avoid mentioning. I've got to describe it without using position references since they can be confusing. So, I'll say something like: ""Choose the star with gray vertical stripes and a black border."" That should help identify it uniquely!"
+exp2_069.jpeg,cond2,absent,present,2,square,green,dot,"1,1",Pick the green-outlined square with the gray,none
+exp2_070.jpeg,cond1,absent,absent,4,square,green,checker,"1,3",Pick the gray checkerboard **square** with the **green border** (the only square and only green-bordered shape).,"**Describing target objects**
+
+I need to describe a target object using non-spatial properties. In this case, the target is a green-bordered square checkerboard in a 3x3 grid, while the other objects include a circle checkerboard and a red-bordered star with wavy stripes. I need a clear and robust identification strategy, like ""the only green-bordered shape"" or ""checkerboard square not circle."" My response might be: ""Select the green-bordered square with gray checkerboard pattern (the only square, not a circle)."" This should keep it straightforward!"
+exp2_071.jpeg,cond4,present,present,3,square,black,checker,"1,2","Pick the checkerboard that has a dark gray frame around it, not the one with the light green frame.","**Evaluating visual options**
+
+I need to describe the target for the listener based solely on what’s visible. It looks like there are multiple checkerboards. One is a gray checkerboard, while another, in the bottom right, has a green frame. There are also two that are hidden behind curtains. I should distinguish between them: one has a dark gray frame, while the other might not have a frame. I really need to inspect them carefully!"
+exp2_072.jpeg,cond3,present,absent,2,star,black,stripe,"3,2",Select the grey star with vertical stripes and a black outline.,"**Describing visual features**
+
+I want to make sure I give a good description without mentioning any spatial references or dashed boxes. So, I could say something like ""the grey vertical-striped star outlined in black."" I should also clarify that it’s neither a circle nor polka-dotted to avoid any confusion. I need to keep the description clear and concise while highlighting important features. Let's focus on making it easily understandable!"
+exp2_073.jpeg,cond4,present,present,2,star,green,stripe,"3,2",Choose the green-outlined star that has vertical,"**Explaining selection instructions**
+
+It sounds like I'm working on providing clear instructions for selecting something specific, like a star. I should avoid using spatial terms like ""in the middle row"" that might confuse the user. Instead, I can say, “Select the green star with vertical grey-and-white stripes inside.” That directly communicates what needs to be chosen without unnecessary details. I think this approach will help keep the instructions straightforward and easy to understand!"
+exp2_074.jpeg,cond2,absent,present,3,square,black,"wavy, zigzag","1,3",Pick the square filled with wavy horizontal lines.,"**Describing patterns clearly**
+
+I need to focus on comparing a wavy square pattern with a black border to other shapes like star polka dots, striped triangles, and checkerboard squares, possibly with a red frame. I think it’s important to keep the descriptions non-spatial. For instance, I could describe the wavy square as ""a square with wavy horizontal stripes"" compared to a checkerboard pattern. My goal is to make the message concise and clear!"
+exp2_075.jpeg,cond1,absent,absent,2,star,red,"wavy, zigzag","3,2",Pick the red-outlined star that has a gray wavy pattern inside.,"**Describing the target object**
+
+I need to give a clear description of the target object to help the listener choose it. The target is a red star shape with a wavy gray pattern inside, which I should clearly mention. I'll also note that there are other visible objects like a gray checkerboard triangle and a black square with vertical stripes, but those won't distract from the main target. The concise description could be, ""a red star outlined in red and filled with wavy gray patterns."""
+exp2_076.jpeg,cond1,absent,absent,2,"triangle, triangular",green,stripe,"1,3",Pick the green-outlined triangle filled with vertical gray stripes.,"**Describing a target object**
+
+I need to describe the target object clearly without using spatial references. The image shows a grid with three rows and three columns. The target object is a green-outline triangle with vertical gray stripes, located in a cell that’s easily identifiable among the visible objects, as it’s the only triangle and the only one with stripes. This should help make the description concise and effective!"
+exp2_077.jpeg,cond3,present,absent,3,"circle, circular",blue,stripe,"1,3",Select the blue-outlined circle filled with vertical gray-and-white stripes.,"**Clarifying the description**
+
+I need to be clear in my description, specifying things like ""striped circle with a blue outline."" It’s important not to mention curtains or the location so I can keep it focused. So, I think the final phrasing should be something like: ""Choose the blue-outlined circle with vertical gray and white stripes inside."" I want to ensure that it’s as concise as possible while conveying exactly what’s needed!"
+exp2_078.jpeg,cond4,present,present,4,"triangle, triangular",red,stripe,"2,1",Pick the vertically striped triangle that has a red outline.,none
+exp2_079.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",Pick the polka‑dot circle with a green outline.,"**Describing visual targets**
+
+I'm working on a reference game where I need to provide a description of a target without using spatial terms like ""top right."" It looks like I have a grid of 3 rows and 4 columns. In the second row, there's a distinct green circle with a dotted interior, which I need to highlight among other shapes. I'll say something like, ""Choose the only circle with a green border and polka dot fill,"" avoiding any spatial language."
+exp2_080.jpeg,cond3,present,absent,3,"triangle, triangular",blue,dot,"2,3",,"**Exploring hidden shapes**
+
+I'm thinking about how hidden shapes could include triangles with dots, but I can't be sure about that. I really want to give a description that maximizes the chances of getting it right. It feels like there's so much uncertainty in determining what's there. I guess I’ll just have to provide my best guess while acknowledging that there are other possibilities too—like those triangles with dots I keep thinking about!"
+exp2_081.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Select the green-outlined triangle that has a gray-and-white checkerboard pattern inside.,"**Describing visual targets**
+
+I’m in a reference game where I need to provide a concise description to help others pick the correct target. I can’t use terms like “top middle,” but I can mention shapes, colors, patterns, and borders instead. The target is a green-outlined triangle with a checkered gray and white interior. I need to ensure the description is unique, so I’ll clarify it’s not wavy or circular. The answer needs to be straightforward, just a phrase or sentence."
+exp2_082.jpeg,cond3,present,absent,2,"triangle, triangular",green,stripe,"2,1",Select the vertically striped triangle with a green outline.,none
+exp2_083.jpeg,cond1,absent,absent,3,star,red,dot,"3,3",Pick the red-outlined star with the gray polka dots inside.,"**Providing clear descriptions**
+
+I need to create a referring expression for a target object, which is a red-outlined star that has a polka-dot interior. The grid isn't relevant here, and I want to avoid using spatial terms like ""bottom right"" to keep it clear. I also need to ensure my description distinguishes it from other shapes nearby, like a green square or a blue circle. A simple way to describe it would be: ""the red-outlined star with small gray dots inside."" This effectively distinguishes it as the only star!"
+exp2_084.jpeg,cond4,present,present,4,"circle, circular",black,"wavy, zigzag","2,1",Select the grey circle with the wavy pattern that has a plain black outline (not the one with the green outline).,none
+exp2_085.jpeg,cond3,present,absent,2,"triangle, triangular",green,"wavy, zigzag","1,2",Select the triangle with a bright green border and a gray interior filled with white wavy lines.,"**Identifying the target object**
+
+I need to refer to the target object accurately, which is the green-bordered triangle filled with a gray wavy pattern. I also have to consider the surroundings like the striped star and the unknowns behind the curtains. But I shouldn't specify locations like ""top left"" due to potential rearrangement. Instead, I should focus on intrinsic properties: describing the triangle's shape and colors while noting the star's black outline with vertical gray stripes. It's all about being precise without relying on positional cues."
+exp2_086.jpeg,cond4,present,present,3,star,black,dot,"2,3","Pick the star with a black outline and a white center filled with grey polka dots (no green border, no wavy pattern).","**Clarifying star descriptions**
+
+I’m in a reference game where I need to distinguish between objects. The target is a dashed red box around a black outlined star with a polka-dot interior, which is monochrome. There's also a green outlined star with grey stripes, plus two hidden objects behind curtains. I have to give a unique description that doesn't rely on arrangement. I should avoid vague references and consider hidden shapes and colors, so clarity is key!"
+exp2_087.jpeg,cond2,absent,present,3,star,black,checker,"1,2",Select the star with the gray checkerboard pattern inside.,"**Clarifying shape descriptions**
+
+I need to focus on referring to a star that has a checkerboard fill and a black outline. There are other shapes to describe, like a green-outlined triangle with wavy grey stripes and another star that has vertical stripes. I need to avoid using spatial terms like ""left"" or ""right"" and I shouldn’t mention the dashed red box that’s only visible to us. So, I'll instruct: ""Choose the star with a checkerboard pattern inside."" That seems sufficient!"
+exp2_088.jpeg,cond1,absent,absent,4,"circle, circular",red,checker,"3,2",Select the gray checkerboard **circle** with a **red outline**.,"**Providing clear instructions**
+
+I need to make sure the referring expression clearly identifies the target object, which is the circle marked by a red dashed box. I should avoid using spatial terms like left or right since their arrangement can change, and some cells might be hidden. I'll describe the target as a ""checkerboard-filled circle with a red border"" to ensure it's distinct from similar objects like other shapes or patterns. It's all about clarity!"
+exp2_089.jpeg,cond3,present,absent,4,square,black,dot,"3,3",Select the gray polka‑dot square with the thick black border (the only non‑star shape).,"**Describing visual objects**
+
+I need to create a referring expression for a target object, which is a dotted gray polka dot square. I can’t use spatial references or rely on what's behind some curtains. I know there are other visible objects, like two stars. I'll focus on distinguishing features such as shape and pattern. A good description would be: ""the only non-star object; a gray polka-dot square with a thick black border."" I'll keep it concise yet informative!"
+exp2_090.jpeg,cond3,present,absent,3,"triangle, triangular",green,dot,"3,2",Select the green-outlined triangle that is filled with gray polka dots.,"**Considering description clarity**
+
+I'm in a reference game and need to describe a target uniquely to the listener without using location-based cues. I have a 3x3 grid to work with, showing empty cells along with visible and hidden objects. The target is a green-outlined triangle filled with gray polka dots, while another visible object is a circle with vertical gray stripes. I have to use properties like shape, pattern, and outline color for clarity, even though hidden shapes might create confusion. I'll emphasize the triangle's distinct features while staying aware of potential overlaps."
+exp2_091.jpeg,cond1,absent,absent,3,square,black,"wavy, zigzag","2,1",Pick the gray wavy-pattern **square** with a solid black border (not a triangle or circle).,"**Describing the image**
+
+I need to describe the target image carefully without using spatial terms or mentioning the dashed red box. The target image is a square featuring a distinct gray wave pattern with a black border. It’s important to clarify that it's not a circle or triangle, and its texture is wavy rather than checkerboard. I also have to keep in mind that there may be hidden objects, but for this example, I’m focusing solely on the visible elements."
+exp2_092.jpeg,cond2,absent,present,3,"triangle, triangular",red,dot,"1,3",Select the polka‑dotted triangle with a red outline.,"**Defining the target shape**
+
+I need to clearly describe the target. It’s a dotted triangle with a red outline, and importantly, it doesn’t have any checkers. For context, I've seen other shapes, like triangles with checkers and black borders, a red star outline with a dotted interior, and a solid dotted square with a green border. But the target shape I’m focusing on is specifically that red-outlined triangle filled with gray polka dots."
+exp2_093.jpeg,cond4,present,present,3,square,red,"wavy, zigzag","3,2","Pick the picture that has gray and white wavy lines, not the one with dots and not a red curtain.","**Describing visual patterns**
+
+I need to convey a clear description of a target image that features distinctive gray and white wavy stripes and visible polka dots. I want to ensure I avoid any confusion with any hidden patterns or squares that might not be obvious. It's important to emphasize that I’m focusing on visible elements. I think I should say something like, ""Choose the picture with gray and white wavy lines, not the one with dots or curtains."" That should help!"
+exp2_094.jpeg,cond2,absent,present,4,star,green,dot,"1,3",Select the green-outlined star that has a dotted interior.,"**Describing the target object**
+
+I need to describe the target object, which is a star that has a green outline and a white interior filled with grey polka dots. The outer border is green, giving it a distinct shape as a star. I should contrast it with other objects too, like a red-outlined striped star and some circles. I want to phrase my description appropriately while avoiding any location words that could lead to confusion."
+exp2_095.jpeg,cond1,absent,absent,2,"circle, circular",blue,dot,"1,3",Select the blue-outlined circle filled with gray polka dots.,"**Describing unique objects**
+
+I’m thinking about a 3x3 grid with some distinct objects. In the top right, there’s a square with a checkerboard pattern and a green outline. In the middle left, a blue triangle with a checkerboard design appears, and at the bottom left, there’s a blue circle filled with polka dots—this is my target. I need to create a unique description for the circle, as it’s the only one with a dotted fill and blue outline compared to the others."
+exp2_096.jpeg,cond4,present,present,4,star,green,dot,"1,3",Choose the star with a green outline and a dotted interior (not the blue-outlined star).,"**Refining descriptions**
+
+I’m thinking about how to describe a star that’s green rather than blue and making sure it’s independent of where it’s located. The challenge is crafting a clear instruction. I want to say something like, “Pick the green-outlined star with a dotted interior.” It’s important to be concise and specific, so the instructions are easy to follow. I’m focusing on clarity in communication here!"
+exp2_097.jpeg,cond3,present,absent,3,square,black,stripe,"3,2","Pick the grey vertically striped rectangle with the black border (the only rectangle, not a star).","**Crafting a referring expression**
+
+I need to come up with a way to help the listener identify the target, which is a striped rectangle with vertical grey stripes and a black frame. The other objects include a red-outlined star and a blue-outlined star, which complicates things. I can't mention spatial positions at all, which is challenging. So, I’ll focus on the features, like shape and color, while avoiding references to the curtains or their specific locations to ensure clarity."
+exp2_098.jpeg,cond1,absent,absent,2,square,blue,stripe,"1,2",Select the blue-outlined square with gray vertical stripes.,"**Identifying objects without spatial reference**
+
+I need to describe my target object clearly without referencing any spatial elements like a curtain. I see a blue-bordered square with gray vertical stripes. There are also two stars featured, which have a black border and wavy fill with a blue checkered border. To uniquely identify the object, I think I can simply call it “the vertically striped square with a blue border.” That should work since the only other visible shapes are those stars."
+exp2_099.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","2,3",Select the green-outlined circle that has a grey-and-white wavy pattern inside.,"**Evaluating the task**
+
+I'm considering how to guide the user through the selection process effectively. We need a referring expression to help them choose the target, which is represented by a dashed red outline. I’m looking at a 3x3 grid with visible shapes to make this clearer. My focus is on inspecting the setup to ensure I provide the best possible experience for the user. It’s important that everything is easy to understand and navigate!"
+exp2_100.jpeg,cond4,present,present,2,square,green,dot,"3,2",,"**Considering ambiguity in description**
+
+I'm thinking about how descriptions can be ambiguous. There might be arbitrary things behind the scenes, like a potential ""polka-dot"" pattern. If something truly exists that fits that description, then calling it a ""polka-dot pattern"" could lead to confusion. It’s interesting to think about how language can become unclear when dealing with unexpected elements behind a metaphorical curtain. I’d want to clarify to avoid any misunderstanding."
+exp2_101.jpeg,cond4,present,present,2,"circle, circular",green,checker,"3,3",Select the green-outlined circle that has a gray-and-white checkerboard pattern inside it (not the one with vertical stripes).,none
+exp2_102.jpeg,cond1,absent,absent,4,square,black,checker,"3,1",Select the square with the grey checkerboard pattern and a black border.,"**Considering visual elements**
+
+I’m thinking about how to describe shapes without mentioning triangles or circles. I want to include details that others have blue, green, or red borders. I’m also weighing the idea of using a wave interior versus a checkerboard pattern. In the end, my answer needs to be minimal yet effective, ensuring clarity without overwhelming elements. I want it to be straightforward and focused on the essential features!"
+exp2_103.jpeg,cond3,present,absent,2,square,red,dot,"2,1","Pick the light gray **square** filled with evenly spaced gray dots (the dotted square, not the dotted circle).","**Describing the target object**
+
+I need to act as the speaker in this reference game, giving a description that guides the listener to pick the target from a grid. I can’t mention spatial details like ""middle top"" or refer to the red dashed box. Instead, I should focus on describing the gray square that’s filled with evenly spaced gray dots, making sure to distinguish it from the dotted circle. I'll avoid making assumptions about hidden elements since the listeners might know them, but I don't. So I’ll say: ""Choose the gray square with polka dots."""
+exp2_104.jpeg,cond2,absent,present,2,"circle, circular",green,stripe,"2,3",Pick the green-outlined circle with straight vertical gray stripes (not the wavy pattern and not the star).,"**Creating unique descriptions**
+
+The user wants a description of a game target that’s a striped circle with a green border featuring vertical gray stripes. They also mention others like a wavy circle and a star striped vertically. I need to avoid spatial references and keep it concise. So, I’ll highlight the “green-bordered circle decorated with vertical gray stripes” while also distinguishing it from the star. I’ll focus on making the message clear and unique!"
+exp2_105.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"2,1",Pick the triangle that has a dotted,"**Generating referring expressions**
+
+I need to create a referring expression based on a visible 3x3 grid. The top row has a left triangle with vertical stripes, a center triangle with polka dots, and a blank space on the right. The middle row is blank, and the bottom row has left and middle sections as hidden with question marks. I can't reference positions like ""top middle,"" so I'll focus on distinguishing visible features. I need to make sure my expression is unique among the visible objects while considering the hidden ones too, but that’s a challenge!"
+exp2_106.jpeg,cond4,present,present,4,"triangle, triangular",green,dot,"2,1",,"**Clarifying shape descriptions**
+
+I want to specify the shapes clearly. For example, I could say, ""the green-outlined triangle with polka dots inside"" to differentiate it from other visible shapes, like another green-outline triangle with a checkerboard pattern and a blue-outline square with dots. So, my description would be, ""the green triangle with a dotted interior, not the one with the checkerboard pattern."" It seems like that should work well!"
+exp2_107.jpeg,cond1,absent,absent,4,"triangle, triangular",red,"wavy, zigzag","3,3",Pick the grey wavy triangle with a red outline.,"**Describing target objects**
+
+I’m working on a description for a reference game. I need to avoid spatial terms like grid coordinates and focus on properties like shape, border color, and fill pattern. The target shape is a red-bordered triangle with a wavy interior. I need to ensure the description is unique; the triangle stands out as a shape. However, the border color alone isn’t unique since other objects share that. I’ll emphasize the combination of attributes. The goal is simply to describe it effectively!"
+exp2_108.jpeg,cond3,present,absent,4,square,red,"wavy, zigzag","1,3","Pick the grey square filled with white-and-grey wavy lines—the only wavy square, not the wavy","**Describing the target object**
+
+I’m generating a description for a target object in a reference game. The board is 3x3, with some cells hidden by red curtains. My target is a dashed red box around the lower-left cell, which is a square featuring grey wavy stripes on a white background. There's also a circle with a similar pattern nearby, so I need to clarify it's the square with wavy grey lines, not the circle. It's the only square with that design!"
+exp2_109.jpeg,cond3,present,absent,2,"triangle, triangular",red,dot,"3,3",Select the polka‑dotted triangle with the red outline.,none
+exp2_110.jpeg,cond2,absent,present,2,"triangle, triangular",green,dot,"2,3",Pick the dotted,"**Describing target objects**
+
+I need to describe the target object clearly for the listener to select it. I can't use spatial references due to the arrangement being different. Looking at the 3x3 grid image, I see three shapes: a triangle with a black outline and gray polka-dot fill in the top left, the target triangle with a green outline and the same dotted fill in the bottom middle, and a circle with a blue outline and gray wavy fill in the bottom right. Since there are no curtains here, I’ll focus on the properties to ensure uniqueness among the visible shapes."
+exp2_111.jpeg,cond1,absent,absent,4,"triangle, triangular",green,"wavy, zigzag","3,1",Select the gray triangle with a green border and a wavy pattern inside.,"**Describing the target object**
+
+I'm in a reference game where I need to describe a target object for others to identify without using spatial coordinates. The object is a triangle with a green border and a wavy grey pattern. I see other objects, like a square with a red border and a striped circle, but I need to make my description unique. I must account for possible hidden objects behind curtains while ensuring my description works even if others are present. It's a bit tricky!"
+exp2_112.jpeg,cond2,absent,present,4,"circle, circular",black,"wavy, zigzag","3,2",Pick the circle with the wavy gray pattern and a black outline (not the dotted one with the red outline).,"**Describing target shapes**
+
+I'm focused on providing a distinct description of the target shape without using spatial references like 'top-left'. I need to mention shapes like circles, triangles, and squares, and patterns such as wavy or dotted. For the target specifically, it's a circle with a wavy gray pattern and a black outline. I will avoid mentioning the red border, as clarity is key for understanding. I'll condense this information into a concise description for better communication."
+exp2_113.jpeg,cond3,present,absent,2,"circle, circular",red,"wavy, zigzag","3,2",Choose the circular object with gray wavy stripes inside and a reddish-pink ring around it.,"**Following instructions clearly**
+
+I'm focusing on how to describe the instructions properly. I need to keep it simple and precise while talking to someone else. So, I'll say something like: ""Pick the circular object that has grey wavy lines inside and is bordered with red."" It's important that I keep it minimal and direct to avoid confusion. Clarity is key in communication, and I want to ensure the listener understands the request without any unnecessary details."
+exp2_114.jpeg,cond1,absent,absent,2,square,red,"wavy, zigzag","1,2",Pick the gray square with horizontal wavy lines and a solid red border (the only non‑star shape).,"**Describing target objects**
+
+I'm considering how to describe a target object in a reference game without using spatial terms like ""top left"" or ""middle."" The target is a gray wavy square inside a dashed red box, distinctly different from the visible star shapes. I want to mention its properties: the shape, pattern, and the color of its outline versus its fill. The phrase I come up with is ""the gray square with wavy horizontal lines and a red border."" It’s essential to be precise!"
+exp2_115.jpeg,cond2,absent,present,4,"triangle, triangular",green,dot,"3,3",Pick the triangle with a green outline and a grey polka‑dot pattern inside.,"**Defining safe attributes**
+
+I'm considering the specific attributes needed, trying to think of a combination that fits. It seems like I need a green-outlined triangle with grey polka dots inside. That's a clear visual, so I'm thinking this should meet the safety criteria while being distinct enough. Alright, I'm solidifying this idea, making sure there aren't any hidden elements that could complicate things."
+exp2_116.jpeg,cond3,present,absent,2,star,black,stripe,"3,3",Pick the star-shaped object with a black outline and gray vertical stripes inside.,"**Describing visual objects**
+
+I need to refer to the target object, which is a striped star outline. It has vertical black stripes, so I must describe its shape, pattern, and color without using spatial terms. There's also a wavy triangle with a green border and grey waves, plus curtains with question marks. It's challenging to create a unique description since hidden objects can also share similar shapes. I'll say, ""Choose the gray star with vertical stripes and black outline."" However, I must add that it has no color fill, only gray vertical stripes inside."
+exp2_117.jpeg,cond4,present,present,2,star,black,"wavy, zigzag","3,3",Pick the gray star that has a black outline and a wavy pattern inside (not the green-outlined striped star).,"**Describing the target object clearly**
+
+I need to choose how to describe the target object, which is a star with specific features, like the dashed red box star option. I have to ensure clarity since the user can see everything, including what's behind the curtains. I can't use directional terms like left or right, so I should focus on unique features, like the black outline and wavy gray interior. However, there could be others with similar features hidden, so I have to describe everything I know without assuming additional details."
+exp2_118.jpeg,cond2,absent,present,3,star,black,dot,"3,1",Pick the star-shaped object that has grey polka dots inside and a thin black outline (no colored,"**Generating a referring expression**
+
+I’m working on creating a referring expression for a specific target: the dashed red box that contains a star outline in black filled with grey polka dots. I can see there are other objects nearby, like a green-bordered square and a red-bordered triangle, but I need to avoid using any spatial terms. I want a descriptive phrase that clearly separates the target star from the others, like “the white star with grey polka dots and a thin black outline.”"
+exp2_119.jpeg,cond1,absent,absent,4,"triangle, triangular",red,dot,"1,2",Select the gray polka‑dotted triangle with the red outline.,"**Identifying target shapes**
+
+I need to clearly describe a target shape without using positional references like ""top left."" Looking at the 3x3 grid, I see that the top row is blank. The middle row has a red-outlined triangle with grey dots, which is my target. I also notice a blue-bordered square with vertical stripes and some other shapes below. To instruct, I should say, ""Select the triangle with grey dots inside, which sets it apart from circles and squares."""
+exp2_120.jpeg,cond4,present,present,3,square,blue,stripe,"2,1","Pick the picture that shows only thin vertical gray-and-white stripes (no checkerboard squares, no red curtain).",none

@@ -1,0 +1,121 @@
+image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought
+exp2_001.jpeg,cond2,absent,present,2,"triangle, triangular",black,stripe,"3,3",the striped triangle,none
+exp2_002.jpeg,cond4,present,present,4,square,blue,checker,"3,2",Pick the gray-and-white checkerboard pattern.,none
+exp2_003.jpeg,cond3,present,absent,4,"circle, circular",red,"wavy, zigzag","1,3",Pick the only circle with a wavy gray pattern inside and a red border.,none
+exp2_004.jpeg,cond1,absent,absent,3,square,blue,checker,"3,3",Pick the blue-outlined square with a grey-and-white checkerboard pattern.,none
+exp2_005.jpeg,cond2,absent,present,3,square,blue,"wavy, zigzag","2,3",Pick the grey wavy square with the red border.,none
+exp2_006.jpeg,cond2,absent,present,4,"circle, circular",black,checker,"2,1",Pick the grey checkered circle with a thick black outline.,none
+exp2_007.jpeg,cond4,present,present,3,"circle, circular",red,stripe,"1,3",Pick the striped circle without a colored outline.,none
+exp2_008.jpeg,cond1,absent,absent,4,"triangle, triangular",blue,stripe,"3,1",Pick the only blue-outlined triangle with gray vertical stripes inside.,none
+exp2_009.jpeg,cond4,present,present,2,"circle, circular",red,"wavy, zigzag","1,1",Pick the circle with the gray wavy-line pattern.,none
+exp2_010.jpeg,cond3,present,absent,3,square,red,stripe,"3,2",Pick the square image with vertical gray-and-white stripes inside a red border.,none
+exp2_011.jpeg,cond4,present,present,2,square,black,"wavy, zigzag","1,3",Pick the picture with the wavy gray-and-white lines.,none
+exp2_012.jpeg,cond1,absent,absent,4,"triangle, triangular",black,"wavy, zigzag","2,3",Pick the wavy triangle.,none
+exp2_013.jpeg,cond2,absent,present,2,square,red,dot,"3,2",Select the **square with small gray polka dots and a thin red border** (not the checkerboards).,none
+exp2_014.jpeg,cond2,absent,present,4,star,red,checker,"3,2",Pick the red-outlined star that has a grey checkerboard pattern inside.,none
+exp2_015.jpeg,cond4,present,present,2,"triangle, triangular",green,dot,"3,2",Select the green-outlined triangle with the gray polka dots.,none
+exp2_016.jpeg,cond1,absent,absent,2,square,green,dot,"2,3",Pick the gray polka‑dot shape inside the green square border.,none
+exp2_017.jpeg,cond3,present,absent,4,star,green,stripe,"2,3",Pick the green star with vertical stripes.,none
+exp2_018.jpeg,cond3,present,absent,3,star,blue,dot,"1,1",Pick the object that is a hollow blue-outlined star filled with gray polka dots.,none
+exp2_019.jpeg,cond4,present,present,3,"triangle, triangular",red,dot,"2,1",the gray triangle with dots and a red border,none
+exp2_020.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"1,1",Pick the triangle with the dotted pattern inside.,none
+exp2_021.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,2",Select the gray vertically striped triangle with a red outline.,none
+exp2_022.jpeg,cond1,absent,absent,4,square,black,stripe,"3,1",Pick the black-outlined shape that is a square with vertical gray stripes.,none
+exp2_023.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",Pick the green-outlined circle that is filled with grey polka dots.,none
+exp2_024.jpeg,cond2,absent,present,2,"triangle, triangular",green,stripe,"1,2",Select the light‑gray triangle with vertical stripes and a bright green outline.,none
+exp2_025.jpeg,cond3,present,absent,2,star,blue,dot,"1,3",Select the blue-outlined star with grey polka dots.,none
+exp2_026.jpeg,cond4,present,present,2,star,black,checker,"1,1",Pick the star with the grey checkerboard pattern inside.,none
+exp2_027.jpeg,cond3,present,absent,2,star,blue,checker,"1,3",Pick the blue-outlined star with a checkered interior.,none
+exp2_028.jpeg,cond2,absent,present,3,"triangle, triangular",blue,dot,"1,1",Pick the dotted triangle with the blue outline.,none
+exp2_029.jpeg,cond1,absent,absent,4,"circle, circular",red,"wavy, zigzag","1,3",Pick the grey wavy circle with a red outline.,none
+exp2_030.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","3,2",Pick the green-outlined circle with the wavy gray pattern inside.,none
+exp2_031.jpeg,cond3,present,absent,3,"circle, circular",green,checker,"2,1",Pick the green-outlined circle with the gray checkerboard pattern.,none
+exp2_032.jpeg,cond3,present,absent,4,"triangle, triangular",red,stripe,"3,3",Pick the striped triangle with the red outline.,none
+exp2_033.jpeg,cond1,absent,absent,3,star,green,stripe,"3,3",Select the green-outlined striped star.,none
+exp2_034.jpeg,cond4,present,present,4,square,red,dot,"1,3",Pick the square with gray polka dots and a thin gray border (not the one with the thick black border).,none
+exp2_035.jpeg,cond4,present,present,3,star,black,dot,"3,2",Pick the black-outlined star with the gray polka-dot fill.,none
+exp2_036.jpeg,cond2,absent,present,4,star,green,dot,"2,1",Pick the green-outlined star with a dotted interior.,none
+exp2_037.jpeg,cond3,present,absent,3,"triangle, triangular",black,"wavy, zigzag","1,1",Pick the gray wavy triangle.,none
+exp2_038.jpeg,cond3,present,absent,2,"circle, circular",red,stripe,"3,3",Pick the circle with vertical gray and white stripes.,none
+exp2_039.jpeg,cond4,present,present,4,"triangle, triangular",blue,"wavy, zigzag","3,1",Pick the blue-outlined triangle that has a wavy gray pattern inside it.,none
+exp2_040.jpeg,cond1,absent,absent,4,square,blue,stripe,"1,3",Pick the blue-outlined square with vertical stripes.,none
+exp2_041.jpeg,cond4,present,present,2,"circle, circular",red,dot,"3,1",Choose the gray polka‑dot circle with the red outline.,none
+exp2_042.jpeg,cond1,absent,absent,3,"circle, circular",red,"wavy, zigzag","3,3",Pick the red-outlined circle with the wavy pattern inside.,none
+exp2_043.jpeg,cond2,absent,present,4,star,green,"wavy, zigzag","1,1",Pick the green star with the wavy gray-and-white pattern inside.,none
+exp2_044.jpeg,cond3,present,absent,3,square,red,dot,"1,3",Pick the square gray polka‑dot pattern that is not inside a green circle.,none
+exp2_045.jpeg,cond1,absent,absent,2,"triangle, triangular",black,stripe,"2,1",Pick the striped triangle.,none
+exp2_046.jpeg,cond2,absent,present,4,star,red,"wavy, zigzag","2,1",Pick the red-outlined star with the wavy pattern inside.,none
+exp2_047.jpeg,cond4,present,present,3,square,green,stripe,"1,3",Pick the green-framed square that has only vertical gray and white stripes (no dots or checks).,none
+exp2_048.jpeg,cond2,absent,present,3,square,red,stripe,"3,3",Pick the gray vertical-striped square with the red border.,none
+exp2_049.jpeg,cond4,present,present,3,square,green,stripe,"1,1",Pick the striped square with the green border.,none
+exp2_050.jpeg,cond3,present,absent,3,star,red,stripe,"2,3",Pick the striped star with a red outline.,none
+exp2_051.jpeg,cond1,absent,absent,3,"triangle, triangular",black,"wavy, zigzag","2,3",Pick the gray wavy triangle with a thick black outline.,none
+exp2_052.jpeg,cond3,present,absent,3,"triangle, triangular",black,checker,"2,1",Pick the gray checkered triangle.,none
+exp2_053.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,1",Pick the red-outlined triangle with gray vertical stripes.,none
+exp2_054.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Select the green-outlined triangle that has a checkerboard pattern inside.,none
+exp2_055.jpeg,cond1,absent,absent,2,"triangle, triangular",blue,dot,"3,3",Pick the dotted triangle with the blue outline.,none
+exp2_056.jpeg,cond2,absent,present,3,"triangle, triangular",blue,"wavy, zigzag","3,2",Pick the blue triangle with the wavy gray pattern inside.,none
+exp2_057.jpeg,cond4,present,present,3,"triangle, triangular",blue,"wavy, zigzag","3,1",Pick the blue triangle that has the wavy gray pattern inside (not the one with the dotted pattern).,none
+exp2_058.jpeg,cond3,present,absent,2,"circle, circular",green,dot,"3,3",Pick the gray polka‑dotted circle with a green outline.,none
+exp2_059.jpeg,cond3,present,absent,3,star,black,"wavy, zigzag","2,1",Select the grey wavy star outline.,none
+exp2_060.jpeg,cond1,absent,absent,2,"circle, circular",red,"wavy, zigzag","2,1",Pick the grey circle with the wavy pattern and red outline.,none
+exp2_061.jpeg,cond3,present,absent,2,star,green,stripe,"2,1",Pick the green outlined star with gray vertical stripes.,none
+exp2_062.jpeg,cond1,absent,absent,4,square,green,dot,"2,3",Pick the green square with the polka‑dot pattern.,none
+exp2_063.jpeg,cond2,absent,present,2,"triangle, triangular",red,stripe,"3,2",Pick the striped triangle (the triangle with vertical gray stripes and a red outline).,none
+exp2_064.jpeg,cond1,absent,absent,3,star,red,dot,"1,2",Pick the red-outlined star with a dotted interior.,none
+exp2_065.jpeg,cond3,present,absent,2,square,blue,checker,"3,2",Pick the gray-and-white checkerboard pattern.,none
+exp2_066.jpeg,cond2,absent,present,4,"circle, circular",black,dot,"1,1",Pick the grey polka‑dotted circle with a thick black outline.,none
+exp2_067.jpeg,cond4,present,present,3,square,blue,"wavy, zigzag","2,1",Pick the gray wavy square that does **not** have a red border around it.,none
+exp2_068.jpeg,cond4,present,present,4,star,black,stripe,"2,1",Select the grey vertically-striped star with the black outline.,none
+exp2_069.jpeg,cond2,absent,present,2,square,green,dot,"1,1",Pick the light square with green border that has small grey dots all over it.,none
+exp2_070.jpeg,cond1,absent,absent,4,square,green,checker,"1,3",Pick the green-bordered square with a grey checkerboard pattern.,none
+exp2_071.jpeg,cond4,present,present,3,square,black,checker,"1,2",Pick the gray checkerboard that is **not** highlighted with a green border.,none
+exp2_072.jpeg,cond3,present,absent,2,star,black,stripe,"3,2",Pick the striped star.,none
+exp2_073.jpeg,cond4,present,present,2,star,green,stripe,"3,2",the green-outlined striped star,none
+exp2_074.jpeg,cond2,absent,present,3,square,black,"wavy, zigzag","1,3",Pick the square with the wavy horizontal stripe pattern.,none
+exp2_075.jpeg,cond1,absent,absent,2,star,red,"wavy, zigzag","3,2",Pick the red-outlined star that’s filled with a gray wavy pattern.,none
+exp2_076.jpeg,cond1,absent,absent,2,"triangle, triangular",green,stripe,"1,3",Pick the green-outlined triangle with vertical gray stripes.,none
+exp2_077.jpeg,cond3,present,absent,3,"circle, circular",blue,stripe,"1,3",Choose the blue-outlined circle with vertical gray-and-white stripes.,none
+exp2_078.jpeg,cond4,present,present,4,"triangle, triangular",red,stripe,"2,1",Pick the striped triangle with the red border.,none
+exp2_079.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",Select the grey polka‑dot circle with a green outline.,none
+exp2_080.jpeg,cond3,present,absent,3,"triangle, triangular",blue,dot,"2,3",Select the blue-outlined triangle filled with gray dots.,none
+exp2_081.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Select the green-outlined triangle with the checkered pattern inside.,none
+exp2_082.jpeg,cond3,present,absent,2,"triangle, triangular",green,stripe,"2,1",Pick the green-outlined striped triangle.,none
+exp2_083.jpeg,cond1,absent,absent,3,star,red,dot,"3,3",Pick the red-outlined star with a polka-dotted interior.,none
+exp2_084.jpeg,cond4,present,present,4,"circle, circular",black,"wavy, zigzag","2,1",Pick the gray wavy circle with the black outline.,none
+exp2_085.jpeg,cond3,present,absent,2,"triangle, triangular",green,"wavy, zigzag","1,2",Pick the green-outlined triangle with the gray wavy pattern inside.,none
+exp2_086.jpeg,cond4,present,present,3,star,black,dot,"2,3",Pick the white star with grey polka dots and a black outline.,none
+exp2_087.jpeg,cond2,absent,present,3,star,black,checker,"1,2",Pick the star with the grey checkerboard pattern inside.,none
+exp2_088.jpeg,cond1,absent,absent,4,"circle, circular",red,checker,"3,2",Pick the gray checkered circle with a red outline.,none
+exp2_089.jpeg,cond3,present,absent,4,square,black,dot,"3,3","Pick the square image filled with a grid of evenly spaced small gray dots, without any star shape.",none
+exp2_090.jpeg,cond3,present,absent,3,"triangle, triangular",green,dot,"3,2",Pick the green-outlined triangle with a grey polka-dot filling.,none
+exp2_091.jpeg,cond1,absent,absent,3,square,black,"wavy, zigzag","2,1",Pick the grey wavy shape with a black border.,none
+exp2_092.jpeg,cond2,absent,present,3,"triangle, triangular",red,dot,"1,3",Pick the red-outlined triangle that has a dotted pattern inside.,none
+exp2_093.jpeg,cond4,present,present,3,square,red,"wavy, zigzag","3,2",Pick the gray square filled with repeating white wavy lines.,none
+exp2_094.jpeg,cond2,absent,present,4,star,green,dot,"1,3",Pick the green-outlined star that has a polka‑dot pattern inside.,none
+exp2_095.jpeg,cond1,absent,absent,2,"circle, circular",blue,dot,"1,3",Pick the blue-outlined circle with the gray polka-dot pattern.,none
+exp2_096.jpeg,cond4,present,present,4,star,green,dot,"1,3",Pick the green star with the dotted fill.,none
+exp2_097.jpeg,cond3,present,absent,3,square,black,stripe,"3,2",Pick the gray-and-white vertically striped rectangle with a black border.,none
+exp2_098.jpeg,cond1,absent,absent,2,square,blue,stripe,"1,2",Pick the blue-bordered square with vertical gray and white stripes.,none
+exp2_099.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","2,3",Pick the wavy gray circle with the green outline.,none
+exp2_100.jpeg,cond4,present,present,2,square,green,dot,"3,2",Pick the picture with many small grey dots in a regular grid pattern (not the checkerboard).,none
+exp2_101.jpeg,cond4,present,present,2,"circle, circular",green,checker,"3,3",Pick the green circle that has a gray-and-white checkerboard pattern inside it.,none
+exp2_102.jpeg,cond1,absent,absent,4,square,black,checker,"3,1",Pick the only shape that is a square with a checkerboard pattern.,none
+exp2_103.jpeg,cond3,present,absent,2,square,red,dot,"2,1",Select the pale grey square filled with a uniform grid of small grey dots and no border.,none
+exp2_104.jpeg,cond2,absent,present,2,"circle, circular",green,stripe,"2,3","Pick the green-outlined circle with vertical grey stripes (not the wavy one, not the star).",none
+exp2_105.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"2,1",Pick the triangle that has grey polka dots inside it (not the one with vertical stripes).,none
+exp2_106.jpeg,cond4,present,present,4,"triangle, triangular",green,dot,"2,1",Pick the green-outlined triangle that has grey polka dots inside it.,none
+exp2_107.jpeg,cond1,absent,absent,4,"triangle, triangular",red,"wavy, zigzag","3,3",Pick the grey wavy triangle with the solid red outline.,none
+exp2_108.jpeg,cond3,present,absent,4,square,red,"wavy, zigzag","1,3",Pick the gray square with white wavy lines.,none
+exp2_109.jpeg,cond3,present,absent,2,"triangle, triangular",red,dot,"3,3",Pick the dotted triangle.,none
+exp2_110.jpeg,cond2,absent,present,2,"triangle, triangular",green,dot,"2,3",Select the green-outlined triangle with grey dots.,none
+exp2_111.jpeg,cond1,absent,absent,4,"triangle, triangular",green,"wavy, zigzag","3,1",Pick the **green triangle with the gray wavy pattern inside it**.,none
+exp2_112.jpeg,cond2,absent,present,4,"circle, circular",black,"wavy, zigzag","3,2",Pick the gray wavy circle with a thick black outline.,none
+exp2_113.jpeg,cond3,present,absent,2,"circle, circular",red,"wavy, zigzag","3,2",Pick the gray circle with the wavy pattern and a pink outline.,none
+exp2_114.jpeg,cond1,absent,absent,2,square,red,"wavy, zigzag","1,2",Pick the gray square with the wavy pattern.,none
+exp2_115.jpeg,cond2,absent,present,4,"triangle, triangular",green,dot,"3,3",Pick the green-outlined triangle filled with gray dots.,none
+exp2_116.jpeg,cond3,present,absent,2,star,black,stripe,"3,3",Pick the grey star with vertical stripes and a black outline.,none
+exp2_117.jpeg,cond4,present,present,2,star,black,"wavy, zigzag","3,3",Select the gray star with the wavy pattern and a black outline.,none
+exp2_118.jpeg,cond2,absent,present,3,star,black,dot,"3,1",Pick the star outline that has a dotted fill and a thin black border (not the wavy or checkered shapes).,none
+exp2_119.jpeg,cond1,absent,absent,4,"triangle, triangular",red,dot,"1,2",Pick the red-outlined triangle with a dotted fill.,none
+exp2_120.jpeg,cond4,present,present,3,square,blue,stripe,"2,1","Pick the square that has vertical gray-and-white stripes (like a barcode), not the checkerboard pattern.",none
