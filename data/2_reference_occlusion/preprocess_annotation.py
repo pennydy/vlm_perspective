@@ -1,3 +1,4 @@
+from ast import pattern
 import pandas as pd
 import argparse
 import re
@@ -18,6 +19,27 @@ def get_numbers(listener_answer):
     else:
         print("the intput is longer than 2 numbers")
         return listener_answer
+    
+def extract_thought_answer(full_answer):
+    full_answer = str(full_answer)
+    thought_answer = re.search(r"(.*?)</think>", full_answer, re.DOTALL) 
+    if thought_answer:
+        thoughts = thought_answer.group(1).lstrip("\n")
+        answer = full_answer.split("</think>", 1)[1].lstrip("\\n")
+        return thoughts, answer
+    if "<think>" in full_answer:
+        thoughts = full_answer.split("<think>", 1)[1].lstrip("\\n")
+        print("Answer not found in the generated text.")
+        return thoughts, ""
+    print("full_answer:", full_answer)
+    return full_answer.strip(), ""
+
+
+def remove_symbols(text):
+    if not pd.isna(text):
+        for pattern in ["\\n", "['", "']", "<think>", "\""]:
+            text = text.replace(pattern, "")
+    return text.strip()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="preprocess and annotate results")
@@ -32,6 +54,18 @@ if __name__ == "__main__":
     results = pd.read_csv(args.input, header=0)
 
     if task == "speaker":
+        if "qwen" in file_name.lower() and "thinking" in file_name.lower():
+            results["speaker_answer_original"] = results["speaker_answer"]
+            results["speaker_answer"] = results["speaker_answer_original"].apply(lambda x: extract_thought_answer(x)[1])
+            results["speaker_thought"] = results["speaker_answer_original"].apply(lambda x: extract_thought_answer(x)[0])
+
+            results["speaker_answer"] = results["speaker_answer"].apply(remove_symbols)
+            results["speaker_thought"] = results["speaker_thought"].apply(remove_symbols)
+
+            results = results.drop(columns=["speaker_answer_original"])
+        elif "qwen" in file_name.lower() and "instruct" in file_name.lower():
+            results["speaker_answer"] = results["speaker_answer"].apply(remove_symbols).strip()
+
         results["speaker_answer"] = results["speaker_answer"].str.lower()
 
         results["target_shape_list"] = results["target_shape"].str.split(r",\s*")

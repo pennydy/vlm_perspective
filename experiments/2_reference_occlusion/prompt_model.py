@@ -292,12 +292,12 @@ if __name__ == "__main__":
         elif model.startswith("qwen"):
             encoded_image = encode_image(image_path)
             model = AutoModelForImageTextToText.from_pretrained(
-                "Qwen/Qwen3-VL-8B-Instruct", dtype="auto", device_map="auto"
+                f"Qwen/{model}", dtype="auto", device_map="auto"
             )
             config = model.generation_config
             config.do_sample = False
             config.temperature = 0.0  # default temperature is 0.7
-            processor = AutoProcessor.from_pretrained("Qwen/Qwen3-VL-8B-Instruct")
+            processor = AutoProcessor.from_pretrained(f"Qwen/{model}")
             prompt=[{"role" : "system", 
                      "content": [{"type": "text", "text": system_prompt},]},
                      {"role": "user", 
@@ -314,7 +314,7 @@ if __name__ == "__main__":
             inputs = inputs.to(model.device)
             generated_ids = model.generate(**inputs, 
                                            generation_config=config, # not sure this is working
-                                           max_new_tokens=128)
+                                           max_new_tokens=1024)
             generated_ids_trimmed = [
                 out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
                 ]
