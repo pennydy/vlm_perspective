@@ -1,0 +1,121 @@
+image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought
+exp2_001.jpeg,cond2,absent,present,2,"triangle, triangular",black,stripe,"3,3",Select the **triangle filled with vertical gray stripes** (not the wavy-pattern triangle or the star).,none
+exp2_002.jpeg,cond4,present,present,4,square,blue,checker,"3,2",Select the **gray-and-white checkerboard pattern square** (a grid of alternating light and dark squares) with a **blue border**.,none
+exp2_003.jpeg,cond3,present,absent,4,"circle, circular",red,"wavy, zigzag","1,3",Select the **gray circle filled with wavy zigzag lines and outlined with a reddish ring** (not a star or a curtain).,none
+exp2_004.jpeg,cond1,absent,absent,3,square,blue,checker,"3,3",Select the **checkerboard pattern square** — a grid of alternating light and dark gray squares with a **blue border**.,none
+exp2_005.jpeg,cond2,absent,present,3,square,blue,"wavy, zigzag","2,3",Select the **square with a thick blue border** that’s filled with **gray-and-white wavy (zigzag) horizontal stripes**.,none
+exp2_006.jpeg,cond2,absent,present,4,"circle, circular",black,checker,"2,1",Select the **circle with a thick black outline** that’s filled with a **gray-and-white checkerboard** pattern.,none
+exp2_007.jpeg,cond4,present,present,3,"circle, circular",red,stripe,"1,3",Select the **circle filled with vertical gray stripes that has a red outline** (not the similar one with a blue outline).,none
+exp2_008.jpeg,cond1,absent,absent,4,"triangle, triangular",blue,stripe,"3,1","Select the **upright triangle with a thick blue outline**, filled with **vertical gray stripes** (not the wavy pattern).",none
+exp2_009.jpeg,cond4,present,present,2,"circle, circular",red,"wavy, zigzag","1,1","Select the circle filled with gray wavy zigzag lines, outlined with a thick red ring.",none
+exp2_010.jpeg,cond3,present,absent,3,square,red,stripe,"3,2","Select the square tile that shows **vertical gray stripes** (like a barcode), with a thin red border.",none
+exp2_011.jpeg,cond4,present,present,2,square,black,"wavy, zigzag","1,3","Select the tile that shows a gray-and-white wavy zigzag pattern, framed by a thick black square border.",none
+exp2_012.jpeg,cond1,absent,absent,4,"triangle, triangular",black,"wavy, zigzag","2,3",Select the **triangle** that has a **thick black outline** and a **gray wavy (zigzag) pattern** inside.,none
+exp2_013.jpeg,cond2,absent,present,2,square,red,dot,"3,2","Select the **square tile with lots of small gray polka dots**, framed by a **solid red border** (not the checkerboard patterns).",none
+exp2_014.jpeg,cond2,absent,present,4,star,red,checker,"3,2",Select the **five-point star with a red outline** and a **gray checkerboard pattern inside**.,none
+exp2_015.jpeg,cond4,present,present,2,"triangle, triangular",green,dot,"3,2",Select the **triangle with a bright green outline** and a **light gray interior filled with small dark polka dots**.,none
+exp2_016.jpeg,cond1,absent,absent,2,square,green,dot,"2,3",Select the **square** (not a circle) that has a **green border** and is filled with **gray polka dots**.,none
+exp2_017.jpeg,cond3,present,absent,4,star,green,stripe,"2,3",Select the green five-pointed star outline that has vertical gray stripes inside it.,none
+exp2_018.jpeg,cond3,present,absent,3,star,blue,dot,"1,1",Select the **five-pointed star** with a **blue outline** and a **gray polka-dot pattern** inside.,none
+exp2_019.jpeg,cond4,present,present,3,"triangle, triangular",red,dot,"2,1",Select the triangle with a **red outline** and a **gray polka-dot pattern** inside (not the blue wavy triangle).,none
+exp2_020.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"1,1",Select the **triangle** that has a **thick black outline** and is filled with **small gray polka dots**.,none
+exp2_021.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,2",Select the **triangle** with a **red outline** and **gray vertical stripes** inside.,none
+exp2_022.jpeg,cond1,absent,absent,4,square,black,stripe,"3,1",Select the **square** that has **vertical gray stripes inside** and a **thick black outline** (no other pattern inside).,none
+exp2_023.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2","Select the **circle with a green outline** that’s filled with **gray polka dots** (a dotted circle, not the checkered one).",none
+exp2_024.jpeg,cond2,absent,present,2,"triangle, triangular",green,stripe,"1,2",Select the **upright triangle with a green outline** that’s filled with **vertical gray stripes**.,none
+exp2_025.jpeg,cond3,present,absent,2,star,blue,dot,"1,3",Select the blue-outlined five-point star with gray polka dots inside (a hollow star shape).,none
+exp2_026.jpeg,cond4,present,present,2,star,black,checker,"1,1",Select the **five-point star with a black outline whose interior is a gray checkerboard pattern** (like a transparency grid).,none
+exp2_027.jpeg,cond3,present,absent,2,star,blue,checker,"1,3",Select the **blue five-pointed star outline** with a **gray checkered pattern inside**.,none
+exp2_028.jpeg,cond2,absent,present,3,"triangle, triangular",blue,dot,"1,1",Select the **triangle** that has a **thick blue outline** and a **gray polka-dotted interior**.,none
+exp2_029.jpeg,cond1,absent,absent,4,"circle, circular",red,"wavy, zigzag","1,3",Select the **circle with a red outline** that’s filled with **gray wavy (zigzag) stripes**.,none
+exp2_030.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","3,2",Select the **circle with a green outline** that has a **gray wavy (zigzag) pattern** inside.,none
+exp2_031.jpeg,cond3,present,absent,3,"circle, circular",green,checker,"2,1",Select the **green-outlined circle** that contains a **gray-and-white checkerboard pattern** inside.,none
+exp2_032.jpeg,cond3,present,absent,4,"triangle, triangular",red,stripe,"3,3",Select the **triangle**: it has a **red outline** and the inside is filled with **vertical gray stripes**.,none
+exp2_033.jpeg,cond1,absent,absent,3,star,green,stripe,"3,3","Select the **five-pointed star** with a **green outline**, and an interior made of **gray vertical stripes** (with some light teal/green stripes).",none
+exp2_034.jpeg,cond4,present,present,4,square,red,dot,"1,3",Select the **square filled with small gray polka dots** that has a **thin pink/red outline** (not the black-outlined square or any circle).,none
+exp2_035.jpeg,cond4,present,present,3,star,black,dot,"3,2",Select the **five-point star with a thick black outline** and a **white interior filled with gray polka dots**.,none
+exp2_036.jpeg,cond2,absent,present,4,star,green,dot,"2,1",Select the **five-point star with a green outline** and a **gray polka-dotted interior**.,none
+exp2_037.jpeg,cond3,present,absent,3,"triangle, triangular",black,"wavy, zigzag","1,1",Select the **outlined triangle** that’s filled with **gray wavy/zigzag stripes** (a black-bordered triangle).,none
+exp2_038.jpeg,cond3,present,absent,2,"circle, circular",red,stripe,"3,3","Select the image that shows a **gray circle outlined in red, filled with vertical gray stripes** (a “striped circle” icon).",none
+exp2_039.jpeg,cond4,present,present,4,"triangle, triangular",blue,"wavy, zigzag","3,1",Select the **triangle with a blue outline** that has a **gray wavy (zigzag) pattern inside**.,none
+exp2_040.jpeg,cond1,absent,absent,4,square,blue,stripe,"1,3",Select the **square with a thick blue outline** and **vertical gray stripes inside**.,none
+exp2_041.jpeg,cond4,present,present,2,"circle, circular",red,dot,"3,1","Select the **polka-dotted gray circle with the thick red outline** (the one with a red border, not the black-bordered one).",none
+exp2_042.jpeg,cond1,absent,absent,3,"circle, circular",red,"wavy, zigzag","3,3",Select the **red-outlined circle/oval filled with gray-and-white wavy stripes** (a round badge with a wavy pattern inside).,none
+exp2_043.jpeg,cond2,absent,present,4,star,green,"wavy, zigzag","1,1",Select the **five-point star with a green outline and gray wavy (zigzag) stripes inside**.,none
+exp2_044.jpeg,cond3,present,absent,3,square,red,dot,"1,3",Select the **square tile with gray polka dots** (white background with evenly spaced gray dots).,none
+exp2_045.jpeg,cond1,absent,absent,2,"triangle, triangular",black,stripe,"2,1",Select the **triangle** that has a **thick black outline** and is filled with **vertical gray-and-white stripes**.,none
+exp2_046.jpeg,cond2,absent,present,4,star,red,"wavy, zigzag","2,1","Select the **five-pointed star with a red outline**, filled with **gray-and-white wavy stripes**.",none
+exp2_047.jpeg,cond4,present,present,3,square,green,stripe,"1,3",Select the **square with vertical gray-and-white stripes** (the striped pattern).,none
+exp2_048.jpeg,cond2,absent,present,3,square,red,stripe,"3,3",Select the **square with vertical gray stripes inside a red border** (the red-framed striped square).,none
+exp2_049.jpeg,cond4,present,present,3,square,green,stripe,"1,1","Select the **plain gray rectangle filled with vertical stripes**, with a **bright green border** (not the striped one with a black border, and not the star).",none
+exp2_050.jpeg,cond3,present,absent,3,star,red,stripe,"2,3",Select the image that shows a five-pointed star outline with vertical gray stripes inside it (a red-and-gray striped star).,none
+exp2_051.jpeg,cond1,absent,absent,3,"triangle, triangular",black,"wavy, zigzag","2,3",Select the **triangle** with a **thick black outline** that’s filled with **gray wavy (zigzag) lines**.,none
+exp2_052.jpeg,cond3,present,absent,3,"triangle, triangular",black,checker,"2,1",Select the **triangle** shape filled with a **gray-and-white checkerboard pattern** (outlined in black).,none
+exp2_053.jpeg,cond1,absent,absent,3,"triangle, triangular",red,stripe,"1,1",Select the **triangle** that has a **red outline** and **vertical gray stripes** inside.,none
+exp2_054.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Select the triangle with a bright green outline that’s filled with a gray-and-white checkerboard pattern.,none
+exp2_055.jpeg,cond1,absent,absent,2,"triangle, triangular",blue,dot,"3,3",Select the **triangle**: it has a **thick blue outline** and is filled with a **gray polka-dot pattern**.,none
+exp2_056.jpeg,cond2,absent,present,3,"triangle, triangular",blue,"wavy, zigzag","3,2",Select the **triangle with a blue outline** that’s filled with a **gray wavy (zigzag) pattern**.,none
+exp2_057.jpeg,cond4,present,present,3,"triangle, triangular",blue,"wavy, zigzag","3,1",Select the upright triangle with a thick blue outline that’s filled with wavy horizontal gray lines (looks like a water pattern).,none
+exp2_058.jpeg,cond3,present,absent,2,"circle, circular",green,dot,"3,3",Select the **circle with a bright green outline** that’s filled with **gray polka dots**.,none
+exp2_059.jpeg,cond3,present,absent,3,star,black,"wavy, zigzag","2,1",Select the **five-pointed star** with a **thick black outline** and a **gray wavy pattern** filling the inside.,none
+exp2_060.jpeg,cond1,absent,absent,2,"circle, circular",red,"wavy, zigzag","2,1",Select the **circle with a red outline** that’s filled with **gray wavy (zigzag) stripes**.,none
+exp2_061.jpeg,cond3,present,absent,2,star,green,stripe,"2,1",Select the **green five-pointed star** that has **gray vertical stripes inside** it (a green outline around the star).,none
+exp2_062.jpeg,cond1,absent,absent,4,square,green,dot,"2,3",Select the **green-outlined square** that’s filled with **gray polka dots** (a dotted square with a green border).,none
+exp2_063.jpeg,cond2,absent,present,2,"triangle, triangular",red,stripe,"3,2",Select the **upright triangle outline** that has a **reddish/pink border** and is filled with **vertical gray stripes**.,none
+exp2_064.jpeg,cond1,absent,absent,3,star,red,dot,"1,2",Select the **five-pointed star** with a **red outline** and **gray polka dots** inside.,none
+exp2_065.jpeg,cond3,present,absent,2,square,blue,checker,"3,2",Select the image that looks like a gray-and-white checkerboard/grid pattern inside a thick blue square frame.,none
+exp2_066.jpeg,cond2,absent,present,4,"circle, circular",black,dot,"1,1","Select the **circle with a black outline** that’s filled with **small gray polka dots** (no blue border, not wavy inside).",none
+exp2_067.jpeg,cond4,present,present,3,square,blue,"wavy, zigzag","2,1",Select the tile that shows a gray-and-white wavy pattern inside a **blue** square frame (not the same wavy pattern with a red frame).,none
+exp2_068.jpeg,cond4,present,present,4,star,black,stripe,"2,1","Select the **five-pointed star with a thick black outline**, filled with **gray vertical stripes** (a black-and-gray striped star).",none
+exp2_069.jpeg,cond2,absent,present,2,square,green,dot,"1,1",Select the **square with a green border** that’s filled with **small gray polka dots**.,none
+exp2_070.jpeg,cond1,absent,absent,4,square,green,checker,"1,3",Select the **checkerboard pattern inside a green-outlined square** (a gray-and-white checkered square with a green border).,none
+exp2_071.jpeg,cond4,present,present,3,square,black,checker,"1,2",Select the **gray-and-white checkerboard square with a thick dark/black border** (not the one outlined in green).,none
+exp2_072.jpeg,cond3,present,absent,2,star,black,stripe,"3,2",Select the **five-point star** icon: a black-outlined star with a lighter striped pattern inside.,none
+exp2_073.jpeg,cond4,present,present,2,star,green,stripe,"3,2",Select the **five-point star with a bright green outline** and **vertical gray stripes inside** (white background).,none
+exp2_074.jpeg,cond2,absent,present,3,square,black,"wavy, zigzag","1,3",Select the **square tile filled with repeating wavy (zigzag) horizontal lines**—it looks like a gray-and-white ripple pattern inside a thick dark border.,none
+exp2_075.jpeg,cond1,absent,absent,2,star,red,"wavy, zigzag","3,2",Select the **five-pointed star** with a **red outline** and a **wavy black-and-white pattern** inside.,none
+exp2_076.jpeg,cond1,absent,absent,2,"triangle, triangular",green,stripe,"1,3",Select the **green-outlined triangle** that’s filled with **vertical gray stripes**.,none
+exp2_077.jpeg,cond3,present,absent,3,"circle, circular",blue,stripe,"1,3",Select the **circle with a blue outline** that’s filled with **vertical gray stripes**.,none
+exp2_078.jpeg,cond4,present,present,4,"triangle, triangular",red,stripe,"2,1",Select the **triangle with a red outline** that has **vertical gray stripes inside**.,none
+exp2_079.jpeg,cond2,absent,present,4,"circle, circular",green,dot,"3,2",Select the **circle with a green outline** that has a **gray polka-dot fill** (a dotted circle).,none
+exp2_080.jpeg,cond3,present,absent,3,"triangle, triangular",blue,dot,"2,3",Select the **upright triangle** with a **thick blue outline** and a **gray polka-dot (dotted) interior**.,none
+exp2_081.jpeg,cond2,absent,present,4,"triangle, triangular",green,checker,"2,1",Select the **triangle with a green outline** that has a **black-and-white checkerboard (chessboard) pattern** inside.,none
+exp2_082.jpeg,cond3,present,absent,2,"triangle, triangular",green,stripe,"2,1",Select the **upright triangle** with a **bright green outline** and **vertical gray stripes** inside.,none
+exp2_083.jpeg,cond1,absent,absent,3,star,red,dot,"3,3",Select the **five-pointed star** with a **red outline** and a **gray polka-dot fill**.,none
+exp2_084.jpeg,cond4,present,present,4,"circle, circular",black,"wavy, zigzag","2,1",Select the circle with the wavy gray-and-white pattern that has a **black outline** (not the similar one with a green outline).,none
+exp2_085.jpeg,cond3,present,absent,2,"triangle, triangular",green,"wavy, zigzag","1,2",Select the **triangle** icon: a green-outlined triangle filled with gray wavy/zigzag lines.,none
+exp2_086.jpeg,cond4,present,present,3,star,black,dot,"2,3",Select the **five-point star with a thick black outline and light gray polka-dot fill** (no green border).,none
+exp2_087.jpeg,cond2,absent,present,3,star,black,checker,"1,2",Select the **five-pointed star with a black outline and a gray-and-white checkerboard pattern inside**.,none
+exp2_088.jpeg,cond1,absent,absent,4,"circle, circular",red,checker,"3,2",Select the **circle with a red outline** that has a **gray-and-white checkerboard fill**.,none
+exp2_089.jpeg,cond3,present,absent,4,square,black,dot,"3,3",Select the **square tile with light gray polka dots inside a black border** (it looks like dotted wallpaper in a framed square).,none
+exp2_090.jpeg,cond3,present,absent,3,"triangle, triangular",green,dot,"3,2",Select the **triangle**: it has a **thick green outline** and the inside is **light gray with evenly spaced dark polka dots**.,none
+exp2_091.jpeg,cond1,absent,absent,3,square,black,"wavy, zigzag","2,1",Select the **square with a thick black border** that’s filled with **gray-and-white wavy stripes**.,none
+exp2_092.jpeg,cond2,absent,present,3,"triangle, triangular",red,dot,"1,3",Select the triangle with a red outline and gray polka dots inside (not the black checkered triangle).,none
+exp2_093.jpeg,cond4,present,present,3,square,red,"wavy, zigzag","3,2",Select the square tile with a gray background filled with repeating white wavy zigzag lines (a ripple/chevron-like pattern).,none
+exp2_094.jpeg,cond2,absent,present,4,star,green,dot,"1,3",Select the **five-pointed star with a green outline** and a **gray polka-dot fill**.,none
+exp2_095.jpeg,cond1,absent,absent,2,"circle, circular",blue,dot,"1,3",Select the **blue-outlined circle filled with small gray polka dots** (a dotted pattern inside a blue ring).,none
+exp2_096.jpeg,cond4,present,present,4,star,green,dot,"1,3",Select the **five-pointed star with a green outline** and a **gray polka-dot interior**.,none
+exp2_097.jpeg,cond3,present,absent,3,square,black,stripe,"3,2","Select the **plain square tile filled with vertical gray-and-white stripes and a thick black border** (not a star, and not behind a curtain).",none
+exp2_098.jpeg,cond1,absent,absent,2,square,blue,stripe,"1,2",Select the **square with vertical gray stripes** (it has a **thick blue border**).,none
+exp2_099.jpeg,cond2,absent,present,3,"circle, circular",green,"wavy, zigzag","2,3",Select the **green-outlined circle filled with gray wavy (zigzag) stripes**.,none
+exp2_100.jpeg,cond4,present,present,2,square,green,dot,"3,2",Select the square that has a light gray background filled with evenly spaced darker gray polka dots (the dotted pattern).,none
+exp2_101.jpeg,cond4,present,present,2,"circle, circular",green,checker,"3,3",Select the green-outlined circle that contains a gray-and-white checkerboard (chessboard-like) pattern.,none
+exp2_102.jpeg,cond1,absent,absent,4,square,black,checker,"3,1",Select the **solid square** with a **thick black border** and a **gray-and-white checkerboard fill** (not a triangle or circle).,none
+exp2_103.jpeg,cond3,present,absent,2,square,red,dot,"2,1","Select the **square panel filled with small gray polka dots**, bordered by a **thin red frame** (not the dotted pattern inside a black circle).",none
+exp2_104.jpeg,cond2,absent,present,2,"circle, circular",green,stripe,"2,3",Select the green-outlined circle filled with gray **vertical stripes** (not the wavy pattern).,none
+exp2_105.jpeg,cond4,present,present,3,"triangle, triangular",black,dot,"2,1","Select the **triangle with gray polka dots inside** (black outline, dotted fill).",none
+exp2_106.jpeg,cond4,present,present,4,"triangle, triangular",green,dot,"2,1",Select the **green-outlined triangle** that has a **gray polka-dot interior** (not the green triangle with the checkerboard pattern).,none
+exp2_107.jpeg,cond1,absent,absent,4,"triangle, triangular",red,"wavy, zigzag","3,3",Select the **red-outlined triangle** that’s filled with **gray wavy (zigzag) stripes**.,none
+exp2_108.jpeg,cond3,present,absent,4,square,red,"wavy, zigzag","1,3",Select the **square** tile (not a circle) that has a **red border** and is filled with **gray-and-white wavy/zigzag horizontal stripes**.,none
+exp2_109.jpeg,cond3,present,absent,2,"triangle, triangular",red,dot,"3,3",Select the **triangle**: a white triangle filled with gray polka dots and outlined in **red**.,none
+exp2_110.jpeg,cond2,absent,present,2,"triangle, triangular",green,dot,"2,3",Select the **triangle** with a **green outline** and a **gray polka-dot** interior.,none
+exp2_111.jpeg,cond1,absent,absent,4,"triangle, triangular",green,"wavy, zigzag","3,1",Select the **triangle** that has a **green outline** and is filled with a **gray-and-white wavy pattern**.,none
+exp2_112.jpeg,cond2,absent,present,4,"circle, circular",black,"wavy, zigzag","3,2",Select the **circle with a thick black outline** that’s filled with a **wavy/zigzag pattern** (not dots or checkerboard).,none
+exp2_113.jpeg,cond3,present,absent,2,"circle, circular",red,"wavy, zigzag","3,2",Select the **circle with a red outline filled with gray wavy (zigzag) stripes**.,none
+exp2_114.jpeg,cond1,absent,absent,2,square,red,"wavy, zigzag","1,2",Select the square tile (not a star) that has a thick red border and is filled with repeating white wavy lines on a gray background.,none
+exp2_115.jpeg,cond2,absent,present,4,"triangle, triangular",green,dot,"3,3",Select the **triangle with a green outline** that’s filled with **gray polka dots** (white background).,none
+exp2_116.jpeg,cond3,present,absent,2,star,black,stripe,"3,3",Select the **black five-pointed star** with a thick outline and **vertical gray stripes** inside.,none
+exp2_117.jpeg,cond4,present,present,2,star,black,"wavy, zigzag","3,3",Select the **five-point star with a thick black outline and a gray wavy (zigzag) pattern inside**.,none
+exp2_118.jpeg,cond2,absent,present,3,star,black,dot,"3,1",Select the **five-pointed star with a thick black outline and light gray polka dots inside**.,none
+exp2_119.jpeg,cond1,absent,absent,4,"triangle, triangular",red,dot,"1,2",Select the **triangle** with a **red outline** that’s filled with **gray polka dots**.,none
+exp2_120.jpeg,cond4,present,present,3,square,blue,stripe,"2,1","Select the picture that looks like a **barcode**: a rectangle filled with **many thin vertical gray stripes**, framed by a **blue border**.",none

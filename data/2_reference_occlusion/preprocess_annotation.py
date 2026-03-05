@@ -1,4 +1,4 @@
-from ast import pattern
+# from ast import pattern
 import pandas as pd
 import argparse
 import re
@@ -17,7 +17,7 @@ def get_numbers(listener_answer):
         listener_answer=f"{listener_answer_number[0]},{listener_answer_number[1]}"
         return listener_answer
     else:
-        print("the intput is longer than 2 numbers")
+        print(f"Listener answer contains more than 2 numbers: {listener_answer}")
         return listener_answer
     
 def extract_thought_answer(full_answer):

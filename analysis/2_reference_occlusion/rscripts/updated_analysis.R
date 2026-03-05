@@ -22,17 +22,19 @@ source("helpers.R")
 datafile_path <- "../../../data/2_reference_occlusion"
 files <- list.files(
   path = datafile_path,
-  pattern = "^speaker-.*_annotated\\.csv$",
+  # pattern = "^speaker-.*_annotated\\.csv$",
+  pattern = "^listener-.*.csv$",
   full.names = TRUE
 )
-files <- files[!grepl("_2_annotated.csv", files)]
+# files <- files[!grepl("_2_annotated.csv", files)]
+files <- files[!grepl("_2.csv", files)]
 speaker_data <- map_dfr(files, function(f) {
   file_name <- basename(f)
   parts <- strsplit(file_name, "_")[[1]]
   
   read_csv(f) %>% 
-    mutate(model = str_remove(parts[1],"speaker-"),
-           reasoning = parts[3])
+    mutate(model = str_remove(parts[1],"listener-"),
+           reasoning = str_remove(parts[3], ".csv"))
 })
 
 # data_exclusion
@@ -435,3 +437,23 @@ gemini3_pro_low_model <- lm(utt_length ~ occlusion * distractor,
                                data=gemini3_pro_data %>% 
                                  filter(reasoning == "low"))
 summary(gemini3_pro_low_model)
+
+gemini3_pro_high_model <- lm(utt_length ~ occlusion * distractor,
+                            data=gemini3_pro_data %>% 
+                              filter(reasoning == "high"))
+summary(gemini3_pro_high_model)
+
+# replicating the original gemini2.5 pro results
+gemini2.5_pro_medium_0 <- read.csv("../../../data/2_reference_occlusion/listener-gemini-2.5-pro_0_medium_1.csv",header=TRUE)
+gemini2.5_pro_medium_0 <- gemini2.5_pro_medium_0 %>% 
+  mutate(occlusion=as.factor(occlusion),
+         distractor=as.factor(distractor),
+         utt_length = str_count(speaker_answer, "\\S+"))
+mean(gemini2.5_pro_medium_0$utt_length) # 9.06
+contrasts(gemini2.5_pro_medium_0$occlusion) <- contr.treatment(2, base = 1)
+levels(gemini2.5_pro_medium_0$occlusion) # level1: absent, level2: present
+contrasts(gemini2.5_pro_medium_0$distractor) <- contr.treatment(2, base = 1)
+levels(gemini2.5_pro_medium_0$distractor)
+gemini2.5_pro_medium_0_model <- lm(utt_length ~ occlusion * distractor,
+                            data=gemini2.5_pro_medium_0)
+summary(gemini2.5_pro_medium_0_model)

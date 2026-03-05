@@ -329,4 +329,4 @@ if __name__ == "__main__":
     output_dir = args.output_dir
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_{args.seed}_{args.reasoning}.csv"), index=False)
+    prompts.to_csv(os.path.join(output_dir,f"{task}-{args.model}_1_{args.reasoning}_{args.seed}.csv"), index=False)
