@@ -106,7 +106,7 @@ system_prompt_listener = "Your are the listener in a reference game. Please only
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="reference game")
-    parser.add_argument("--model", "-m", type=str, default="gpt-4.1") # or gpt-5.1
+    parser.add_argument("--model", "-m", type=str, default="gpt-4.1") # or gpt-5.1, gpt-5.2
     parser.add_argument("--input", "-i", type=str, default="exp2_speaker.csv")
     parser.add_argument("--output_dir", "-o", type=str, default="../../data/2_reference_occlusion")
     parser.add_argument("--task", "-t", type=str, default="speaker")

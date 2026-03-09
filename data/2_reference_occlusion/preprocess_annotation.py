@@ -44,12 +44,13 @@ def remove_symbols(text):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="preprocess and annotate results")
     parser.add_argument("--input", "-i", type=str, default="speaker-gpt-5.2_1_none.csv")
-    parser.add_argument("--task", "-t", type=str, default="speaker")
 
     args = parser.parse_args()
-    task = args.task
 
     file_name = re.sub(r"\.csv$", "", args.input)
+    task = file_name.split("-")[0] 
+    if task not in ["speaker", "listener"]:
+        raise ValueError("Incorrect file. The file name must be either 'speaker' or 'listener'.")
 
     results = pd.read_csv(args.input, header=0)
 
