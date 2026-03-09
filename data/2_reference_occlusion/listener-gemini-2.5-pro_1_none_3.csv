@@ -1,4 +1,4 @@
-image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought_summary,target_shape_list,target_texture_list,contain_shape,contain_color,contain_texture,listener_answer,listener_thought_summary,listener_answer_correct,listener_anwer_note
+image_file,condition,occlusion,distractor,non_target,target_shape,target_color,target_texture,target_location,speaker_answer,speaker_thought_summary,target_shape_list,target_texture_list,contain_shape,contain_color,contain_texture,listener_answer,listener_thought_summary,listener_answer_correct,listener_answer_note
 exp2_001.jpeg,cond2,absent,present,2,"triangle, triangular",black,stripe,"3,3",the triangle with vertical stripes.,"Okay, here's my interpretation of this request and the subsequent thought process, presented as a first-person summary, keeping in mind the expert user:
 
 **Breaking Down the Reference Game Task**

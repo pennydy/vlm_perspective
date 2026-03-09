@@ -82,6 +82,16 @@ if __name__ == "__main__":
         listener_answer = results["listener_answer"].apply(get_numbers)
 
         results["listener_answer_correct"] = target_location == listener_answer
+
+        if "contain_shape" not in results.columns:
+            results["speaker_answer"] = results["speaker_answer"].str.lower()
+
+            results["target_shape_list"] = results["target_shape"].str.split(r",\s*")
+            results["target_texture_list"] = results["target_texture"].str.split(r",\s*")
+            
+            results[["contain_shape", "contain_color", "contain_texture"]] = results.apply(
+                check_features, axis=1
+            )
         
         results.to_csv(f"{file_name}.csv", index=False)
 
